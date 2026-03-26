@@ -1,0 +1,3 @@
+#!/bin/bash
+BKT=https://objectstorage.us-phoenix-1.oraclecloud.com/p/83YfJoC0aLBkYg_S3izMiKah46I91A1kUeoDGps6WZ3ncCAi_RE-J09Jrgf24UGQ/n/hpc_limited_availability/b/feyer_cae/o/
+ wget $1 $BKT$1

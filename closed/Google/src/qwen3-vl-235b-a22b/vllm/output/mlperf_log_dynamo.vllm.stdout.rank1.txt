@@ -1,0 +1,10 @@
+WARNING 02-12 23:05:32 [prometheus.py:31] Found PROMETHEUS_MULTIPROC_DIR was set by user. This directory must be wiped between vLLM runs or you will find inaccurate metrics. Unset the variable and vLLM will properly handle cleanup.
+INFO 02-12 23:05:32 [model.py:530] Resolved architecture: Qwen3VLMoeForConditionalGeneration
+INFO 02-12 23:05:32 [model.py:1547] Using max model len 32768
+WARNING 02-12 23:05:34 [quark_ocp_mx.py:157] AITER is not found or QuarkOCP_MX is not supported on the current platform. QuarkOCP_MX quantization will not be available.
+WARNING 02-12 23:05:35 [model.py:1360] Default sampling parameters have been overridden by the model's Hugging Face generation config recommended from the model creator. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+INFO 02-12 23:05:35 [model.py:530] Resolved architecture: Qwen3VLMoeForConditionalGeneration
+INFO 02-12 23:05:35 [model.py:1547] Using max model len 32768
+INFO 02-12 23:05:35 [scheduler.py:231] Chunked prefill is enabled with max_num_batched_tokens=8192.
+INFO 02-12 23:05:35 [vllm.py:618] Asynchronous scheduling is enabled.
+INFO 02-12 23:05:35 [vllm.py:625] Disabling NCCL for DP synchronization when using async scheduling.

@@ -1,0 +1,6 @@
+[2026-02-13 05:45:35,297 log_parser.py:72 INFO] Sucessfully loaded MLPerf log from /home/inference/yolo_runs/Dell/results/XE7745_L4x16/yolo-95/singlestream/performance/run_1/mlperf_log_detail.txt.
+[2026-02-13 05:45:35,298 log_parser.py:72 INFO] Sucessfully loaded MLPerf log from /home/inference/yolo_runs/Dell/results/XE7745_L4x16/yolo-95/singlestream/TEST01/mlperf_log_detail.txt.
+Verifying performance.
+Reference score = 10548640.0
+Test score = 10548360.0
+TEST PASS

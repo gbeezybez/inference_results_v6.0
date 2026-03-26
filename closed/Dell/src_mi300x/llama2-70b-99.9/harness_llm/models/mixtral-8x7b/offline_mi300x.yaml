@@ -1,0 +1,52 @@
+# benchmark details
+benchmark_name: mixtral-8x7b
+scenario: offline
+test_mode: performance
+
+vllm_env_config:
+  VLLM_LOGGING_LEVEL: "ERROR"
+  VLLM_USE_AITER: 1
+  VLLM_USE_AITER_MOE: 1
+  VLLM_USE_AITER_2STAGE_MOE: 1
+
+# configuration related to the LLM model.
+vllm_engine_config:
+  model: /model/mixtral-8x7b/fp8_quantized
+  tensor_parallel_size: 1
+  num_scheduler_steps: 9
+  block_size: 32
+  kv_cache_dtype: fp8
+  quantization: fp8
+  max_model_len: 2048
+  swap_space: 0
+  gpu_memory_utilization: 0.97
+  max_seq_len_to_capture: 3072
+  enforce_eager: False
+  disable_custom_all_reduce: True
+  max_num_batched_tokens: 51200
+  max_num_seqs: 5000
+  enable_chunked_prefill: False
+  enable_prefix_caching: False
+
+# configuration related to the sampling params
+vllm_sampling_config:
+  n: 1
+  max_tokens: 1024
+  min_tokens: 2
+  temperature: 0
+  repetition_penalty: 1
+  frequency_penalty: 0
+  detokenize: False
+  ignore_eos: False
+
+# configuration related to the harness tests.
+harness_config:
+  dataset_path: /data/mixtral-8x7b/mlperf_mixtral8x7b_dataset_15k.pkl
+  mlperf_conf_path: /app/mlperf_inference/mlperf.conf
+  user_conf_path: /lab-mlperf-inference/code/user_mi300x.conf
+  target_qps: -1 # 100
+  total_sample_count: 15000
+  output_log_dir: /app/logs
+  enable_log_trace: False
+  enable_warmup: True
+  device_count: 8

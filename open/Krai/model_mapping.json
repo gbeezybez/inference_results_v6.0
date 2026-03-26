@@ -1,0 +1,5 @@
+{
+    "llama3_1-70b-fp8_dyn"    : "llama2-70b-99.9",
+    "llama3_1-70b-fp8_pre"    : "llama2-70b-99.9",
+    "llama3_1-70b-fp8_trtllm" : "llama2-70b-99.9"
+}

@@ -1,0 +1,6 @@
+[2026-02-07 16:47:27,386 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from /work/build/submission-staging/closed/NVIDIA/results/SE455I_V3_TRT/resnet50/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-07 16:47:27,387 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from build/compliance_logs/TEST01/SE455I_V3_TRT/resnet50/Offline/mlperf_log_detail.txt.
+Verifying performance.
+Reference score = 25200.5
+Test score = 25212.3
+TEST PASS

@@ -1,0 +1,61 @@
+From 339f60066d7b67bfe5ede574b2e3b283d0108795 Mon Sep 17 00:00:00 2001
+From: MLPerf <mlperf>
+Date: Wed, 1 Jan 2025 00:00:00 +0000
+Subject: [PATCH] Add pipever arg for moe
+
+---
+ aiter/fused_moe_bf16_asm.py | 5 ++++-
+ aiter/ops/moe_op.py         | 2 ++
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+
+diff --git a/aiter/fused_moe_bf16_asm.py b/aiter/fused_moe_bf16_asm.py
+index fc3ac30..e2af8d3 100755
+--- a/aiter/fused_moe_bf16_asm.py
++++ b/aiter/fused_moe_bf16_asm.py
+@@ -425,6 +425,7 @@ def ck_moe_2stages(
+     expert_mask=None,
+     activation=ActivationType.Silu,
+     doweight_stage1=False,
++    pipe_ver: Optional[int] = 1,
+ ):
+     
+     quant_func = get_hip_quant(quant_type)
+@@ -471,7 +472,8 @@ def ck_moe_2stages(
+         a1_scale, 
+         block_size, 
+         sorted_weights if doweight_stage1 else None,
+-        act_op
++        act_op,
++        pipe_ver,
+     )
+ 
+     if quant_type == QuantType.per_Token:
+@@ -492,6 +494,7 @@ def ck_moe_2stages(
+         a2_scale, 
+         block_size, 
+         sorted_weights if not doweight_stage1 else None,
++        pipe_ver,
+     )
+     return moe_buf
+ 
+diff --git a/aiter/ops/moe_op.py b/aiter/ops/moe_op.py
+index 49b8011..525d934 100755
+--- a/aiter/ops/moe_op.py
++++ b/aiter/ops/moe_op.py
+@@ -221,6 +221,7 @@ def ck_moe_stage1(
+     block_m: Optional[int] = 32,
+     sorted_weights: Optional[Tensor] = None,
+     act_op: Optional[int] = 0,
++    pipe_ver: Optional[int] = 1,
+ ): ...
+ 
+ 
+@@ -238,4 +239,5 @@ def ck_moe_stage2(
+     a2_scale: Optional[Tensor] = None,
+     block_m: Optional[int] = 32,
+     sorted_weights: Optional[Tensor] = None,
++    pipe_ver: Optional[int] = 1,
+ ): ...
+-- 
+2.34.1
+

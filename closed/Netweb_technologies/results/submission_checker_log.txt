@@ -1,0 +1,107 @@
+[2026-02-14 00:32:46,146 loader.py:193 INFO] Loading System log from build/submission/closed/Netweb_technologies/systems/B200-SXM-180GBx8_TRT.json
+[2026-02-14 00:32:46,147 loader.py:193 INFO] Loading Performance log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-14 00:32:46,175 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-14 00:32:46,175 loader.py:193 INFO] Loading Accuracy log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-14 00:32:46,201 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/accuracy/mlperf_log_detail.txt.
+[2026-02-14 00:32:46,201 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/accuracy/accuracy.txt
+[2026-02-14 00:32:46,201 loader.py:193 INFO] Loading AccuracyJSON log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/accuracy/mlperf_log_accuracy.json
+[2026-02-14 00:32:46,201 loader.py:193 INFO] Loading Measurements log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/measurements.json
+[2026-02-14 00:32:46,202 loader.py:210 INFO] Could not load Performance log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-14 00:32:46,202 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-14 00:32:46,202 loader.py:210 INFO] Could not load Performance log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-14 00:32:46,202 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-14 00:32:46,202 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/TEST06/verify_accuracy.txt, path does not exist
+[2026-02-14 00:32:46,202 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-14 00:32:46,202 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-14 00:32:46,202 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/TEST08/verify_accuracy.txt
+[2026-02-14 00:32:46,202 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-14 00:32:46,202 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-14 00:32:46,202 base.py:42 INFO] Starting performance checks for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-14 00:32:46,202 performance_check.py:263 INFO] Target latency: None, Latency: 634451078410, Scenario: Offline
+[2026-02-14 00:32:46,202 base.py:45 INFO] All performance checks checks passed for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-14 00:32:46,202 base.py:42 INFO] Starting accuracy checks for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-14 00:32:46,202 base.py:45 INFO] All accuracy checks checks passed for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-14 00:32:46,202 base.py:42 INFO] Starting system checks for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT
+[2026-02-14 00:32:46,202 base.py:45 INFO] All system checks checks passed for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT
+[2026-02-14 00:32:46,202 base.py:42 INFO] Starting measurement checks for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/measurements.json
+[2026-02-14 00:32:46,203 base.py:45 INFO] All measurement checks checks passed for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/measurements.json
+[2026-02-14 00:32:46,203 base.py:42 INFO] Starting base checks for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/performance/power
+[2026-02-14 00:32:46,203 base.py:45 INFO] All base checks checks passed for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/performance/power
+[2026-02-14 00:32:46,203 loader.py:193 INFO] Loading Performance log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-14 00:32:46,233 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/performance/run_1/mlperf_log_detail.txt.
+[2026-02-14 00:32:46,233 loader.py:193 INFO] Loading Accuracy log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/accuracy/mlperf_log_detail.txt
+[2026-02-14 00:32:46,260 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/accuracy/mlperf_log_detail.txt.
+[2026-02-14 00:32:46,260 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/accuracy/accuracy.txt
+[2026-02-14 00:32:46,260 loader.py:193 INFO] Loading AccuracyJSON log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/accuracy/mlperf_log_accuracy.json
+[2026-02-14 00:32:46,260 loader.py:193 INFO] Loading Measurements log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/measurements.json
+[2026-02-14 00:32:46,260 loader.py:210 INFO] Could not load Performance log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-14 00:32:46,260 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-14 00:32:46,260 loader.py:210 INFO] Could not load Performance log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-14 00:32:46,260 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-14 00:32:46,260 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/TEST06/verify_accuracy.txt, path does not exist
+[2026-02-14 00:32:46,260 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-14 00:32:46,260 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-14 00:32:46,260 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/TEST08/verify_accuracy.txt
+[2026-02-14 00:32:46,260 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-14 00:32:46,260 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-14 00:32:46,260 base.py:42 INFO] Starting performance checks for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-14 00:32:46,260 performance_check.py:244 INFO] Target latency: 60000000000, Early Stopping Latency: 80000000, Scenario: Server
+[2026-02-14 00:32:46,260 base.py:45 INFO] All performance checks checks passed for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-14 00:32:46,260 base.py:42 INFO] Starting accuracy checks for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/accuracy/mlperf_log_detail.txt
+[2026-02-14 00:32:46,261 base.py:45 INFO] All accuracy checks checks passed for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/accuracy/mlperf_log_detail.txt
+[2026-02-14 00:32:46,261 base.py:42 INFO] Starting system checks for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT
+[2026-02-14 00:32:46,261 base.py:45 INFO] All system checks checks passed for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT
+[2026-02-14 00:32:46,261 base.py:42 INFO] Starting measurement checks for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/measurements.json
+[2026-02-14 00:32:46,261 base.py:45 INFO] All measurement checks checks passed for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/measurements.json
+[2026-02-14 00:32:46,261 base.py:42 INFO] Starting base checks for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/performance/power
+[2026-02-14 00:32:46,261 base.py:45 INFO] All base checks checks passed for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/performance/power
+[2026-02-14 00:32:46,261 loader.py:193 INFO] Loading Performance log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-14 00:32:46,265 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-14 00:32:46,265 loader.py:193 INFO] Loading Accuracy log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-14 00:32:46,266 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/accuracy/mlperf_log_detail.txt.
+[2026-02-14 00:32:46,266 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/accuracy/accuracy.txt
+[2026-02-14 00:32:46,266 loader.py:193 INFO] Loading AccuracyJSON log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/accuracy/mlperf_log_accuracy.json
+[2026-02-14 00:32:46,266 loader.py:193 INFO] Loading Measurements log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/measurements.json
+[2026-02-14 00:32:46,266 loader.py:193 INFO] Loading Performance log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/TEST01/performance/run_1/mlperf_log_detail.txt
+[2026-02-14 00:32:46,267 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/TEST01/performance/run_1/mlperf_log_detail.txt.
+[2026-02-14 00:32:46,267 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/TEST01/verify_accuracy.txt
+[2026-02-14 00:32:46,267 loader.py:210 INFO] Could not load Performance log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-14 00:32:46,267 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-14 00:32:46,267 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/TEST06/verify_accuracy.txt, path does not exist
+[2026-02-14 00:32:46,267 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-14 00:32:46,267 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-14 00:32:46,267 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-14 00:32:46,267 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-14 00:32:46,267 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-14 00:32:46,267 base.py:42 INFO] Starting performance checks for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-14 00:32:46,267 performance_check.py:263 INFO] Target latency: None, Latency: 600662567568, Scenario: Offline
+[2026-02-14 00:32:46,267 base.py:45 INFO] All performance checks checks passed for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-14 00:32:46,267 base.py:42 INFO] Starting accuracy checks for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-14 00:32:46,267 base.py:45 INFO] All accuracy checks checks passed for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-14 00:32:46,267 base.py:42 INFO] Starting system checks for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT
+[2026-02-14 00:32:46,267 base.py:45 INFO] All system checks checks passed for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT
+[2026-02-14 00:32:46,267 base.py:42 INFO] Starting measurement checks for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/measurements.json
+[2026-02-14 00:32:46,267 base.py:45 INFO] All measurement checks checks passed for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/measurements.json
+[2026-02-14 00:32:46,267 base.py:42 INFO] Starting base checks for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/performance/power
+[2026-02-14 00:32:46,267 base.py:45 INFO] All base checks checks passed for: build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/performance/power
+[2026-02-14 00:32:46,268 main.py:215 INFO] ---
+[2026-02-14 00:32:46,268 main.py:219 INFO] Results build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Offline/performance/run_1/mlperf_log_detail.txt 10737.2
+[2026-02-14 00:32:46,268 main.py:219 INFO] Results build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/dlrm-v3/Server/performance/run_1/mlperf_log_detail.txt 10007.0
+[2026-02-14 00:32:46,268 main.py:219 INFO] Results build/submission/closed/Netweb_technologies/results/B200-SXM-180GBx8_TRT/whisper/Offline/performance/run_1/mlperf_log_detail.txt 45083.1
+[2026-02-14 00:32:46,268 main.py:221 INFO] ---
+[2026-02-14 00:32:46,268 main.py:310 INFO] ---
+[2026-02-14 00:32:46,268 main.py:311 INFO] Results=3, NoResults=0, Power Results=0
+[2026-02-14 00:32:46,268 main.py:318 INFO] ---
+[2026-02-14 00:32:46,268 main.py:319 INFO] Closed Results=3, Closed Power Results=0
+
+[2026-02-14 00:32:46,268 main.py:324 INFO] Open Results=0, Open Power Results=0
+
+[2026-02-14 00:32:46,268 main.py:329 INFO] Network Results=0, Network Power Results=0
+
+[2026-02-14 00:32:46,268 main.py:334 INFO] ---
+[2026-02-14 00:32:46,268 main.py:336 INFO] Systems=1, Power Systems=0
+[2026-02-14 00:32:46,268 main.py:340 INFO] Closed Systems=1, Closed Power Systems=0
+[2026-02-14 00:32:46,268 main.py:345 INFO] Open Systems=0, Open Power Systems=0
+[2026-02-14 00:32:46,268 main.py:350 INFO] Network Systems=0, Network Power Systems=0
+[2026-02-14 00:32:46,268 main.py:355 INFO] ---
+[2026-02-14 00:32:46,268 main.py:360 INFO] SUMMARY: submission looks OK

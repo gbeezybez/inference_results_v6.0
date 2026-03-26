@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# In case the values have been set before
+unset GPU_MEMORY_UTILIZATION
+rm -f audit.config audit.conf

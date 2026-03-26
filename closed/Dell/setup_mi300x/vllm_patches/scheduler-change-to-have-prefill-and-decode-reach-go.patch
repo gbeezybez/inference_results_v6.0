@@ -1,0 +1,130 @@
+From 65a32856164e9fb0748b81d3d5843015f2d4770d Mon Sep 17 00:00:00 2001
+From: MLPerf <mlperf>
+Date: Wed, 1 Jan 2025 00:00:00 +0000
+Subject: [PATCH] scheduler-change-to-have-prefill-and-decode-reach-good-TFLOPs
+
+---
+ vllm/core/scheduler.py | 37 +++++++++++++++++++++++++++++++++++--
+ vllm/envs.py           | 21 +++++++++++++++++++++
+ 2 files changed, 56 insertions(+), 2 deletions(-)
+
+diff --git a/vllm/core/scheduler.py b/vllm/core/scheduler.py
+index 0ef039699..3bfa8d1ff 100644
+--- a/vllm/core/scheduler.py
++++ b/vllm/core/scheduler.py
+@@ -21,6 +21,7 @@ from vllm.sequence import (Sequence, SequenceData, SequenceGroup,
+                            SequenceGroupMetadataDelta, SequenceStage,
+                            SequenceStatus)
+ from vllm.utils import Device, PyObjectCache
++import vllm.envs as envs
+ 
+ logger = init_logger(__name__)
+ 
+@@ -647,6 +648,20 @@ class Scheduler:
+         self._finished_requests_ids = list()
+         return finished_requests_ids
+ 
++    def _get_target_decode_batch(self) -> int:
++        max_target_decode_batch = envs.VLLM_LLAMA2_MLPERF_MAX_TARGET_DECODE_BATCH
++        min_target_decode_batch = envs.VLLM_LLAMA2_MLPERF_MIN_TARGET_DECODE_BATCH
++        step = envs.VLLM_LLAMA2_MLPERF_STEP_DECODE_BATCH
++        n_running = len(self.running)
++
++        if n_running >= max_target_decode_batch:
++            return max_target_decode_batch
++
++        if n_running >= min_target_decode_batch:
++            return (n_running // step) * step
++
++        return min_target_decode_batch
++
+     def _schedule_running(
+         self,
+         budget: SchedulingBudget,
+@@ -700,7 +715,15 @@ class Scheduler:
+ 
+         running_queue = self.running
+         assert len(self._async_stopped) == 0
++
++        if envs.VLLM_LLAMA2_MLPERF_SCHED:
++            target_decode_batch = self._get_target_decode_batch()
++
+         while running_queue:
++            # MLPERF WTL
++            if envs.VLLM_LLAMA2_MLPERF_SCHED and len(ret.decode_seq_groups) >= target_decode_batch:
++                break
++
+             seq_group = running_queue[0]
+             # We discard the cached tokens info here because we don't need it
+             # for running sequence:
+@@ -1272,8 +1295,14 @@ class Scheduler:
+         running_scheduled = SchedulerRunningOutputs.create_empty()
+         swapped_in = SchedulerSwappedInOutputs.create_empty()
+ 
++        # MLPERF WTL
++        do_prefill =  True
++        if envs.VLLM_LLAMA2_MLPERF_SCHED:
++            num_free_gpu_blocks = self.block_manager.get_num_free_gpu_blocks()
++            do_prefill = len(self.running) < envs.VLLM_LLAMA2_MLPERF_MAX_TARGET_DECODE_BATCH and num_free_gpu_blocks > envs.VLLM_LLAMA2_MLPERF_MIN_REQUIRE_PREFILL_GPU_BLOCK
++
+         # If any requests are swapped, prioritized swapped requests.
+-        if not self.swapped:
++        if not self.swapped and do_prefill:
+             prefills = self._schedule_prefills(budget,
+                                                curr_loras,
+                                                enable_chunking=False)
+@@ -1307,7 +1336,11 @@ class Scheduler:
+         if len(prefills.seq_groups) > 0:
+             self.running.extend([s.seq_group for s in prefills.seq_groups])
+ 
+-        self.running.extend(running_scheduled.decode_seq_groups_list)
++        ## MLPERF WTL
++        if envs.VLLM_LLAMA2_MLPERF_SCHED:
++            self.running.extendleft(running_scheduled.decode_seq_groups_list)
++        else:
++            self.running.extend(running_scheduled.decode_seq_groups_list)
+ 
+         if len(swapped_in.decode_seq_groups) > 0:
+             self.running.extend(
+diff --git a/vllm/envs.py b/vllm/envs.py
+index b1030997f..37f22082b 100644
+--- a/vllm/envs.py
++++ b/vllm/envs.py
+@@ -8,6 +8,11 @@ import tempfile
+ from typing import TYPE_CHECKING, Any, Callable, Optional
+ 
+ if TYPE_CHECKING:
++    VLLM_LLAMA2_MLPERF_SCHED: bool = False
++    VLLM_LLAMA2_MLPERF_MAX_TARGET_DECODE_BATCH: int = 1536
++    VLLM_LLAMA2_MLPERF_MIN_TARGET_DECODE_BATCH: int = 1536
++    VLLM_LLAMA2_MLPERF_STEP_DECODE_BATCH: int = 256
++    VLLM_LLAMA2_MLPERF_MIN_REQUIRE_PREFILL_GPU_BLOCK: int = 0
+     VLLM_HOST_IP: str = ""
+     VLLM_PORT: Optional[int] = None
+     VLLM_RPC_BASE_PATH: str = tempfile.gettempdir()
+@@ -189,6 +194,22 @@ def get_vllm_port() -> Optional[int]:
+ 
+ environment_variables: dict[str, Callable[[], Any]] = {
+ 
++    # MLPERF LLAMA2
++    "VLLM_LLAMA2_MLPERF_SCHED":
++    lambda: bool(int(os.getenv("VLLM_LLAMA2_MLPERF_SCHED", "0"))),
++
++    "VLLM_LLAMA2_MLPERF_MAX_TARGET_DECODE_BATCH":
++    lambda: int(os.getenv("VLLM_LLAMA2_MLPERF_MAX_TARGET_DECODE_BATCH", "1536")),
++
++    "VLLM_LLAMA2_MLPERF_MIN_TARGET_DECODE_BATCH":
++    lambda: int(os.getenv("VLLM_LLAMA2_MLPERF_MIN_TARGET_DECODE_BATCH", "1536")),
++
++    "VLLM_LLAMA2_MLPERF_STEP_DECODE_BATCH":
++    lambda: int(os.getenv("VLLM_LLAMA2_MLPERF_STEP_DECODE_BATCH", "256")),
++
++    "VLLM_LLAMA2_MLPERF_MIN_REQUIRE_PREFILL_GPU_BLOCK":
++    lambda: int(os.getenv("VLLM_LLAMA2_MLPERF_MIN_REQUIRE_PREFILL_GPU_BLOCK", "0")),
++
+     # ================== Installation Time Env Vars ==================
+ 
+     # Target device of vLLM, supporting [cuda (by default),
+-- 
+2.34.1
+

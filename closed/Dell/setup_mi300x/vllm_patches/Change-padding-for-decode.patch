@@ -1,0 +1,39 @@
+From b600f873f78c3ae1301ef508a4f90ff05b8d0481 Mon Sep 17 00:00:00 2001
+From: MLPerf <mlperf>
+Date: Wed, 1 Jan 2025 00:00:00 +0000
+Subject: [PATCH] Change-padding-for-decode
+
+---
+ .../quantization/quark/schemes/quark_w4a4_mxfp4.py       | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+diff --git a/vllm/model_executor/layers/quantization/quark/schemes/quark_w4a4_mxfp4.py b/vllm/model_executor/layers/quantization/quark/schemes/quark_w4a4_mxfp4.py
+index 367d661e6..e1bd527c6 100644
+--- a/vllm/model_executor/layers/quantization/quark/schemes/quark_w4a4_mxfp4.py
++++ b/vllm/model_executor/layers/quantization/quark/schemes/quark_w4a4_mxfp4.py
+@@ -173,9 +173,14 @@ class QuarkW4A4MXFP4(QuarkScheme):
+             qdq_x, _ = per_token_group_quant_mxfp4(x, OCP_MX_BLOCK_SIZE)
+             return F.linear(qdq_x, dq_w, bias)
+         else:
+-            PADDING = 256
+             M = x.shape[0]
+-            if (M % 256) != 0:
++
++            if M >= 3072:
++                PADDING = 256
++            else:
++                PADDING = 32
++
++            if (M % PADDING) != 0:
+                 x_pad = torch.zeros((M + PADDING- 1) // PADDING * PADDING, x.shape[1], device=x.device, dtype=x.dtype)
+                 x_pad[:M, :] = x
+             else:
+@@ -187,3 +187,4 @@ class QuarkW4A4MXFP4(QuarkScheme):
+                 else:
+-                    assert x_pad.shape[0] == x_scales.shape[0], f"{x_pad.shape=}, {x_scales.shape=}"
++                    if M >= 3072:
++                        assert x_pad.shape[0] == x_scales.shape[0], f"{x_pad.shape=}, {x_scales.shape=}"
+                     x_q = x_pad
+-- 
+2.34.1
+

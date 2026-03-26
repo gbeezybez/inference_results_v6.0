@@ -1,0 +1,78 @@
+2026-02-07 03:45:16,894 - INFO - Loading MLPerf log from /host/Workspace/gpt-oss/log/gpt-oss-120b/mlperf_log_accuracy.json
+2026-02-07 03:45:17,045 - INFO - Loaded 990 log entries
+2026-02-07 03:45:17,045 - INFO - Loading reference data from /data/dataset/gpt-oss-120b/compliance/acc_eval_compliance_gpqa.parquet
+2026-02-07 03:45:17,062 - INFO - Loaded reference data from Parquet file
+2026-02-07 03:45:17,069 - INFO - Reference data shape: (990, 6)
+2026-02-07 03:45:17,069 - INFO - Reference columns: ['input_tokens', 'num_tokens', 'text_input', 'original_messages', 'ground_truth', 'dataset']
+2026-02-07 03:45:17,071 - INFO - Unique datasets in reference data (1 total):
+2026-02-07 03:45:17,071 - INFO -   'gpqa_diamond' (990 samples)
+2026-02-07 03:45:17,071 - INFO - 
+Sample rows from reference data:
+2026-02-07 03:45:17,071 - INFO -   Row 0: dataset='gpqa_diamond'
+2026-02-07 03:45:17,071 - INFO -   Row 1: dataset='gpqa_diamond'
+2026-02-07 03:45:17,071 - INFO -   Row 2: dataset='gpqa_diamond'
+2026-02-07 03:45:17,071 - INFO - 
+Expected Dataset → Evaluator mapping:
+2026-02-07 03:45:17,072 - INFO -   'gpqa_diamond' (normalized: 'gpqa_diamond') → 'gpqa'
+2026-02-07 03:45:17,072 - INFO - Loading tokenizer: openai/gpt-oss-120b
+2026-02-07 03:45:18,050 - INFO - Grouping MLPerf log entries by dataset...
+2026-02-07 03:45:18,076 - INFO - Grouped entries by dataset:
+2026-02-07 03:45:18,076 - INFO -   gpqa_diamond: 990 entries
+2026-02-07 03:45:18,076 - INFO - Total entries: 990
+2026-02-07 03:45:18,076 - INFO - 
+Processing MLPerf log entries by dataset...
+2026-02-07 03:45:18,076 - INFO - 
+================================================================================
+2026-02-07 03:45:18,076 - INFO - Processing gpqa_diamond: 990 samples
+2026-02-07 03:45:18,076 - INFO - ================================================================================
+
+Evaluating gpqa_diamond:   0%|          | 0/990 [00:00<?, ?entry/s]
+Evaluating gpqa_diamond:  27%|██▋       | 263/990 [00:00<00:00, 2623.80entry/s]
+Evaluating gpqa_diamond:  53%|█████▎    | 526/990 [00:00<00:00, 966.50entry/s] 
+Evaluating gpqa_diamond:  68%|██████▊   | 674/990 [00:00<00:00, 654.66entry/s]
+Evaluating gpqa_diamond:  78%|███████▊  | 772/990 [00:00<00:00, 683.39entry/s]
+Evaluating gpqa_diamond:  87%|████████▋ | 863/990 [00:01<00:00, 639.58entry/s]
+Evaluating gpqa_diamond:  95%|█████████▌| 941/990 [00:01<00:00, 556.98entry/s]
+Evaluating gpqa_diamond: 100%|██████████| 990/990 [00:01<00:00, 654.44entry/s]
+2026-02-07 03:45:19,590 - INFO - 
+Calculating final scores...
+2026-02-07 03:45:19,590 - INFO - Evaluation complete!
+
+================================================================================
+MLPerf Accuracy Evaluation Results
+================================================================================
+Total samples evaluated: 990
+Overall raw accuracy: 63.23% (626/990)
+================================================================================
+
+Per-Dataset Breakdown:
+--------------------------------------------------------------------------------
+Dataset                    Correct    Total  Repeats      Score   Accuracy
+--------------------------------------------------------------------------------
+gpqa_diamond                   626      990        5     125.20     63.23%
+================================================================================
+
+Final Score Calculation:
+--------------------------------------------------------------------------------
+Formula: gpqa_diamond/5
+Score:   = 626/5
+         = 125.20
+         = 125.20
+Max:     = 990/5
+         = 198.00
+
+FINAL SCORE: 63.23% (125.20/198.00)
+================================================================================
+
+
+Printing for submission_checker:
+
+'exact_match': 63.232
+
+================================================================================
+TEST07 Verification Summary
+================================================================================
+Accuracy score: 63.232
+Accuracy threshold: 60.698
+Accuracy check pass: True
+TEST PASS

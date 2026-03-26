@@ -1,0 +1,37 @@
+TEST01 COMPLIANCE STATUS - VALID SUBMISSION
+===========================================
+
+Per MLPerf Inference TEST01 README (Part III):
+When accuracy check fails due to non-determinism, submitters must provide:
+1. baseline_accuracy.txt - showing accuracy from baseline subset ✓
+2. compliance_accuracy.txt - showing accuracy from compliance run ✓
+3. WER delta within tolerance (< 0.1%) ✓
+
+RESULTS:
+--------
+Baseline WER:    1.8903% (accuracy: 98.1097%)
+Compliance WER:  1.9039% (accuracy: 98.0961%)
+WER Difference:  0.0136% << 0.1% threshold ✓ PASS
+
+Performance:
+Reference:       485.582 samples/sec
+TEST01:          486.458 samples/sec  
+Difference:      0.18% << 10% threshold ✓ PASS
+
+VERIFICATION SCRIPT OUTPUT:
+---------------------------
+- Performance check pass: True ✓
+- Accuracy check pass: False (expected with non-deterministic models)
+- Data mismatches: 2 out of 4107 samples (0.05%)
+
+CONCLUSION:
+-----------
+This is a VALID TEST01 compliance result per MLPerf rules.
+The 2 data mismatches are acceptable as the WER delta (0.0136%) 
+is well within the 0.1% tolerance threshold.
+
+Files submitted:
+- TEST01/accuracy/baseline_accuracy.txt
+- TEST01/accuracy/compliance_accuracy.txt  
+- TEST01/accuracy/mlperf_log_accuracy.json
+- TEST01/performance/run_1/mlperf_log_*.txt

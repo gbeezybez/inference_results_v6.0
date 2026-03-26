@@ -1,0 +1,19 @@
+diff --git a/aiter/ops/triton/moe_op_gemm_a8w4.py b/aiter/ops/triton/moe_op_gemm_a8w4.py
+index 8f433cc6f..353f38e01 100644
+--- a/aiter/ops/triton/moe_op_gemm_a8w4.py
++++ b/aiter/ops/triton/moe_op_gemm_a8w4.py
+@@ -105,6 +105,14 @@ def get_kernel_config(m, n, k, routing_data):
+     else:
+         block_n = 512
+         num_warps = 8
++        
++        grid_m = routing_data.n_blocks(m, block_m)
++        grid_n = triton.cdiv(n, block_n)
++        grid = grid_m * grid_n * split_k
++        while block_n > 256 and grid < 4096:
++            block_n = block_n // 2
++            grid_n = triton.cdiv(n, block_n)
++            grid = grid_m * grid_n * split_k
+ 
+     ret = {
+         "block_m": block_m,

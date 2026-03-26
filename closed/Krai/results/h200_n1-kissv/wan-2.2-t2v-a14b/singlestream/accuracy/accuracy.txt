@@ -1,0 +1,3 @@
+'vbench_score': 69.89
+
+hash=5ba645766c9a48227cc1e41759b98dbbc40eafc2cebb5d9612522aff821279bc

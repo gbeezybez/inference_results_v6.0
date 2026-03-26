@@ -1,0 +1,6 @@
+[2026-02-09 14:11:58,517 log_parser.py:72 INFO] Sucessfully loaded MLPerf log from /root/inference/speech2text/v6_submission_proper/closed/RedHat/results/H200/whisper/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-09 14:11:58,517 log_parser.py:72 INFO] Sucessfully loaded MLPerf log from /root/inference/speech2text/logs_TEST01_compliance/mlperf_log_detail.txt.
+Verifying performance.
+Reference score = 485.582
+Test score = 486.458
+TEST PASS

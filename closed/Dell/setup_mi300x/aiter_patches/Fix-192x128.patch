@@ -1,0 +1,47 @@
+From 75a7d5fd855efdaad955bc3b54ed8dd1b8ac8bf8 Mon Sep 17 00:00:00 2001
+From: MLPerf <mlperf>
+Date: Wed, 1 Jan 2025 00:00:00 +0000
+Subject: [PATCH] Fix 192x128
+
+---
+ .../moe_ck_gemm1_instance_pertoken_f16_f8.cu           | 10 ++++++++++
+ .../moe_ck_gemm2_instance_pertoken_b16_i8.cu           |  2 +-
+ 2 files changed, 11 insertions(+), 1 deletion(-)
+
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_f16_f8.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_f16_f8.cu
+index 87d4a73..1f71765 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_f16_f8.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_f16_f8.cu
+@@ -68,6 +68,16 @@ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
+ 
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
++
++
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_b16_i8.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_b16_i8.cu
+index 870f62f..4692c13 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_b16_i8.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_b16_i8.cu
+@@ -24,7 +24,7 @@ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false)
+-CK_MOE_STAGE2_GEMM_DEFINE(102, 128/sizeof(A0DataType), 1, 4, V1, false)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false)
+ 
+ 
+-- 
+2.34.1
+

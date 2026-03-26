@@ -1,0 +1,23 @@
+nltk==3.9.1
+evaluate==0.4.3
+rouge_score==0.1.2
+# Triton harness dependencies
+grpcio>=1.67.1
+tritonclient==2.52.0
+gevent==24.11.1
+geventhttpclient==2.3.3
+httpx[http2]==0.28.1
+uvloop==0.21.0
+setproctitle==1.3.6
+pylatexenc==2.10
+
+# -e /work/build/inference/language/deepseek-r1/submodules/LiveCodeBench
+# -e /work/build/inference/language/deepseek-r1/submodules/prm800k
+huggingface_hub[cli]==0.32.0
+openai-whisper==20240930
+librosa==0.10.1
+tiktoken==0.9.0
+soundfile==0.13.0
+safetensors==0.5.2
+num2words==0.5.14
+sox==1.5.0

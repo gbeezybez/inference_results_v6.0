@@ -1,0 +1,44 @@
+{
+  "division": "closed",
+  "submitter": "RedHat",
+  "status": "available",
+
+  "system_name": "H200x8_Ubuntu22.04_SPR_2S",
+  "system_type": "datacenter",
+  "number_of_nodes": 1,
+
+  "accelerators_per_node": 8,
+  "accelerator_model_name": "NVIDIA H200",
+  "accelerator_host_interconnect": "NVLink (NV18 between all GPU pairs)",
+  "accelerator_frequency": "1980 MHz (max graphics/SM), 3201 MHz (max mem)",
+  "accelerator_memory_capacity": "151 GB",
+  "accelerator_memory_configuration": "HBM3e",
+  "accelerator_on-chip_memories": "L1/L2: <optional; not reported here>",
+
+  "accelerator_vbios_version": "96.00.A5.00.03",
+  "accelerator_idle_temperature": "30-33 C",
+
+  "host_processors_per_node": 2,
+  "host_processor_model_name": "Intel Xeon Processor (Sapphire Rapids)",
+  "host_processor_core_count": 80,
+  "host_processor_frequency": "NA",
+  "host_memory_capacity": "1.7 TiB",
+  "host_memory_configuration": "ECC RAM (dmidecode does not report speed)",
+
+  "host_storage_capacity": "56 TB NVMe (8x 7 TB) + 100 GB OS disk",
+  "host_storage_type": "Micron 7450 NVMe SSD (8 drives) + virtual OS disk (vda)",
+
+  "operating_system": "Ubuntu 22.04.5 LTS (Jammy Jellyfish), kernel 5.14.0-570.52.1.el9_6.x86_64",
+  "framework": "vLLM (CentML PR32: SJF + ViT attn update) + ai-dynamo + MLPerf Inference Qwen3-VL harness",
+  "other_software_stack": "Python 3.12, PyTorch 2.9.1+cu130, CUDA 13.0, cuDNN <fill>, NCCL <present>, Triton 3.5.1",
+
+  "input_data_types": "fp16/bf16 (images), int32 (tokens)",
+  "weight_data_types": "fp8",
+  "weight_transformations": "dynamic FP8 (as provided by checkpoint)",
+  "retraining": "none",
+
+  "starting_weights_filename": "https://huggingface.co/RedHatAI/Qwen3-VL-235B-A22B-Instruct-FP8-dynamic",
+
+  "hw_notes": "1 node with 8x NVIDIA H200 GPUs; all-to-all NVLink connectivity (NV18); 2-socket Sapphire Rapids host; 160 logical CPUs (80 physical cores), NUMA=2; ~1.7 TiB system RAM; 8x Micron 7450 7TB NVMe",
+  "sw_notes": "MLPerf multimodal Qwen3-VL harness; vLLM via Dynamo backend; async scheduling enabled; SJF scheduling enabled when --scheduling-policy=sjf; CUDA Graph capture enabled via compilation config"
+}

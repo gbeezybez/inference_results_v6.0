@@ -1,0 +1,59 @@
+From e43100aceee98295721721e3fcd3b5bdd4fa6784 Mon Sep 17 00:00:00 2001
+From: MLPerf <mlperf>
+Date: Wed, 1 Jan 2025 00:00:00 +0000
+Subject: [PATCH] add MIN_REQUIRE_PREFILL_QUERY condition
+
+---
+ vllm/core/scheduler.py | 6 ++++++
+ vllm/envs.py           | 4 ++++
+ 2 files changed, 10 insertions(+)
+
+diff --git a/vllm/core/scheduler.py b/vllm/core/scheduler.py
+index 0360f21cd..9dadb3859 100644
+--- a/vllm/core/scheduler.py
++++ b/vllm/core/scheduler.py
+@@ -524,6 +524,9 @@ class Scheduler:
+         # for processing and deallocation by the free_finished_seq_groups()
+         self._async_stopped: List[SequenceGroup] = []
+ 
++        ## MLPERF
++        self._do_prefill = True
++
+         # List with the chunk sizes to hand out to each sequence depending
+         # on how many partial prefills are running. This is slightly faster than
+         # running an integer division every time a prefill is scheduled.
+@@ -1299,6 +1302,9 @@ class Scheduler:
+         if envs.VLLM_LLAMA2_MLPERF_SCHED:
+             num_free_gpu_blocks = self.block_manager.get_num_free_gpu_blocks()
+             do_prefill = len(self.running) < envs.VLLM_LLAMA2_MLPERF_MAX_TARGET_DECODE_BATCH and num_free_gpu_blocks > envs.VLLM_LLAMA2_MLPERF_MIN_REQUIRE_PREFILL_GPU_BLOCK
++            has_enough_query = len(self.waiting) >= envs.VLLM_LLAMA2_MLPERF_MIN_REQUIRE_PREFILL_QUERY
++            do_prefill = do_prefill and ( has_enough_query or self._do_prefill )
++            self._do_prefill = not do_prefill
+ 
+         # If any requests are swapped, prioritized swapped requests.
+         if not self.swapped and do_prefill:
+diff --git a/vllm/envs.py b/vllm/envs.py
+index 37f22082b..8ab7b9a58 100644
+--- a/vllm/envs.py
++++ b/vllm/envs.py
+@@ -13,6 +13,7 @@ if TYPE_CHECKING:
+     VLLM_LLAMA2_MLPERF_MIN_TARGET_DECODE_BATCH: int = 1536
+     VLLM_LLAMA2_MLPERF_STEP_DECODE_BATCH: int = 256
+     VLLM_LLAMA2_MLPERF_MIN_REQUIRE_PREFILL_GPU_BLOCK: int = 0
++    VLLM_LLAMA2_MLPERF_MIN_REQUIRE_PREFILL_QUERY: int = 10
+     VLLM_HOST_IP: str = ""
+     VLLM_PORT: Optional[int] = None
+     VLLM_RPC_BASE_PATH: str = tempfile.gettempdir()
+@@ -210,6 +211,9 @@ environment_variables: dict[str, Callable[[], Any]] = {
+     "VLLM_LLAMA2_MLPERF_MIN_REQUIRE_PREFILL_GPU_BLOCK":
+     lambda: int(os.getenv("VLLM_LLAMA2_MLPERF_MIN_REQUIRE_PREFILL_GPU_BLOCK", "0")),
+ 
++    "VLLM_LLAMA2_MLPERF_MIN_REQUIRE_PREFILL_QUERY":
++    lambda: int(os.getenv("VLLM_LLAMA2_MLPERF_MIN_REQUIRE_PREFILL_QUERY", "10")),
++
+     # ================== Installation Time Env Vars ==================
+ 
+     # Target device of vLLM, supporting [cuda (by default),
+-- 
+2.34.1
+

@@ -1,0 +1,59 @@
+================================================
+MLPerf Results Summary
+================================================
+SUT name : PySUT
+Scenario : Offline
+Mode     : PerformanceOnly
+Samples per second: 242.801
+Tokens per second: 15408.4
+Result is : VALID
+  Min duration satisfied : Yes
+  Min queries satisfied : Yes
+  Early stopping satisfied: Yes
+
+================================================
+Additional Stats
+================================================
+Min latency (ns)                : 4363444718
+Max latency (ns)                : 739824499012
+Mean latency (ns)               : 371607618414
+50.00 percentile latency (ns)   : 371380067188
+90.00 percentile latency (ns)   : 666668493059
+95.00 percentile latency (ns)   : 704850783436
+97.00 percentile latency (ns)   : 719746525796
+99.00 percentile latency (ns)   : 733766714510
+99.90 percentile latency (ns)   : 739824499012
+
+
+================================================
+Test Parameters Used
+================================================
+samples_per_query : 178200
+target_qps : 270
+ttft_latency (ns): 100000000
+tpot_latency (ns): 100000000
+max_async_queries : 1
+min_duration (ms): 600000
+max_duration (ms): 0
+min_query_count : 1
+max_query_count : 0
+qsl_rng_seed : 2465351861681999779
+sample_index_rng_seed : 14276810075590677512
+schedule_rng_seed : 3936089224930324775
+accuracy_log_rng_seed : 720381539243781796
+accuracy_log_probability : 0
+accuracy_log_sampling_target : 4096
+print_timestamps : 0
+performance_issue_unique : 0
+performance_issue_same : 0
+performance_issue_same_index : 0
+performance_sample_count : 1633
+accuracy_sample_count : 1633
+WARNING: sample_concatenate_permutation was set to true. 
+Generated samples per query might be different as the one in the setting.
+Check the generated_samples_per_query line in the detailed log for the real
+samples_per_query value
+
+1 warning encountered. See detailed log.
+
+No errors encountered during test.

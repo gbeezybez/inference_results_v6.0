@@ -1,0 +1,160 @@
+Launching server on port 30002 with CPU affinity 14-20
+INFO 02-09 14:49:24 [__init__.py:248] No platform detected, vLLM is running on UnspecifiedPlatform
+WARNING 02-09 14:49:24 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('libcudart.so.12: cannot open shared object file: No such file or directory')
+INFO 02-09 14:49:24 [importing.py:43] Triton is installed but 0 active driver(s) found (expected 1). Disabling Triton to prevent runtime errors.
+INFO 02-09 14:49:24 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+[2026-02-09 14:49:24] server_args=ServerArgs(model_path='/model/Llama-3.1-8B-Instruct-autoround-w4g128-iters128-cpu', tokenizer_path='/model/Llama-3.1-8B-Instruct-autoround-w4g128-iters128-cpu', tokenizer_mode='auto', skip_tokenizer_init=True, load_format='auto', trust_remote_code=False, dtype='auto', kv_cache_dtype='auto', quantization=None, quantization_param_path=None, context_length=None, device='cpu', served_model_name='/model/Llama-3.1-8B-Instruct-autoround-w4g128-iters128-cpu', chat_template=None, completion_template=None, is_embedding=False, revision=None, host='127.0.0.1', port=30002, mem_fraction_static=0.9, max_running_requests=128, max_total_tokens=131072, chunked_prefill_size=8192, max_prefill_tokens=32768, schedule_policy='fcfs', schedule_conservativeness=1.0, cpu_offload_gb=0, page_size=1, tp_size=1, stream_interval=1, stream_output=False, random_seed=838454474, constrained_json_whitespace_pattern=None, watchdog_timeout=300, dist_timeout=None, download_dir=None, base_gpu_id=0, gpu_id_step=1, log_level='info', log_level_http=None, log_requests=False, log_requests_level=0, show_time_cost=False, enable_metrics=False, decode_log_interval=40, api_key=None, file_storage_path='sglang_storage', enable_cache_report=False, reasoning_parser=None, dp_size=1, load_balance_method='round_robin', ep_size=1, dist_init_addr=None, nnodes=1, node_rank=0, json_model_override_args='{}', lora_paths=None, max_loras_per_batch=8, lora_backend='triton', attention_backend='intel_amx', sampling_backend='pytorch', grammar_backend='xgrammar', speculative_algorithm=None, speculative_draft_model_path=None, speculative_num_steps=None, speculative_eagle_topk=None, speculative_num_draft_tokens=None, speculative_accept_threshold_single=1.0, speculative_accept_threshold_acc=1.0, speculative_token_map=None, enable_double_sparsity=False, ds_channel_config_path=None, ds_heavy_channel_num=32, ds_heavy_token_num=256, ds_heavy_channel_type='qk', ds_sparse_decode_threshold=4096, disable_radix_cache=False, disable_cuda_graph=False, disable_cuda_graph_padding=False, enable_nccl_nvls=False, disable_outlines_disk_cache=False, disable_custom_all_reduce=False, disable_mla=False, disable_overlap_schedule=False, enable_mixed_chunk=False, enable_dp_attention=False, enable_ep_moe=False, enable_deepep_moe=False, deepep_mode='auto', enable_torch_compile=False, torch_compile_max_bs=32, cuda_graph_max_bs=160, cuda_graph_bs=None, torchao_config='', enable_nan_detection=False, enable_p2p_check=False, triton_attention_reduce_in_fp32=False, triton_attention_num_kv_splits=8, num_continuous_decode_steps=1, delete_ckpt_after_loading=False, enable_memory_saver=False, allow_auto_truncate=False, enable_custom_logit_processor=False, tool_call_parser=None, enable_hierarchical_cache=False, hicache_ratio=2.0, enable_flashinfer_mla=False, enable_flashmla=False, flashinfer_mla_disable_ragged=False, warmups=None, n_share_experts_fusion=0, disable_shared_experts_fusion=False, debug_tensor_dump_output_folder=None, debug_tensor_dump_input_file=None, debug_tensor_dump_inject=False, disaggregation_mode='null', disaggregation_bootstrap_port=8998)
+[2026-02-09 14:49:24] The model is convertible to int4_cpu during runtime. Using int4_cpu kernel.
+[2026-02-09 14:49:24] int4_cpu quantization is not fully optimized yet. The speed can be slower than non-quantized models.
+INFO 02-09 14:49:29 [__init__.py:248] No platform detected, vLLM is running on UnspecifiedPlatform
+INFO 02-09 14:49:29 [__init__.py:248] No platform detected, vLLM is running on UnspecifiedPlatform
+WARNING 02-09 14:49:29 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('libcudart.so.12: cannot open shared object file: No such file or directory')
+WARNING 02-09 14:49:29 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('libcudart.so.12: cannot open shared object file: No such file or directory')
+INFO 02-09 14:49:29 [importing.py:43] Triton is installed but 0 active driver(s) found (expected 1). Disabling Triton to prevent runtime errors.
+INFO 02-09 14:49:29 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+INFO 02-09 14:49:29 [importing.py:43] Triton is installed but 0 active driver(s) found (expected 1). Disabling Triton to prevent runtime errors.
+INFO 02-09 14:49:29 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+[2026-02-09 14:49:29 TP0] The model is convertible to int4_cpu during runtime. Using int4_cpu kernel.
+[2026-02-09 14:49:29 TP0] int4_cpu quantization is not fully optimized yet. The speed can be slower than non-quantized models.
+[2026-02-09 14:49:29 TP0] The model is convertible to int4_cpu during runtime. Using int4_cpu kernel.
+[2026-02-09 14:49:29 TP0] int4_cpu quantization is not fully optimized yet. The speed can be slower than non-quantized models.
+[2026-02-09 14:49:29 TP0] Init torch distributed begin.
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[2026-02-09 14:49:29 TP0] Init torch distributed ends. mem usage=0.02 GB
+[2026-02-09 14:49:29 TP0] Load weight begin. avail mem=977.22 GB
+[2026-02-09 14:49:29 TP0] Ignore import error when loading sglang.srt.models.minicpmo. cannot import name 'WHISPER_ATTENTION_CLASSES' from 'transformers.models.whisper.modeling_whisper' (/usr/local/lib/python3.12/dist-packages/transformers/models/whisper/modeling_whisper.py)
+Loading safetensors checkpoint shards:   0% Completed | 0/2 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  50% Completed | 1/2 [00:00<00:00,  3.65it/s]
+Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:00<00:00,  5.49it/s]
+Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:00<00:00,  5.10it/s]
+
+[2026-02-09 14:50:08 TP0] Load weight end. type=LlamaForCausalLM, dtype=torch.bfloat16, avail mem=873.14 GB, mem usage=104.08 GB.
+[2026-02-09 14:50:09 TP0] KV Cache is allocated. #tokens: 131072, K size: 8.00 GB, V size: 8.00 GB
+[2026-02-09 14:50:09 TP0] Memory pool end. avail mem=858.88 GB
+[2026-02-09 14:50:09 TP0] max_total_num_tokens=131072, chunked_prefill_size=8192, max_prefill_tokens=32768, max_running_requests=128, context_len=131072
+[2026-02-09 14:50:09] INFO:     Started server process [16322]
+[2026-02-09 14:50:09] INFO:     Waiting for application startup.
+[2026-02-09 14:50:09] INFO:     Application startup complete.
+[2026-02-09 14:50:09] INFO:     Uvicorn running on http://127.0.0.1:30002 (Press CTRL+C to quit)
+[2026-02-09 14:50:10] INFO:     127.0.0.1:41666 - "GET /get_model_info HTTP/1.1" 200 OK
+[2026-02-09 14:50:10 TP0] Prefill batch. #new-seq: 1, #new-token: 3, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+[2026-02-09 14:50:16] INFO:     127.0.0.1:41672 - "POST /generate HTTP/1.1" 200 OK
+[2026-02-09 14:50:16] The server is fired up and ready to roll!
+[2026-02-09 14:51:10] INFO:     127.0.0.1:45790 - "GET /health HTTP/1.1" 200 OK
+[2026-02-09 14:53:50] INFO:     127.0.0.1:48708 - "GET /v1/models HTTP/1.1" 200 OK
+[2026-02-09 14:53:56 TP0] Prefill batch. #new-seq: 8, #new-token: 8192, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+[2026-02-09 14:53:56 TP0] Prefill batch. #new-seq: 1, #new-token: 56, #cached-token: 0, token usage: 0.06, #running-req: 7, #queue-req: 0, 
+[2026-02-09 14:54:26 TP0] Decode batch. #running-req: 8, #token: 8505, token usage: 0.06, gen throughput (token/s): 1.03, #queue-req: 0, 
+[2026-02-09 14:54:35 TP0] Decode batch. #running-req: 8, #token: 8825, token usage: 0.07, gen throughput (token/s): 33.73, #queue-req: 0, 
+[2026-02-09 14:54:45 TP0] Decode batch. #running-req: 8, #token: 9145, token usage: 0.07, gen throughput (token/s): 33.91, #queue-req: 0, 
+[2026-02-09 14:54:48] INFO:     127.0.0.1:59320 - "POST /generate HTTP/1.1" 200 OK
+[2026-02-09 14:54:49 TP0] Prefill batch. #new-seq: 5, #new-token: 8192, #cached-token: 5, token usage: 0.00, #running-req: 0, #queue-req: 59, 
+[2026-02-09 14:54:49 TP0] Prefill batch. #new-seq: 6, #new-token: 8192, #cached-token: 130, token usage: 0.06, #running-req: 4, #queue-req: 54, 
+[2026-02-09 14:55:39 TP0] Prefill batch. #new-seq: 6, #new-token: 8192, #cached-token: 131, token usage: 0.12, #running-req: 9, #queue-req: 49, 
+[2026-02-09 14:55:39 TP0] Prefill batch. #new-seq: 6, #new-token: 8192, #cached-token: 131, token usage: 0.19, #running-req: 14, #queue-req: 44, 
+[2026-02-09 14:56:05 TP0] Prefill batch. #new-seq: 6, #new-token: 8192, #cached-token: 131, token usage: 0.25, #running-req: 19, #queue-req: 39, 
+[2026-02-09 14:56:30 TP0] Prefill batch. #new-seq: 5, #new-token: 8192, #cached-token: 105, token usage: 0.31, #running-req: 24, #queue-req: 35, 
+[2026-02-09 14:56:55 TP0] Prefill batch. #new-seq: 6, #new-token: 8192, #cached-token: 134, token usage: 0.37, #running-req: 28, #queue-req: 30, 
+[2026-02-09 14:57:20 TP0] Prefill batch. #new-seq: 6, #new-token: 8192, #cached-token: 131, token usage: 0.44, #running-req: 33, #queue-req: 25, 
+[2026-02-09 14:57:45 TP0] Prefill batch. #new-seq: 6, #new-token: 8192, #cached-token: 134, token usage: 0.50, #running-req: 38, #queue-req: 20, 
+[2026-02-09 14:58:10 TP0] Prefill batch. #new-seq: 6, #new-token: 8192, #cached-token: 131, token usage: 0.56, #running-req: 43, #queue-req: 15, 
+[2026-02-09 14:58:35 TP0] Prefill batch. #new-seq: 6, #new-token: 8192, #cached-token: 135, token usage: 0.62, #running-req: 48, #queue-req: 10, 
+[2026-02-09 14:59:00 TP0] Prefill batch. #new-seq: 6, #new-token: 8192, #cached-token: 134, token usage: 0.69, #running-req: 53, #queue-req: 5, 
+[2026-02-09 14:59:26 TP0] Prefill batch. #new-seq: 5, #new-token: 8192, #cached-token: 104, token usage: 0.75, #running-req: 58, #queue-req: 1, 
+[2026-02-09 14:59:52 TP0] Prefill batch. #new-seq: 2, #new-token: 1765, #cached-token: 27, token usage: 0.81, #running-req: 62, #queue-req: 0, 
+[2026-02-09 15:00:50 TP0] Decode batch. #running-req: 64, #token: 109757, token usage: 0.84, gen throughput (token/s): 4.56, #queue-req: 0, 
+[2026-02-09 15:01:30 TP0] Decode batch. #running-req: 64, #token: 112317, token usage: 0.86, gen throughput (token/s): 63.28, #queue-req: 0, 
+[2026-02-09 15:02:08 TP0] Decode batch. #running-req: 64, #token: 114877, token usage: 0.88, gen throughput (token/s): 68.17, #queue-req: 0, 
+[2026-02-09 15:02:29] INFO:     127.0.0.1:39600 - "POST /generate HTTP/1.1" 200 OK
+[2026-02-09 15:02:30 TP0] Prefill batch. #new-seq: 7, #new-token: 8192, #cached-token: 190, token usage: 0.00, #running-req: 0, #queue-req: 57, 
+[2026-02-09 15:02:30 TP0] Prefill batch. #new-seq: 8, #new-token: 8192, #cached-token: 184, token usage: 0.06, #running-req: 6, #queue-req: 50, 
+[2026-02-09 15:03:18 TP0] Prefill batch. #new-seq: 7, #new-token: 8192, #cached-token: 157, token usage: 0.13, #running-req: 13, #queue-req: 44, 
+[2026-02-09 15:03:18 TP0] Prefill batch. #new-seq: 8, #new-token: 8192, #cached-token: 184, token usage: 0.19, #running-req: 19, #queue-req: 37, 
+[2026-02-09 15:03:42 TP0] Prefill batch. #new-seq: 8, #new-token: 8192, #cached-token: 187, token usage: 0.25, #running-req: 26, #queue-req: 30, 
+[2026-02-09 15:04:06 TP0] Prefill batch. #new-seq: 7, #new-token: 8192, #cached-token: 162, token usage: 0.31, #running-req: 33, #queue-req: 24, 
+[2026-02-09 15:04:30 TP0] Prefill batch. #new-seq: 8, #new-token: 8192, #cached-token: 185, token usage: 0.38, #running-req: 39, #queue-req: 17, 
+[2026-02-09 15:04:53 TP0] Prefill batch. #new-seq: 8, #new-token: 8192, #cached-token: 190, token usage: 0.44, #running-req: 46, #queue-req: 10, 
+[2026-02-09 15:05:17 TP0] Prefill batch. #new-seq: 7, #new-token: 8192, #cached-token: 157, token usage: 0.50, #running-req: 53, #queue-req: 4, 
+[2026-02-09 15:05:41 TP0] Prefill batch. #new-seq: 5, #new-token: 5275, #cached-token: 107, token usage: 0.56, #running-req: 59, #queue-req: 0, 
+[2026-02-09 15:06:36 TP0] Decode batch. #running-req: 64, #token: 80128, token usage: 0.61, gen throughput (token/s): 9.55, #queue-req: 0, 
+[2026-02-09 15:07:11 TP0] Decode batch. #running-req: 64, #token: 82688, token usage: 0.63, gen throughput (token/s): 73.61, #queue-req: 0, 
+[2026-02-09 15:07:46 TP0] Decode batch. #running-req: 64, #token: 85248, token usage: 0.65, gen throughput (token/s): 71.56, #queue-req: 0, 
+[2026-02-09 15:08:12] INFO:     127.0.0.1:51742 - "POST /generate HTTP/1.1" 200 OK
+[2026-02-09 15:08:13 TP0] Prefill batch. #new-seq: 8, #new-token: 8192, #cached-token: 213, token usage: 0.00, #running-req: 0, #queue-req: 56, 
+[2026-02-09 15:08:13 TP0] Prefill batch. #new-seq: 9, #new-token: 8192, #cached-token: 212, token usage: 0.06, #running-req: 7, #queue-req: 48, 
+[2026-02-09 15:08:58 TP0] Prefill batch. #new-seq: 9, #new-token: 8192, #cached-token: 213, token usage: 0.13, #running-req: 15, #queue-req: 40, 
+[2026-02-09 15:08:58 TP0] Prefill batch. #new-seq: 9, #new-token: 8192, #cached-token: 209, token usage: 0.19, #running-req: 23, #queue-req: 32, 
+[2026-02-09 15:09:21 TP0] Prefill batch. #new-seq: 9, #new-token: 8192, #cached-token: 211, token usage: 0.25, #running-req: 31, #queue-req: 24, 
+[2026-02-09 15:09:44 TP0] Prefill batch. #new-seq: 9, #new-token: 8192, #cached-token: 213, token usage: 0.31, #running-req: 39, #queue-req: 16, 
+[2026-02-09 15:10:07 TP0] Prefill batch. #new-seq: 9, #new-token: 8192, #cached-token: 212, token usage: 0.38, #running-req: 47, #queue-req: 8, 
+[2026-02-09 15:10:31 TP0] Prefill batch. #new-seq: 9, #new-token: 8192, #cached-token: 217, token usage: 0.44, #running-req: 55, #queue-req: 0, 
+[2026-02-09 15:10:54 TP0] Prefill batch. #new-seq: 1, #new-token: 380, #cached-token: 0, token usage: 0.50, #running-req: 63, #queue-req: 0, 
+[2026-02-09 15:11:26 TP0] Decode batch. #running-req: 64, #token: 66529, token usage: 0.51, gen throughput (token/s): 11.68, #queue-req: 0, 
+[2026-02-09 15:11:58 TP0] Decode batch. #running-req: 64, #token: 69089, token usage: 0.53, gen throughput (token/s): 80.25, #queue-req: 0, 
+[2026-02-09 15:12:31 TP0] Decode batch. #running-req: 64, #token: 71649, token usage: 0.55, gen throughput (token/s): 77.47, #queue-req: 0, 
+[2026-02-09 15:13:03] INFO:     127.0.0.1:44224 - "POST /generate HTTP/1.1" 200 OK
+[2026-02-09 15:13:04 TP0] Decode batch. #running-req: 0, #token: 0, token usage: 0.00, gen throughput (token/s): 76.24, #queue-req: 0, 
+[2026-02-09 15:13:04 TP0] Prefill batch. #new-seq: 9, #new-token: 8192, #cached-token: 240, token usage: 0.00, #running-req: 0, #queue-req: 55, 
+[2026-02-09 15:13:04 TP0] Prefill batch. #new-seq: 10, #new-token: 8192, #cached-token: 241, token usage: 0.06, #running-req: 8, #queue-req: 46, 
+[2026-02-09 15:13:49 TP0] Prefill batch. #new-seq: 10, #new-token: 8192, #cached-token: 236, token usage: 0.13, #running-req: 17, #queue-req: 37, 
+[2026-02-09 15:13:49 TP0] Prefill batch. #new-seq: 10, #new-token: 8192, #cached-token: 238, token usage: 0.19, #running-req: 26, #queue-req: 28, 
+[2026-02-09 15:14:11 TP0] Prefill batch. #new-seq: 10, #new-token: 8192, #cached-token: 238, token usage: 0.25, #running-req: 35, #queue-req: 19, 
+[2026-02-09 15:14:34 TP0] Prefill batch. #new-seq: 10, #new-token: 8192, #cached-token: 242, token usage: 0.31, #running-req: 44, #queue-req: 10, 
+[2026-02-09 15:14:57 TP0] Prefill batch. #new-seq: 10, #new-token: 8192, #cached-token: 245, token usage: 0.38, #running-req: 53, #queue-req: 1, 
+[2026-02-09 15:15:20 TP0] Prefill batch. #new-seq: 2, #new-token: 1035, #cached-token: 27, token usage: 0.44, #running-req: 62, #queue-req: 0, 
+[2026-02-09 15:16:17 TP0] Decode batch. #running-req: 64, #token: 61047, token usage: 0.47, gen throughput (token/s): 13.25, #queue-req: 0, 
+[2026-02-09 15:16:49 TP0] Decode batch. #running-req: 64, #token: 63607, token usage: 0.49, gen throughput (token/s): 80.37, #queue-req: 0, 
+[2026-02-09 15:17:22 TP0] Decode batch. #running-req: 64, #token: 66167, token usage: 0.50, gen throughput (token/s): 77.65, #queue-req: 0, 
+[2026-02-09 15:17:28] INFO:     127.0.0.1:35692 - "POST /generate HTTP/1.1" 200 OK
+[2026-02-09 15:17:29 TP0] Prefill batch. #new-seq: 12, #new-token: 8192, #cached-token: 320, token usage: 0.00, #running-req: 0, #queue-req: 52, 
+[2026-02-09 15:17:29 TP0] Prefill batch. #new-seq: 12, #new-token: 8192, #cached-token: 290, token usage: 0.06, #running-req: 11, #queue-req: 41, 
+[2026-02-09 15:18:12 TP0] Prefill batch. #new-seq: 12, #new-token: 8192, #cached-token: 291, token usage: 0.13, #running-req: 22, #queue-req: 30, 
+[2026-02-09 15:18:12 TP0] Prefill batch. #new-seq: 12, #new-token: 8192, #cached-token: 292, token usage: 0.19, #running-req: 33, #queue-req: 19, 
+[2026-02-09 15:18:35 TP0] Prefill batch. #new-seq: 12, #new-token: 8192, #cached-token: 291, token usage: 0.25, #running-req: 44, #queue-req: 8, 
+[2026-02-09 15:18:57 TP0] Prefill batch. #new-seq: 9, #new-token: 5917, #cached-token: 216, token usage: 0.31, #running-req: 55, #queue-req: 0, 
+[2026-02-09 15:19:57 TP0] Decode batch. #running-req: 64, #token: 49032, token usage: 0.37, gen throughput (token/s): 16.58, #queue-req: 0, 
+[2026-02-09 15:20:25 TP0] Decode batch. #running-req: 64, #token: 51592, token usage: 0.39, gen throughput (token/s): 90.46, #queue-req: 0, 
+[2026-02-09 15:20:54 TP0] Decode batch. #running-req: 64, #token: 54152, token usage: 0.41, gen throughput (token/s): 87.15, #queue-req: 0, 
+[2026-02-09 15:21:06] INFO:     127.0.0.1:47948 - "POST /generate HTTP/1.1" 200 OK
+[2026-02-09 15:21:06 TP0] Prefill batch. #new-seq: 13, #new-token: 8192, #cached-token: 346, token usage: 0.00, #running-req: 0, #queue-req: 51, 
+[2026-02-09 15:21:06 TP0] Prefill batch. #new-seq: 13, #new-token: 8192, #cached-token: 320, token usage: 0.06, #running-req: 12, #queue-req: 39, 
+[2026-02-09 15:21:50 TP0] Prefill batch. #new-seq: 13, #new-token: 8192, #cached-token: 315, token usage: 0.13, #running-req: 24, #queue-req: 27, 
+[2026-02-09 15:21:50 TP0] Prefill batch. #new-seq: 13, #new-token: 8192, #cached-token: 318, token usage: 0.19, #running-req: 36, #queue-req: 15, 
+[2026-02-09 15:22:13 TP0] Prefill batch. #new-seq: 14, #new-token: 8192, #cached-token: 347, token usage: 0.25, #running-req: 48, #queue-req: 2, 
+[2026-02-09 15:22:35 TP0] Prefill batch. #new-seq: 3, #new-token: 1815, #cached-token: 53, token usage: 0.31, #running-req: 61, #queue-req: 0, 
+[2026-02-09 15:23:17 TP0] Decode batch. #running-req: 64, #token: 44416, token usage: 0.34, gen throughput (token/s): 17.91, #queue-req: 0, 
+[2026-02-09 15:23:45 TP0] Decode batch. #running-req: 64, #token: 46976, token usage: 0.36, gen throughput (token/s): 93.95, #queue-req: 0, 
+[2026-02-09 15:24:13 TP0] Decode batch. #running-req: 64, #token: 49536, token usage: 0.38, gen throughput (token/s): 90.21, #queue-req: 0, 
+[2026-02-09 15:24:30] INFO:     127.0.0.1:59868 - "POST /generate HTTP/1.1" 200 OK
+[2026-02-09 15:24:30 TP0] Prefill batch. #new-seq: 15, #new-token: 8192, #cached-token: 403, token usage: 0.00, #running-req: 0, #queue-req: 49, 
+[2026-02-09 15:24:30 TP0] Prefill batch. #new-seq: 16, #new-token: 8192, #cached-token: 407, token usage: 0.06, #running-req: 14, #queue-req: 34, 
+[2026-02-09 15:25:14 TP0] Prefill batch. #new-seq: 16, #new-token: 8192, #cached-token: 399, token usage: 0.13, #running-req: 29, #queue-req: 19, 
+[2026-02-09 15:25:14 TP0] Prefill batch. #new-seq: 16, #new-token: 8192, #cached-token: 401, token usage: 0.19, #running-req: 44, #queue-req: 4, 
+[2026-02-09 15:25:36 TP0] Prefill batch. #new-seq: 5, #new-token: 2484, #cached-token: 104, token usage: 0.25, #running-req: 59, #queue-req: 0, 
+[2026-02-09 15:26:15 TP0] Decode batch. #running-req: 64, #token: 36389, token usage: 0.28, gen throughput (token/s): 21.04, #queue-req: 0, 
+[2026-02-09 15:26:39 TP0] Decode batch. #running-req: 64, #token: 38949, token usage: 0.30, gen throughput (token/s): 102.97, #queue-req: 0, 
+[2026-02-09 15:27:05 TP0] Decode batch. #running-req: 64, #token: 41509, token usage: 0.32, gen throughput (token/s): 99.23, #queue-req: 0, 
+[2026-02-09 15:27:26] INFO:     127.0.0.1:60676 - "POST /generate HTTP/1.1" 200 OK
+[2026-02-09 15:27:27 TP0] Prefill batch. #new-seq: 22, #new-token: 8192, #cached-token: 591, token usage: 0.00, #running-req: 0, #queue-req: 42, 
+[2026-02-09 15:27:27 TP0] Prefill batch. #new-seq: 23, #new-token: 8192, #cached-token: 585, token usage: 0.06, #running-req: 21, #queue-req: 20, 
+[2026-02-09 15:28:10 TP0] Prefill batch. #new-seq: 21, #new-token: 7775, #cached-token: 537, token usage: 0.13, #running-req: 43, #queue-req: 0, 
+[2026-02-09 15:28:33 TP0] Decode batch. #running-req: 64, #token: 24792, token usage: 0.19, gen throughput (token/s): 29.19, #queue-req: 0, 
+[2026-02-09 15:28:53 TP0] Decode batch. #running-req: 64, #token: 27352, token usage: 0.21, gen throughput (token/s): 126.65, #queue-req: 0, 
+[2026-02-09 15:29:14 TP0] Decode batch. #running-req: 64, #token: 29912, token usage: 0.23, gen throughput (token/s): 121.64, #queue-req: 0, 
+[2026-02-09 15:29:36] INFO:     127.0.0.1:48010 - "POST /generate HTTP/1.1" 200 OK
+[2026-02-09 15:29:37 TP0] Decode batch. #running-req: 0, #token: 0, token usage: 0.00, gen throughput (token/s): 114.13, #queue-req: 0, 
+[2026-02-09 15:29:37 TP0] Prefill batch. #new-seq: 26, #new-token: 8192, #cached-token: 694, token usage: 0.00, #running-req: 0, #queue-req: 38, 
+[2026-02-09 15:29:37 TP0] Prefill batch. #new-seq: 27, #new-token: 8192, #cached-token: 697, token usage: 0.06, #running-req: 25, #queue-req: 12, 
+[2026-02-09 15:30:20 TP0] Prefill batch. #new-seq: 13, #new-token: 4124, #cached-token: 327, token usage: 0.13, #running-req: 51, #queue-req: 0, 
+[2026-02-09 15:30:48 TP0] Decode batch. #running-req: 64, #token: 23175, token usage: 0.18, gen throughput (token/s): 35.80, #queue-req: 0, 
+[2026-02-09 15:31:06 TP0] Decode batch. #running-req: 64, #token: 25735, token usage: 0.20, gen throughput (token/s): 143.74, #queue-req: 0, 
+[2026-02-09 15:31:24 TP0] Decode batch. #running-req: 64, #token: 28295, token usage: 0.22, gen throughput (token/s): 144.82, #queue-req: 0, 
+[2026-02-09 15:31:27] INFO:     127.0.0.1:48192 - "POST /generate HTTP/1.1" 200 OK

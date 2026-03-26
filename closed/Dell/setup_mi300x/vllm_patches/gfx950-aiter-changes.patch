@@ -1,0 +1,162 @@
+From 3752e16d5d1ba955698a65ae26dd95803bd06601 Mon Sep 17 00:00:00 2001
+From: MLPerf <mlperf>
+Date: Wed, 1 Jan 2025 00:00:00 +0000
+Subject: [PATCH] gfx950-aiter-changes
+
+---
+ vllm/attention/backends/rocm_flash_attn.py    |  8 +++--
+ vllm/attention/ops/rocm_aiter_paged_attn.py   |  6 ++--
+ vllm/model_executor/layers/activation.py      |  4 ++-
+ .../quark/schemes/quark_w4a4_mxfp4.py         | 31 ++++++++++++++-----
+ 4 files changed, 34 insertions(+), 15 deletions(-)
+
+diff --git a/vllm/attention/backends/rocm_flash_attn.py b/vllm/attention/backends/rocm_flash_attn.py
+index 5831862ec..0a3408e96 100644
+--- a/vllm/attention/backends/rocm_flash_attn.py
++++ b/vllm/attention/backends/rocm_flash_attn.py
+@@ -571,12 +571,14 @@ class ROCmFlashAttentionImpl(AttentionImpl):
+                     "FA backend instead by setting the env var "
+                     "`VLLM_USE_TRITON_FLASH_ATTN=0`")
+ 
+-            if self.kv_cache_dtype in ["int8", "fp8", "fp8_e4m3"]:
++            if self.kv_cache_dtype in ["int8", "fp8_e4m3"]:
+                 from vllm.attention.ops.triton_flash_attention import (  # noqa: F401
+                                                                 triton_attention)
+                 self.triton_attn_func = triton_attention
+             else:
+                 from aiter.ops.triton.mha import flash_attn_varlen_func
++                from aiter.ops.triton.mha import mha_set_use_int64_strides as set_triton_fa_strides
++                set_triton_fa_strides(True)
+                 self.triton_attn_func = flash_attn_varlen_func
+             logger.debug("Using Triton FA in ROCmBackend")
+             if self.sliding_window != (-1, -1):
+@@ -800,7 +802,7 @@ class ROCmFlashAttentionImpl(AttentionImpl):
+                             query.dtype,
+                             seq_lens,
+                             make_attn_mask=causal_mask)  # type: ignore
+-                    if self.kv_cache_dtype in ["int8", "fp8", "fp8_e4m3"]:
++                    if self.kv_cache_dtype in ["int8", "fp8_e4m3"]:
+                         use_fp8_scales = (layer._q_scale and layer._k_scale
+                                         and layer._v_scale and layer._prob_scale
+                                         and envs.VLLM_USE_ROCM_FP8_FLASH_ATTN)
+@@ -842,7 +844,7 @@ class ROCmFlashAttentionImpl(AttentionImpl):
+                             return_lse=False,
+                             return_attn_probs=False,
+                             block_table=None,
+-                        )[0]
++                        )
+                 elif self.use_naive_attn:
+                     if self.num_kv_heads != self.num_heads:
+                         # Interleave for MQA workaround.
+diff --git a/vllm/attention/ops/rocm_aiter_paged_attn.py b/vllm/attention/ops/rocm_aiter_paged_attn.py
+index a12b493d9..1507621c2 100644
+--- a/vllm/attention/ops/rocm_aiter_paged_attn.py
++++ b/vllm/attention/ops/rocm_aiter_paged_attn.py
+@@ -138,8 +138,8 @@ class AITERPagedAttention(PagedAttention):
+             block_tables,
+             seq_lens,
+             max_num_blocks_per_seq,
+-            k_scale,
+-            v_scale,
+-            output,
++            K_QScale=k_scale,
++            V_QScale=v_scale,
++            out_=output,
+         )
+         return output
+diff --git a/vllm/model_executor/layers/activation.py b/vllm/model_executor/layers/activation.py
+index 09df1c5a2..803bca8bc 100644
+--- a/vllm/model_executor/layers/activation.py
++++ b/vllm/model_executor/layers/activation.py
+@@ -20,6 +20,8 @@ VLLM_USE_AITER_TRITON_SILU_MUL = (os.environ.get(
+     "VLLM_USE_AITER_TRITON_SILU_MUL", "0") == "1")
+ VLLM_TRITON_FP4_GEMM_USE_ASM = (os.environ.get("VLLM_TRITON_FP4_GEMM_USE_ASM",
+                                                "0") == "1")
++VLLM_TRITON_FP4_GEMM_BPRESHUFFLE = (os.environ.get(
++    "VLLM_TRITON_FP4_GEMM_BPRESHUFFLE", "0") == "1")
+ 
+ 
+ @CustomOp.register("fatrelu_and_mul")
+@@ -94,7 +96,7 @@ class SiluAndMul(CustomOp):
+                      x: torch.Tensor,
+                      scale: Optional[torch.Tensor] = None) -> torch.Tensor:
+         if VLLM_USE_AITER_TRITON_SILU_MUL:
+-            if VLLM_TRITON_FP4_GEMM_USE_ASM and x.shape[0] >= 32:
++            if (VLLM_TRITON_FP4_GEMM_USE_ASM and x.shape[0] >= 32) or VLLM_TRITON_FP4_GEMM_BPRESHUFFLE:
+                 out, out_scales = self.op_shfl(x)
+             else:
+                 out, out_scales = self.op(x)
+diff --git a/vllm/model_executor/layers/quantization/quark/schemes/quark_w4a4_mxfp4.py b/vllm/model_executor/layers/quantization/quark/schemes/quark_w4a4_mxfp4.py
+index e0212fa52..0ed935818 100644
+--- a/vllm/model_executor/layers/quantization/quark/schemes/quark_w4a4_mxfp4.py
++++ b/vllm/model_executor/layers/quantization/quark/schemes/quark_w4a4_mxfp4.py
+@@ -26,6 +26,10 @@ try:
+         from aiter import gemm_a4w4_asm
+         from aiter.utility.fp4_utils import (
+             dynamic_mxfp4_quant as dynamic_mxfp4_quant_asm)
++    VLLM_TRITON_FP4_GEMM_BPRESHUFFLE = (os.environ.get(
++        "VLLM_TRITON_FP4_GEMM_BPRESHUFFLE", "0") == "1")
++    if VLLM_TRITON_FP4_GEMM_BPRESHUFFLE:
++        from aiter import gemm_a4w4_blockscale
+ except ImportError:
+     dynamic_mxfp4_quant = gemm_afp4wfp4 = None
+ 
+@@ -56,6 +60,14 @@ class QuarkW4A4MXFP4(QuarkScheme):
+     def process_weights_after_loading(self, layer: torch.nn.Module) -> None:
+         layer.weight = torch.nn.Parameter(layer.weight.data,
+                                           requires_grad=False)
++        if VLLM_TRITON_FP4_GEMM_BPRESHUFFLE:
++            from aiter.ops.shuffle import shuffle_weight
++            #print(f"b4 {layer.weight.shape=}, {layer.weight.stride()=}, {layer.weight.dtype=}")
++
++            wshuffle = shuffle_weight(layer.weight.data, layout=(16, 16))
++            layer.weight = torch.nn.Parameter(wshuffle,
++                                              requires_grad=False)
++            #print(f"after {layer.weight.shape=}, {layer.weight.stride()=}, {layer.weight.dtype=}")
+ 
+         if self.emulate:
+             layer.weight_scale = torch.nn.Parameter(layer.weight_scale.data,
+@@ -174,17 +186,17 @@ class QuarkW4A4MXFP4(QuarkScheme):
+                                 device=x_q.device,
+                                 dtype=self.out_dtype)
+                 #asm_bias = torch.empty_like(y)
+-                gemm_a4w4_asm(x_q, layer.weight, x_s, layer.weight_scale, y, y, bpreshuffle=False)
++                gemm_a4w4_asm(x_q, layer.weight, x_s, layer.weight_scale, y, y, bpreshuffle=VLLM_TRITON_FP4_GEMM_BPRESHUFFLE)
+ 
+                 return y[:M]
+             elif VLLM_TRITON_FP4_GEMM_USE_ASM:
+                 if x_scales is None:
+-                    x_q, x_s = dynamic_mxfp4_quant_asm(x, shuffle=(M >= 32))
++                    x_q, x_s = dynamic_mxfp4_quant_asm(x, shuffle=((M >= 32) or VLLM_TRITON_FP4_GEMM_BPRESHUFFLE))
+                     x_s = x_s.view(torch.uint8)
+                 else:
+                     x_q = x
+                     x_s = x_scales
+-                if M >= 32:
++                if (M >= 32) and not VLLM_TRITON_FP4_GEMM_BPRESHUFFLE:
+                     sm, sn = x_s.shape
+                     x_s = x_s.view(sm // 32, sn * 32)
+                 y = torch.empty(x_q.shape[0],
+@@ -192,11 +204,14 @@ class QuarkW4A4MXFP4(QuarkScheme):
+                                 device=x_q.device,
+                                 dtype=self.out_dtype)
+ 
+-                smw, snw = layer.weight_scale.shape
+-                gemm_afp4wfp4_preshuffled_scales(
+-                    x_q, layer.weight.T, x_s,
+-                    layer.weight_scale.view(smw // 32, snw * 32),
+-                    self.out_dtype, y)
++                if VLLM_TRITON_FP4_GEMM_BPRESHUFFLE:
++                    gemm_a4w4_blockscale(x_q, layer.weight, x_s, layer.weight_scale, y)
++                else:
++                    smw, snw = layer.weight_scale.shape
++                    gemm_afp4wfp4_preshuffled_scales(
++                        x_q, layer.weight.T, x_s,
++                        layer.weight_scale.view(smw // 32, snw * 32),
++                        self.out_dtype, y)
+                 return y
+             else:
+                 if x_scales is None:
+-- 
+2.34.1
+

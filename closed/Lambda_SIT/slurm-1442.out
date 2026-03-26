@@ -1,0 +1,140 @@
+Using SLURM_JOBID from environment: 1442
+Fetched nodelist from job 1442: sjc02-cl01-mgx-00019
+Calculated harness system: GB300-NVL72_GB300-288GB_aarch64x4
+Using SLURM allocation nodelist: sjc02-cl01-mgx-00019
+============================================
+MLPerf Scaleout - all
+============================================
+Atomic system: GB300-NVL72_GB300-288GB_aarch64x1
+Harness system: GB300-NVL72_GB300-288GB_aarch64x4
+GPUs per DP: 1
+GPUs per node: 4
+DP multiplicity: 4
+Allocated nodes: 1
+Total GPUs: 4
+Log directory: /work/build/logs/scaleout_GB300-NVL72_GB300-288GB_aarch64x4_slurm-1442_2026.02.02-22.12.43
+Harness target: run_harness
+Server spawn time: 0s
+Dry run: false
+Deployment: Intra-node (4 DP/node, 1 tasks/DP)
+============================================
+Launching DP rank 0 on sjc02-cl01-mgx-00019 (GPUs: 0, URL: sjc02-cl01-mgx-00019:30000, IPC: tcp://127.0.0.1:10012)...
+================================================
+Executing srun command:
+================================================
+srun \
+    --overlap \
+    --output=/sharedfs/mlperf_inference_v60/nv-mlpinf-partner/closed/NVIDIA/build/logs/scaleout_GB300-NVL72_GB300-288GB_aarch64x4_slurm-1442_2026.02.02-22.12.43/slurm_logs/run_llm_server_sjc02-cl01-mgx-00019_gpus0.stdout \
+    --error=/sharedfs/mlperf_inference_v60/nv-mlpinf-partner/closed/NVIDIA/build/logs/scaleout_GB300-NVL72_GB300-288GB_aarch64x4_slurm-1442_2026.02.02-22.12.43/slurm_logs/run_llm_server_sjc02-cl01-mgx-00019_gpus0.stderr \
+    --export=ALL,NVIDIA_VISIBLE_DEVICES,TLLM_SPAWN_PROXY_PROCESS_IPC_ADDR=tcp://127.0.0.1:10012,MLPERF_SCRATCH_PATH=/home/mlperf_inference_storage \
+    --container-image=docker://registry.gitlab.com/nvidia/mlperf-inference-partner/nv-mlpinf-partner:v6.0-template \
+    --container-mounts=/sharedfs/mlperf_inference_v60/nv-mlpinf-partner/closed/NVIDIA:/work,/lustre/share/coreai_mlperf_inference/mlperf_inference_storage_clone:/home/mlperf_inference_storage \
+    --container-workdir=/work \
+    --container-remap-root \
+    --nodes=1 \
+    --nodelist=sjc02-cl01-mgx-00019 \
+    --ntasks-per-node=1 \
+    --mpi=pmix \
+    make \
+    run_llm_server \
+    RUN_ARGS=--benchmarks=gpt-oss-120b --scenarios=Offline --core_type=trtllm_endpoint --mpi_mode=leader --server_in_foreground --trtllm_server_urls=sjc02-cl01-mgx-00019:30000 \
+    SYSTEM_NAME=GB300-NVL72_GB300-288GB_aarch64x1
+
+Launching DP rank 1 on sjc02-cl01-mgx-00019 (GPUs: 1, URL: sjc02-cl01-mgx-00019:30001, IPC: tcp://127.0.0.1:10013)...
+================================================
+Executing srun command:
+================================================
+srun \
+    --overlap \
+    --output=/sharedfs/mlperf_inference_v60/nv-mlpinf-partner/closed/NVIDIA/build/logs/scaleout_GB300-NVL72_GB300-288GB_aarch64x4_slurm-1442_2026.02.02-22.12.43/slurm_logs/run_llm_server_sjc02-cl01-mgx-00019_gpus1.stdout \
+    --error=/sharedfs/mlperf_inference_v60/nv-mlpinf-partner/closed/NVIDIA/build/logs/scaleout_GB300-NVL72_GB300-288GB_aarch64x4_slurm-1442_2026.02.02-22.12.43/slurm_logs/run_llm_server_sjc02-cl01-mgx-00019_gpus1.stderr \
+    --export=ALL,NVIDIA_VISIBLE_DEVICES,TLLM_SPAWN_PROXY_PROCESS_IPC_ADDR=tcp://127.0.0.1:10013,MLPERF_SCRATCH_PATH=/home/mlperf_inference_storage \
+    --container-image=docker://registry.gitlab.com/nvidia/mlperf-inference-partner/nv-mlpinf-partner:v6.0-template \
+    --container-mounts=/sharedfs/mlperf_inference_v60/nv-mlpinf-partner/closed/NVIDIA:/work,/lustre/share/coreai_mlperf_inference/mlperf_inference_storage_clone:/home/mlperf_inference_storage \
+    --container-workdir=/work \
+    --container-remap-root \
+    --nodes=1 \
+    --nodelist=sjc02-cl01-mgx-00019 \
+    --ntasks-per-node=1 \
+    --mpi=pmix \
+    make \
+    run_llm_server \
+    RUN_ARGS=--benchmarks=gpt-oss-120b --scenarios=Offline --core_type=trtllm_endpoint --mpi_mode=leader --server_in_foreground --trtllm_server_urls=sjc02-cl01-mgx-00019:30001 \
+    SYSTEM_NAME=GB300-NVL72_GB300-288GB_aarch64x1
+
+Launching DP rank 2 on sjc02-cl01-mgx-00019 (GPUs: 2, URL: sjc02-cl01-mgx-00019:30002, IPC: tcp://127.0.0.1:10014)...
+================================================
+Executing srun command:
+================================================
+srun \
+    --overlap \
+    --output=/sharedfs/mlperf_inference_v60/nv-mlpinf-partner/closed/NVIDIA/build/logs/scaleout_GB300-NVL72_GB300-288GB_aarch64x4_slurm-1442_2026.02.02-22.12.43/slurm_logs/run_llm_server_sjc02-cl01-mgx-00019_gpus2.stdout \
+    --error=/sharedfs/mlperf_inference_v60/nv-mlpinf-partner/closed/NVIDIA/build/logs/scaleout_GB300-NVL72_GB300-288GB_aarch64x4_slurm-1442_2026.02.02-22.12.43/slurm_logs/run_llm_server_sjc02-cl01-mgx-00019_gpus2.stderr \
+    --export=ALL,NVIDIA_VISIBLE_DEVICES,TLLM_SPAWN_PROXY_PROCESS_IPC_ADDR=tcp://127.0.0.1:10014,MLPERF_SCRATCH_PATH=/home/mlperf_inference_storage \
+    --container-image=docker://registry.gitlab.com/nvidia/mlperf-inference-partner/nv-mlpinf-partner:v6.0-template \
+    --container-mounts=/sharedfs/mlperf_inference_v60/nv-mlpinf-partner/closed/NVIDIA:/work,/lustre/share/coreai_mlperf_inference/mlperf_inference_storage_clone:/home/mlperf_inference_storage \
+    --container-workdir=/work \
+    --container-remap-root \
+    --nodes=1 \
+    --nodelist=sjc02-cl01-mgx-00019 \
+    --ntasks-per-node=1 \
+    --mpi=pmix \
+    make \
+    run_llm_server \
+    RUN_ARGS=--benchmarks=gpt-oss-120b --scenarios=Offline --core_type=trtllm_endpoint --mpi_mode=leader --server_in_foreground --trtllm_server_urls=sjc02-cl01-mgx-00019:30002 \
+    SYSTEM_NAME=GB300-NVL72_GB300-288GB_aarch64x1
+
+Launching DP rank 3 on sjc02-cl01-mgx-00019 (GPUs: 3, URL: sjc02-cl01-mgx-00019:30003, IPC: tcp://127.0.0.1:10015)...
+All DP ranks launched in background. Check logs for details.
+================================================
+Executing srun command:
+================================================
+srun \
+    --overlap \
+    --output=/sharedfs/mlperf_inference_v60/nv-mlpinf-partner/closed/NVIDIA/build/logs/scaleout_GB300-NVL72_GB300-288GB_aarch64x4_slurm-1442_2026.02.02-22.12.43/slurm_logs/run_llm_server_sjc02-cl01-mgx-00019_gpus3.stdout \
+    --error=/sharedfs/mlperf_inference_v60/nv-mlpinf-partner/closed/NVIDIA/build/logs/scaleout_GB300-NVL72_GB300-288GB_aarch64x4_slurm-1442_2026.02.02-22.12.43/slurm_logs/run_llm_server_sjc02-cl01-mgx-00019_gpus3.stderr \
+    --export=ALL,NVIDIA_VISIBLE_DEVICES,TLLM_SPAWN_PROXY_PROCESS_IPC_ADDR=tcp://127.0.0.1:10015,MLPERF_SCRATCH_PATH=/home/mlperf_inference_storage \
+    --container-image=docker://registry.gitlab.com/nvidia/mlperf-inference-partner/nv-mlpinf-partner:v6.0-template \
+    --container-mounts=/sharedfs/mlperf_inference_v60/nv-mlpinf-partner/closed/NVIDIA:/work,/lustre/share/coreai_mlperf_inference/mlperf_inference_storage_clone:/home/mlperf_inference_storage \
+    --container-workdir=/work \
+    --container-remap-root \
+    --nodes=1 \
+    --nodelist=sjc02-cl01-mgx-00019 \
+    --ntasks-per-node=1 \
+    --mpi=pmix \
+    make \
+    run_llm_server \
+    RUN_ARGS=--benchmarks=gpt-oss-120b --scenarios=Offline --core_type=trtllm_endpoint --mpi_mode=leader --server_in_foreground --trtllm_server_urls=sjc02-cl01-mgx-00019:30003 \
+    SYSTEM_NAME=GB300-NVL72_GB300-288GB_aarch64x1
+
+Server URLs: sjc02-cl01-mgx-00019:30000,sjc02-cl01-mgx-00019:30001,sjc02-cl01-mgx-00019:30002,sjc02-cl01-mgx-00019:30003
+============================================
+Launching harness (target: run_harness)...
+================================================
+Executing srun command:
+================================================
+srun \
+    --export=ALL,MLPERF_SCRATCH_PATH=/home/mlperf_inference_storage \
+    --container-image=docker://registry.gitlab.com/nvidia/mlperf-inference-partner/nv-mlpinf-partner:v6.0-template \
+    --container-mounts=/sharedfs/mlperf_inference_v60/nv-mlpinf-partner/closed/NVIDIA:/work,/lustre/share/coreai_mlperf_inference/mlperf_inference_storage_clone:/home/mlperf_inference_storage \
+    --container-workdir=/work \
+    --container-remap-root \
+    --nodes=1 \
+    --overlap \
+    make \
+    run_harness \
+    RUN_ARGS=--benchmarks=gpt-oss-120b --scenarios=Offline --core_type=trtllm_endpoint --mpi_mode=leader --server_in_foreground --trtllm_server_urls=sjc02-cl01-mgx-00019:30000,sjc02-cl01-mgx-00019:30001,sjc02-cl01-mgx-00019:30002,sjc02-cl01-mgx-00019:30003 \
+    SYSTEM_NAME=GB300-NVL72_GB300-288GB_aarch64x4
+
+pyxis: importing docker image: docker://registry.gitlab.com/nvidia/mlperf-inference-partner/nv-mlpinf-partner:v6.0-template
+[2026-02-02T22:12:44.023] error: pyxis: child 587062 failed with error code: 1
+[2026-02-02T22:12:44.034] error: pyxis: failed to import docker image
+[2026-02-02T22:12:44.034] error: pyxis: printing enroot log file:
+[2026-02-02T22:12:44.034] error: pyxis:     [INFO] Querying registry for permission grant
+[2026-02-02T22:12:44.034] error: pyxis:     [INFO] Authenticating with user: <anonymous>
+[2026-02-02T22:12:44.034] error: pyxis:     [ERROR] URL https://gitlab.com/jwt/auth returned error code: 403 Forbidden
+[2026-02-02T22:12:44.034] error: pyxis: couldn't start container
+[2026-02-02T22:12:44.034] error: spank: required plugin spank_pyxis.so: task_init() failed with rc=-1
+[2026-02-02T22:12:44.034] error: Failed to invoke spank plugin stack
+[2026-02-02T22:12:44.137] error: pyxis: child 587096 failed with error code: 1
+srun: error: sjc02-cl01-mgx-00019: task 0: Exited with exit code 1

@@ -1,0 +1,10 @@
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /root/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+
+Results
+
+{'rouge1': '44.7712', 'rouge2': '22.2839', 'rougeL': '29.0009', 'rougeLsum': '42.3299', 'gen_len': 27190632, 'gen_num': 24576, 'gen_tok_len': 6963553, 'tokens_per_sample': 283.3}
+
+hash=424f96b54f1f1f03f0d3d674cec24450cb9ac8e07fa6465d4e34c08787c77cfc

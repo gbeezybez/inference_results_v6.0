@@ -1,0 +1,164 @@
+{
+    "audit_success": true,
+    "audit_test": "TEST01",
+    "benchmark_full": "3d-unet-99.9",
+    "benchmark_short": "3d-unet",
+    "config_name": "SE455I_V3_TRT-custom_k_99_9_MaxP-SingleStream",
+    "detected_system": {
+        "__obj_class__": "<class 'nvmitten.system.component.Description'>",
+        "data": {
+            "_component_classname": "System",
+            "_component_module": "nvmitten.system.system",
+            "_match_ignore_fields": [],
+            "fields": {
+                "accelerators": {
+                    "__obj_class__": "<class 'nvmitten.json_utils.ClassKeyedDict'>",
+                    "data": [
+                        {
+                            "key.module": "nvmitten.nvidia.accelerator",
+                            "key.name": "GPU",
+                            "value": [
+                                {
+                                    "__obj_class__": "<class 'nvmitten.system.component.Description'>",
+                                    "data": {
+                                        "_component_classname": "GPU",
+                                        "_component_module": "nvmitten.nvidia.accelerator",
+                                        "_match_ignore_fields": [],
+                                        "fields": {
+                                            "is_integrated": false,
+                                            "max_power_limit": {
+                                                "__obj_class__": "<class 'nvmitten.interval.NumericRange'>",
+                                                "data": {
+                                                    "rel_tol": 0.05,
+                                                    "start": 72.0
+                                                }
+                                            },
+                                            "pci_id": "0x27B810DE",
+                                            "vram": {
+                                                "__obj_class__": "<class 'nvmitten.interval.NumericRange'>",
+                                                "data": {
+                                                    "rel_tol": 0.05,
+                                                    "start": {
+                                                        "__obj_class__": "<class 'nvmitten.memory.Memory'>",
+                                                        "data": {
+                                                            "base": 1024,
+                                                            "human_readable_UNUSED": "22.04 GiB",
+                                                            "num_bytes": 23661248512
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "__obj_class__": "<class 'nvmitten.system.component.Description'>",
+                                    "data": {
+                                        "_component_classname": "GPU",
+                                        "_component_module": "nvmitten.nvidia.accelerator",
+                                        "_match_ignore_fields": [],
+                                        "fields": {
+                                            "is_integrated": false,
+                                            "max_power_limit": {
+                                                "__obj_class__": "<class 'nvmitten.interval.NumericRange'>",
+                                                "data": {
+                                                    "rel_tol": 0.05,
+                                                    "start": 72.0
+                                                }
+                                            },
+                                            "pci_id": "0x27B810DE",
+                                            "vram": {
+                                                "__obj_class__": "<class 'nvmitten.interval.NumericRange'>",
+                                                "data": {
+                                                    "rel_tol": 0.05,
+                                                    "start": {
+                                                        "__obj_class__": "<class 'nvmitten.memory.Memory'>",
+                                                        "data": {
+                                                            "base": 1024,
+                                                            "human_readable_UNUSED": "22.04 GiB",
+                                                            "num_bytes": 23661248512
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "key.module": "nvmitten.nvidia.accelerator",
+                            "key.name": "DLA",
+                            "value": []
+                        }
+                    ]
+                },
+                "cpu": {
+                    "__obj_class__": "<class 'nvmitten.system.component.Description'>",
+                    "data": {
+                        "_component_classname": "CPU",
+                        "_component_module": "nvmitten.system.cpu",
+                        "_match_ignore_fields": [],
+                        "fields": {
+                            "architecture": {
+                                "__ENUM__": [
+                                    "nvmitten.constants",
+                                    "CPUArchitecture"
+                                ],
+                                "name": "x86_64"
+                            },
+                            "vendor": "AuthenticAMD"
+                        }
+                    }
+                },
+                "extras": {
+                    "id": "SE455I_V3",
+                    "name": "SE455I_V3",
+                    "primary_compute_sm": {
+                        "__obj_class__": "<class 'nvmitten.nvidia.constants.ComputeSM'>",
+                        "data": 89
+                    },
+                    "tags": {
+                        "__SET__": [
+                            "is_ampere",
+                            "is_ada",
+                            "custom",
+                            "multi_gpu",
+                            "gpu_based"
+                        ]
+                    }
+                },
+                "host_memory": {
+                    "__obj_class__": "<class 'nvmitten.system.component.Description'>",
+                    "data": {
+                        "_component_classname": "HostMemory",
+                        "_component_module": "nvmitten.system.memory",
+                        "_match_ignore_fields": [],
+                        "fields": {
+                            "capacity": {
+                                "__obj_class__": "<class 'nvmitten.memory.Memory'>",
+                                "data": {
+                                    "base": 1000,
+                                    "human_readable_UNUSED": "593.75 GB",
+                                    "num_bytes": 593750444000
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "early_stopping_met": true,
+    "effective_min_duration_ms": 600000,
+    "effective_min_query_count": 1849,
+    "result_90.00_percentile_latency_ns": 1859551294,
+    "result_validity": "VALID",
+    "satisfies_query_constraint": true,
+    "scenario": "SingleStream",
+    "scenario_key": "result_90.00_percentile_latency_ns",
+    "summary_string": "result_90.00_percentile_latency_ns: 1859551294, Result is VALID, 10-min runtime requirement met: True",
+    "system_name": "SE455I_V3_TRT",
+    "tensorrt_version": "10.8.0.43",
+    "test_mode": "PerformanceOnly"
+}

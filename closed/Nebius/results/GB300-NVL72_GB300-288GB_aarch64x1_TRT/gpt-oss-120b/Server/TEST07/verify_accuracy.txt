@@ -1,0 +1,221 @@
+2026-02-13 17:36:09,249 - INFO - Loading MLPerf log from /work/build/compliance_logs/TEST07/GB300-NVL72_GB300-288GB_aarch64x1_TRT/gpt-oss-120b/Server/mlperf_log_accuracy.json
+2026-02-13 17:36:09,295 - INFO - Loaded 990 log entries
+2026-02-13 17:36:09,295 - INFO - Loading reference data from /work/build/data/gpt-oss/v4/acc/acc_eval_compliance_gpqa.parquet
+2026-02-13 17:36:09,342 - INFO - Loaded reference data from Parquet file
+2026-02-13 17:36:09,378 - INFO - Reference data shape: (4395, 6)
+2026-02-13 17:36:09,378 - INFO - Reference columns: ['input_tokens', 'num_tokens', 'text_input', 'original_messages', 'ground_truth', 'dataset']
+2026-02-13 17:36:09,379 - INFO - Unique datasets in reference data (3 total):
+2026-02-13 17:36:09,379 - INFO -   'aime25' (240 samples)
+2026-02-13 17:36:09,379 - INFO -   'gpqa_diamond' (990 samples)
+2026-02-13 17:36:09,379 - INFO -   'livecodebench_v6' (3165 samples)
+2026-02-13 17:36:09,379 - INFO - 
+Sample rows from reference data:
+2026-02-13 17:36:09,379 - INFO -   Row 0: dataset='livecodebench_v6'
+2026-02-13 17:36:09,379 - INFO -   Row 1: dataset='livecodebench_v6'
+2026-02-13 17:36:09,380 - INFO -   Row 2: dataset='livecodebench_v6'
+2026-02-13 17:36:09,380 - INFO - 
+Expected Dataset → Evaluator mapping:
+2026-02-13 17:36:09,380 - INFO -   'aime25' (normalized: 'aime25') → 'aime'
+2026-02-13 17:36:09,380 - INFO -   'gpqa_diamond' (normalized: 'gpqa_diamond') → 'gpqa'
+2026-02-13 17:36:09,380 - INFO -   'livecodebench_v6' (normalized: 'livecodebench_v6') → 'livecodebench'
+2026-02-13 17:36:09,380 - INFO - Loading tokenizer: openai/gpt-oss-120b
+2026-02-13 17:37:09,912 - INFO - Grouping MLPerf log entries by dataset...
+2026-02-13 17:37:09,939 - INFO - Grouped entries by dataset:
+2026-02-13 17:37:09,939 - INFO -   aime25: 54 entries
+2026-02-13 17:37:09,939 - INFO -   gpqa_diamond: 200 entries
+2026-02-13 17:37:09,939 - INFO -   livecodebench_v6: 736 entries
+2026-02-13 17:37:09,939 - INFO - Total entries: 990
+2026-02-13 17:37:09,939 - INFO - Pre-loading LiveCodeBench benchmark for parallel evaluation...
+2026-02-13 17:37:09,961 - INFO - PyTorch version 2.9.1 available.
+
+Generating test split: 0 examples [00:00, ? examples/s]
+Generating test split: 141 examples [00:00, 1384.18 examples/s]
+Generating test split: 283 examples [00:00, 330.30 examples/s] 
+Generating test split: 355 examples [00:01, 268.85 examples/s]
+Generating test split: 405 examples [00:01, 235.12 examples/s]
+Generating test split: 440 examples [00:01, 179.93 examples/s]
+Generating test split: 482 examples [00:02, 173.11 examples/s]
+Generating test split: 529 examples [00:02, 200.15 examples/s]
+Generating test split: 556 examples [00:02, 147.04 examples/s]
+Generating test split: 578 examples [00:02, 150.87 examples/s]
+Generating test split: 616 examples [00:02, 177.63 examples/s]
+Generating test split: 644 examples [00:03, 113.24 examples/s]
+Generating test split: 664 examples [00:03, 86.15 examples/s] 
+Generating test split: 711 examples [00:04, 110.63 examples/s]
+Generating test split: 729 examples [00:04, 104.73 examples/s]
+Generating test split: 783 examples [00:04, 128.82 examples/s]
+Generating test split: 880 examples [00:04, 236.46 examples/s]
+Generating test split: 1000 examples [00:08, 60.41 examples/s]
+Generating test split: 1055 examples [00:08, 125.65 examples/s]
+2026-02-13 17:38:48,735 - INFO - LiveCodeBench benchmark loaded successfully
+2026-02-13 17:38:48,736 - INFO - Created ProcessPoolExecutor with 64 workers for LiveCodeBench
+2026-02-13 17:38:48,736 - INFO - 
+Processing MLPerf log entries by dataset...
+2026-02-13 17:38:48,736 - INFO - 
+================================================================================
+2026-02-13 17:38:48,736 - INFO - Processing aime25: 54 samples
+2026-02-13 17:38:48,736 - INFO - ================================================================================
+Loaded 1055 problems
+
+Evaluating aime25:   0%|          | 0/54 [00:00<?, ?entry/s]
+Evaluating aime25:  91%|█████████ | 49/54 [00:00<00:00, 483.12entry/s]
+Evaluating aime25: 100%|██████████| 54/54 [00:00<00:00, 477.10entry/s]
+2026-02-13 17:38:48,850 - INFO - 
+================================================================================
+2026-02-13 17:38:48,850 - INFO - Processing gpqa_diamond: 200 samples
+2026-02-13 17:38:48,850 - INFO - ================================================================================
+
+Evaluating gpqa_diamond:   0%|          | 0/200 [00:00<?, ?entry/s]
+Evaluating gpqa_diamond:  55%|█████▌    | 110/200 [00:00<00:00, 1064.72entry/s]
+Evaluating gpqa_diamond: 100%|██████████| 200/200 [00:00<00:00, 539.53entry/s] 
+2026-02-13 17:38:49,221 - INFO - 
+================================================================================
+2026-02-13 17:38:49,221 - INFO - Processing livecodebench_v6: 736 samples
+2026-02-13 17:38:49,221 - INFO - ================================================================================
+2026-02-13 17:38:49,221 - INFO - Parsing 736 livecodebench_v6 entries...
+
+Parsing livecodebench_v6:   0%|          | 0/736 [00:00<?, ?entry/s]
+Parsing livecodebench_v6:  19%|█▉        | 143/736 [00:00<00:00, 1426.17entry/s]
+Parsing livecodebench_v6:  39%|███▉      | 286/736 [00:00<00:00, 1237.04entry/s]
+Parsing livecodebench_v6:  56%|█████▌    | 412/736 [00:00<00:00, 937.14entry/s] 
+Parsing livecodebench_v6:  70%|██████▉   | 513/736 [00:00<00:00, 517.12entry/s]
+Parsing livecodebench_v6:  79%|███████▉  | 585/736 [00:00<00:00, 491.56entry/s]
+Parsing livecodebench_v6:  88%|████████▊ | 647/736 [00:01<00:00, 474.77entry/s]
+Parsing livecodebench_v6:  95%|█████████▌| 702/736 [00:01<00:00, 459.94entry/s]
+Parsing livecodebench_v6: 100%|██████████| 736/736 [00:01<00:00, 563.23entry/s]
+2026-02-13 17:38:50,528 - INFO - Evaluating 548 livecodebench_v6 code samples with parallel workers...
+
+Evaluating livecodebench_v6:   0%|          | 0/548 [00:00<?, ?sample/s]
+Evaluating livecodebench_v6:   0%|          | 1/548 [00:00<02:36,  3.49sample/s]
+Evaluating livecodebench_v6:   5%|▌         | 29/548 [00:00<00:05, 95.34sample/s]
+Evaluating livecodebench_v6:  10%|▉         | 53/548 [00:00<00:04, 113.09sample/s]
+Evaluating livecodebench_v6:  13%|█▎        | 69/548 [00:00<00:04, 115.66sample/s]
+Evaluating livecodebench_v6:  16%|█▌        | 87/548 [00:00<00:03, 129.34sample/s]
+Evaluating livecodebench_v6:  19%|█▊        | 102/548 [00:00<00:03, 134.27sample/s]
+Evaluating livecodebench_v6:  21%|██▏       | 117/548 [00:01<00:03, 112.65sample/s]
+Evaluating livecodebench_v6:  24%|██▍       | 131/548 [00:01<00:03, 118.89sample/s]
+Evaluating livecodebench_v6:  26%|██▋       | 145/548 [00:01<00:03, 119.84sample/s]
+Evaluating livecodebench_v6:  29%|██▉       | 158/548 [00:01<00:03, 106.05sample/s]
+Evaluating livecodebench_v6:  31%|███▏      | 172/548 [00:01<00:03, 106.62sample/s]
+Evaluating livecodebench_v6:  34%|███▍      | 186/548 [00:01<00:03, 105.79sample/s]
+Evaluating livecodebench_v6:  36%|███▋      | 199/548 [00:01<00:03, 101.76sample/s]
+Evaluating livecodebench_v6:  38%|███▊      | 210/548 [00:01<00:03, 103.10sample/s]
+Evaluating livecodebench_v6:  41%|████      | 225/548 [00:02<00:02, 114.80sample/s]
+Evaluating livecodebench_v6:  43%|████▎     | 237/548 [00:02<00:03, 101.42sample/s]
+Evaluating livecodebench_v6:  45%|████▌     | 248/548 [00:02<00:03, 92.96sample/s] 
+Evaluating livecodebench_v6:  47%|████▋     | 258/548 [00:02<00:03, 88.23sample/s]
+Evaluating livecodebench_v6:  49%|████▉     | 268/548 [00:02<00:03, 73.97sample/s]
+Evaluating livecodebench_v6:  51%|█████     | 277/548 [00:02<00:03, 76.72sample/s]
+Evaluating livecodebench_v6:  52%|█████▏    | 286/548 [00:02<00:03, 73.67sample/s]
+Evaluating livecodebench_v6:  54%|█████▎    | 294/548 [00:03<00:03, 63.87sample/s]
+Evaluating livecodebench_v6:  56%|█████▌    | 305/548 [00:03<00:03, 65.70sample/s]
+Evaluating livecodebench_v6:  57%|█████▋    | 312/548 [00:03<00:04, 58.79sample/s]
+Evaluating livecodebench_v6:  58%|█████▊    | 319/548 [00:03<00:03, 58.14sample/s]
+Evaluating livecodebench_v6:  61%|██████    | 332/548 [00:03<00:02, 73.98sample/s]
+Evaluating livecodebench_v6:  62%|██████▏   | 340/548 [00:03<00:03, 55.99sample/s]
+Evaluating livecodebench_v6:  64%|██████▍   | 350/548 [00:04<00:03, 60.40sample/s]
+Evaluating livecodebench_v6:  66%|██████▌   | 360/548 [00:04<00:03, 58.24sample/s]
+Evaluating livecodebench_v6:  67%|██████▋   | 367/548 [00:04<00:03, 58.20sample/s]
+Evaluating livecodebench_v6:  68%|██████▊   | 374/548 [00:04<00:03, 56.24sample/s]
+Evaluating livecodebench_v6:  70%|██████▉   | 381/548 [00:04<00:03, 49.49sample/s]
+Evaluating livecodebench_v6:  71%|███████   | 387/548 [00:04<00:03, 50.88sample/s]
+Evaluating livecodebench_v6:  72%|███████▏  | 394/548 [00:04<00:02, 53.12sample/s]
+Evaluating livecodebench_v6:  73%|███████▎  | 400/548 [00:05<00:03, 45.72sample/s]
+Evaluating livecodebench_v6:  74%|███████▍  | 405/548 [00:05<00:03, 45.77sample/s]
+Evaluating livecodebench_v6:  75%|███████▍  | 410/548 [00:05<00:03, 44.30sample/s]
+Evaluating livecodebench_v6:  76%|███████▌  | 416/548 [00:05<00:02, 44.82sample/s]
+Evaluating livecodebench_v6:  78%|███████▊  | 426/548 [00:05<00:02, 55.63sample/s]
+Evaluating livecodebench_v6:  79%|███████▉  | 432/548 [00:05<00:02, 50.83sample/s]
+Evaluating livecodebench_v6:  80%|████████  | 439/548 [00:05<00:01, 55.40sample/s]
+Evaluating livecodebench_v6:  81%|████████  | 445/548 [00:05<00:01, 54.87sample/s]
+Evaluating livecodebench_v6:  82%|████████▏ | 451/548 [00:06<00:02, 47.49sample/s]
+Evaluating livecodebench_v6:  83%|████████▎ | 456/548 [00:06<00:02, 38.02sample/s]
+Evaluating livecodebench_v6:  84%|████████▍ | 461/548 [00:06<00:02, 34.29sample/s]
+Evaluating livecodebench_v6:  85%|████████▍ | 465/548 [00:06<00:03, 26.18sample/s]
+Evaluating livecodebench_v6:  86%|████████▌ | 469/548 [00:06<00:02, 26.59sample/s]
+Evaluating livecodebench_v6:  86%|████████▌ | 472/548 [00:07<00:02, 27.22sample/s]
+Evaluating livecodebench_v6:  87%|████████▋ | 479/548 [00:07<00:02, 34.08sample/s]
+Evaluating livecodebench_v6:  88%|████████▊ | 483/548 [00:07<00:01, 34.20sample/s]
+Evaluating livecodebench_v6:  89%|████████▉ | 488/548 [00:07<00:01, 37.51sample/s]
+Evaluating livecodebench_v6:  90%|█████████ | 494/548 [00:07<00:01, 38.56sample/s]
+Evaluating livecodebench_v6:  91%|█████████ | 498/548 [00:07<00:01, 25.58sample/s]
+Evaluating livecodebench_v6:  92%|█████████▏| 502/548 [00:08<00:03, 13.66sample/s]
+Evaluating livecodebench_v6:  92%|█████████▏| 505/548 [00:09<00:04, 10.62sample/s]
+Evaluating livecodebench_v6:  93%|█████████▎| 508/548 [00:09<00:03, 10.19sample/s]
+Evaluating livecodebench_v6:  93%|█████████▎| 510/548 [00:09<00:04,  8.78sample/s]
+Evaluating livecodebench_v6:  94%|█████████▍| 514/548 [00:09<00:03, 10.38sample/s]
+Evaluating livecodebench_v6:  94%|█████████▍| 516/548 [00:10<00:04,  6.60sample/s]
+Evaluating livecodebench_v6:  95%|█████████▍| 518/548 [00:11<00:05,  5.60sample/s]
+Evaluating livecodebench_v6:  95%|█████████▍| 520/548 [00:11<00:04,  6.70sample/s]
+Evaluating livecodebench_v6:  95%|█████████▌| 522/548 [00:12<00:05,  5.15sample/s]
+Evaluating livecodebench_v6:  96%|█████████▌| 524/548 [00:12<00:06,  3.96sample/s]
+Evaluating livecodebench_v6:  96%|█████████▌| 525/548 [00:13<00:06,  3.72sample/s]
+Evaluating livecodebench_v6:  96%|█████████▌| 526/548 [00:13<00:05,  4.00sample/s]
+Evaluating livecodebench_v6:  96%|█████████▌| 527/548 [00:13<00:04,  4.26sample/s]
+Evaluating livecodebench_v6:  96%|█████████▋| 528/548 [00:13<00:04,  4.50sample/s]
+Evaluating livecodebench_v6:  97%|█████████▋| 529/548 [00:13<00:04,  4.28sample/s]
+Evaluating livecodebench_v6:  97%|█████████▋| 530/548 [00:14<00:05,  3.25sample/s]
+Evaluating livecodebench_v6:  97%|█████████▋| 531/548 [00:14<00:04,  3.95sample/s]
+Evaluating livecodebench_v6:  97%|█████████▋| 532/548 [00:16<00:11,  1.43sample/s]
+Evaluating livecodebench_v6:  97%|█████████▋| 533/548 [00:17<00:10,  1.47sample/s]
+Evaluating livecodebench_v6:  97%|█████████▋| 534/548 [00:17<00:09,  1.43sample/s]
+Evaluating livecodebench_v6:  98%|█████████▊| 535/548 [00:18<00:08,  1.58sample/s]
+Evaluating livecodebench_v6:  98%|█████████▊| 536/548 [00:19<00:08,  1.48sample/s]
+Evaluating livecodebench_v6:  98%|█████████▊| 537/548 [00:19<00:06,  1.61sample/s]
+Evaluating livecodebench_v6:  98%|█████████▊| 538/548 [00:21<00:10,  1.05s/sample]
+Evaluating livecodebench_v6:  98%|█████████▊| 539/548 [00:23<00:11,  1.27s/sample]
+Evaluating livecodebench_v6:  99%|█████████▊| 540/548 [00:23<00:08,  1.05s/sample]
+Evaluating livecodebench_v6:  99%|█████████▊| 541/548 [00:25<00:09,  1.33s/sample]
+Evaluating livecodebench_v6:  99%|█████████▉| 542/548 [00:26<00:06,  1.14s/sample]
+Evaluating livecodebench_v6:  99%|█████████▉| 543/548 [00:27<00:05,  1.11s/sample]
+Evaluating livecodebench_v6:  99%|█████████▉| 544/548 [00:29<00:05,  1.28s/sample]
+Evaluating livecodebench_v6:  99%|█████████▉| 545/548 [00:37<00:09,  3.27s/sample]
+Evaluating livecodebench_v6: 100%|█████████▉| 546/548 [00:49<00:12,  6.08s/sample]
+Evaluating livecodebench_v6: 100%|█████████▉| 547/548 [01:04<00:08,  8.72s/sample]
+Evaluating livecodebench_v6: 100%|██████████| 548/548 [02:52<00:00, 38.42s/sample]
+Evaluating livecodebench_v6: 100%|██████████| 548/548 [02:52<00:00,  3.18sample/s]
+2026-02-13 17:41:43,845 - INFO - Shutting down LiveCodeBench ProcessPoolExecutor
+2026-02-13 17:41:43,961 - INFO - 
+Calculating final scores...
+2026-02-13 17:41:43,961 - INFO - Evaluation complete!
+
+================================================================================
+MLPerf Accuracy Evaluation Results
+================================================================================
+Total samples evaluated: 990
+Overall raw accuracy: 62.83% (622/990)
+================================================================================
+
+Per-Dataset Breakdown:
+--------------------------------------------------------------------------------
+Dataset                    Correct    Total  Repeats      Score   Accuracy
+--------------------------------------------------------------------------------
+aime25                          22       54        8       2.75     40.74%
+gpqa_diamond                   110      200        5      22.00     55.00%
+livecodebench_v6               490      736        3     163.33     66.58%
+================================================================================
+
+Final Score Calculation:
+--------------------------------------------------------------------------------
+Formula: aime25/8 + gpqa_diamond/5 + livecodebench_v6/3
+Score:   = 22/8 + 110/5 + 490/3
+         = 2.75 + 22.00 + 163.33
+         = 188.08
+Max:     = 54/8 + 200/5 + 736/3
+         = 292.08
+
+FINAL SCORE: 64.39% (188.08/292.08)
+================================================================================
+
+
+Printing for submission_checker:
+
+'exact_match': 64.394
+
+================================================================================
+TEST07 Verification Summary
+================================================================================
+Accuracy score: 64.394
+Accuracy threshold: 60.698
+Accuracy check pass: True
+TEST PASS

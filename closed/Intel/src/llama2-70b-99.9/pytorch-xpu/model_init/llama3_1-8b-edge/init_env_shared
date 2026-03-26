@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# export WORKLOAD_NAME="gptj" # Using gptj scenario and dataset for now
+export MODEL_NAME="/model/Llama-3.1-8B-Instruct-autoround-w4g-1-iters512-xpu"
+export MODEL_NAME_FULL="/model/Llama-3.1-8B-Instruct"
+
+export DATASET_PATH="/data/sample_cnn_eval_5000.json"
+export CALIBRATION_PATH="/data/cnn_dailymail_validation.json"
+export OUTPUT_DIR=$ROOT_DIR/log/llama
+export TOTAL_SAMPLE_COUNT=5000
+export EVAL_SCRIPT=$EVALUATION_DIR/evaluate-accuracy-cnn.py
+
+source init_env_base
+export MAX_MODEL_LEN=3072
+export MAX_NUM_BATCHED_TOKENS=768
+export VLLM_XPU_ATTN_IMPL=chunk_chunk
+export VLLM_USE_SEPARATE_QUANT=1
+export VLLM_FUSE_NORM_QUANT=1
+
+# ====== Uncomment to use triton kernels =========
+export VLLM_FUSE_SILU_QUANT=1
+export VLLM_XPU_ATTN_IMPL=chunk_page
+export VLLM_XPU_PA_IMPL=triton

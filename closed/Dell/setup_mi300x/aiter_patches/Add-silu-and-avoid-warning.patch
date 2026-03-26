@@ -1,0 +1,39 @@
+From ff2bba6f4bb64152fd68ebc8ece5ac7f659702b5 Mon Sep 17 00:00:00 2001
+From: MLPerf <mlperf>
+Date: Mon, 28 Jul 2025 08:56:38 +0000
+Subject: [PATCH] Add silu and avoid warning
+
+---
+ aiter/ops/triton/activation.py | 2 +-
+ aiter/ops/triton/mha.py        | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/aiter/ops/triton/activation.py b/aiter/ops/triton/activation.py
+index 03edb6f2..378e34c9 100644
+--- a/aiter/ops/triton/activation.py
++++ b/aiter/ops/triton/activation.py
+@@ -7,7 +7,7 @@ import torch
+ 
+ @triton.jit
+ def _silu(x):
+-    return x * tl.sigmoid(x)
++    return x * tl.minimum(tl.maximum((x + 2.87), 0.0), 6.0) / 6.0
+ 
+ 
+ @triton.jit
+diff --git a/aiter/ops/triton/mha.py b/aiter/ops/triton/mha.py
+index 24bd14cb..b18f5033 100644
+--- a/aiter/ops/triton/mha.py
++++ b/aiter/ops/triton/mha.py
+@@ -265,7 +265,7 @@ def _attn_fwd_inner(
+         if IS_CAUSAL:
+             causal_boundary = start_n + offs_n_causal
+             causal_mask = OFFS_M[:, None] >= causal_boundary[None, :]
+-            mask = mask and causal_mask
++            mask = mask & causal_mask
+ 
+         qk = tl.where(mask, qk, float("-inf"))
+ 
+-- 
+2.34.1
+

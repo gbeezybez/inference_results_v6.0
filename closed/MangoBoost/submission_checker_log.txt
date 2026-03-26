@@ -1,0 +1,276 @@
+[2026-02-24 22:12:49,877 loader.py:194 INFO] Loading System log from ./closed/MangoBoost/systems/8xMI300X_2xEPYC_9534.json
+[2026-02-24 22:12:49,877 loader.py:194 INFO] Loading Performance log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,880 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-24 22:12:49,880 loader.py:194 INFO] Loading Accuracy log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,882 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt.
+[2026-02-24 22:12:49,882 loader.py:194 INFO] Loading AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/accuracy/accuracy.txt
+[2026-02-24 22:12:49,882 loader.py:194 INFO] Loading AccuracyJSON log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/accuracy/mlperf_log_accuracy.json
+[2026-02-24 22:12:49,882 loader.py:194 INFO] Loading Measurements log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/measurements.json
+[2026-02-24 22:12:49,882 loader.py:211 INFO] Could not load Performance log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:49,882 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,882 loader.py:211 INFO] Could not load Performance log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:49,882 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,882 loader.py:194 INFO] Loading AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/TEST06/verify_accuracy.txt
+[2026-02-24 22:12:49,883 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,883 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:49,883 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,883 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,883 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:49,883 base.py:42 INFO] Starting performance checks for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,883 performance_check.py:275 INFO] Target latency: None, Latency: 756845419769, Scenario: Offline
+[2026-02-24 22:12:49,883 base.py:45 INFO] All performance checks checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,883 base.py:42 INFO] Starting accuracy checks for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,884 accuracy_check.py:220 INFO] ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt Skipping dataset size check
+[2026-02-24 22:12:49,884 base.py:45 INFO] All accuracy checks checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,884 base.py:42 INFO] Starting system checks for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534
+[2026-02-24 22:12:49,884 base.py:45 INFO] All system checks checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534
+[2026-02-24 22:12:49,884 base.py:42 INFO] Starting measurement checks for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/measurements.json
+[2026-02-24 22:12:49,884 base.py:45 INFO] All measurement checks checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/measurements.json
+[2026-02-24 22:12:49,884 base.py:42 INFO] Starting base checks for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/performance/power
+[2026-02-24 22:12:49,884 base.py:45 INFO] All base checks checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/performance/power
+[2026-02-24 22:12:49,884 base.py:42 INFO] Starting compliance check for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/
+[2026-02-24 22:12:49,884 base.py:45 INFO] All compliance check checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/
+[2026-02-24 22:12:49,884 loader.py:194 INFO] Loading Performance log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,887 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt.
+[2026-02-24 22:12:49,887 loader.py:194 INFO] Loading Accuracy log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,889 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt.
+[2026-02-24 22:12:49,890 loader.py:194 INFO] Loading AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/accuracy/accuracy.txt
+[2026-02-24 22:12:49,890 loader.py:194 INFO] Loading AccuracyJSON log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/accuracy/mlperf_log_accuracy.json
+[2026-02-24 22:12:49,890 loader.py:194 INFO] Loading Measurements log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/measurements.json
+[2026-02-24 22:12:49,890 loader.py:211 INFO] Could not load Performance log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:49,890 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,890 loader.py:211 INFO] Could not load Performance log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:49,890 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,890 loader.py:194 INFO] Loading AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/TEST06/verify_accuracy.txt
+[2026-02-24 22:12:49,890 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,890 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:49,890 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,890 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,890 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:49,890 base.py:42 INFO] Starting performance checks for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,890 performance_check.py:256 INFO] Target latency: 20000000000, Early Stopping Latency: 0, Scenario: Server
+[2026-02-24 22:12:49,890 base.py:45 INFO] All performance checks checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,890 base.py:42 INFO] Starting accuracy checks for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,891 accuracy_check.py:220 INFO] ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt Skipping dataset size check
+[2026-02-24 22:12:49,891 base.py:45 INFO] All accuracy checks checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,891 base.py:42 INFO] Starting system checks for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534
+[2026-02-24 22:12:49,891 base.py:45 INFO] All system checks checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534
+[2026-02-24 22:12:49,891 base.py:42 INFO] Starting measurement checks for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/measurements.json
+[2026-02-24 22:12:49,891 base.py:45 INFO] All measurement checks checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/measurements.json
+[2026-02-24 22:12:49,891 base.py:42 INFO] Starting base checks for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/performance/power
+[2026-02-24 22:12:49,891 base.py:45 INFO] All base checks checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/performance/power
+[2026-02-24 22:12:49,891 base.py:42 INFO] Starting compliance check for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/
+[2026-02-24 22:12:49,891 base.py:45 INFO] All compliance check checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/
+[2026-02-24 22:12:49,891 loader.py:194 INFO] Loading Performance log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,893 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-24 22:12:49,893 loader.py:194 INFO] Loading Accuracy log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,896 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt.
+[2026-02-24 22:12:49,896 loader.py:194 INFO] Loading AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/accuracy/accuracy.txt
+[2026-02-24 22:12:49,896 loader.py:194 INFO] Loading AccuracyJSON log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/accuracy/mlperf_log_accuracy.json
+[2026-02-24 22:12:49,896 loader.py:194 INFO] Loading Measurements log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/measurements.json
+[2026-02-24 22:12:49,896 loader.py:211 INFO] Could not load Performance log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:49,896 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,896 loader.py:211 INFO] Could not load Performance log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:49,896 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,896 loader.py:194 INFO] Loading AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/TEST06/verify_accuracy.txt
+[2026-02-24 22:12:49,896 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,896 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:49,896 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,896 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,896 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:49,896 base.py:42 INFO] Starting performance checks for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,896 performance_check.py:275 INFO] Target latency: None, Latency: 756845419769, Scenario: Offline
+[2026-02-24 22:12:49,896 base.py:45 INFO] All performance checks checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,896 base.py:42 INFO] Starting accuracy checks for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,896 accuracy_check.py:220 INFO] ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt Skipping dataset size check
+[2026-02-24 22:12:49,897 base.py:45 INFO] All accuracy checks checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,897 base.py:42 INFO] Starting system checks for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534
+[2026-02-24 22:12:49,897 base.py:45 INFO] All system checks checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534
+[2026-02-24 22:12:49,897 base.py:42 INFO] Starting measurement checks for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/measurements.json
+[2026-02-24 22:12:49,897 base.py:45 INFO] All measurement checks checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/measurements.json
+[2026-02-24 22:12:49,897 base.py:42 INFO] Starting base checks for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/performance/power
+[2026-02-24 22:12:49,897 base.py:45 INFO] All base checks checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/performance/power
+[2026-02-24 22:12:49,897 base.py:42 INFO] Starting compliance check for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/
+[2026-02-24 22:12:49,897 base.py:45 INFO] All compliance check checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/
+[2026-02-24 22:12:49,897 loader.py:194 INFO] Loading Performance log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,899 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt.
+[2026-02-24 22:12:49,899 loader.py:194 INFO] Loading Accuracy log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,902 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt.
+[2026-02-24 22:12:49,902 loader.py:194 INFO] Loading AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/accuracy/accuracy.txt
+[2026-02-24 22:12:49,902 loader.py:194 INFO] Loading AccuracyJSON log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/accuracy/mlperf_log_accuracy.json
+[2026-02-24 22:12:49,902 loader.py:194 INFO] Loading Measurements log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/measurements.json
+[2026-02-24 22:12:49,902 loader.py:211 INFO] Could not load Performance log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:49,902 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,902 loader.py:211 INFO] Could not load Performance log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:49,902 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,902 loader.py:194 INFO] Loading AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/TEST06/verify_accuracy.txt
+[2026-02-24 22:12:49,902 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,902 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:49,902 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,902 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,902 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:49,902 base.py:42 INFO] Starting performance checks for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,902 performance_check.py:256 INFO] Target latency: 20000000000, Early Stopping Latency: 0, Scenario: Server
+[2026-02-24 22:12:49,902 base.py:45 INFO] All performance checks checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,902 base.py:42 INFO] Starting accuracy checks for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,903 accuracy_check.py:220 INFO] ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt Skipping dataset size check
+[2026-02-24 22:12:49,903 base.py:45 INFO] All accuracy checks checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,903 base.py:42 INFO] Starting system checks for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534
+[2026-02-24 22:12:49,903 base.py:45 INFO] All system checks checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534
+[2026-02-24 22:12:49,903 base.py:42 INFO] Starting measurement checks for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/measurements.json
+[2026-02-24 22:12:49,903 base.py:45 INFO] All measurement checks checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/measurements.json
+[2026-02-24 22:12:49,903 base.py:42 INFO] Starting base checks for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/performance/power
+[2026-02-24 22:12:49,903 base.py:45 INFO] All base checks checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/performance/power
+[2026-02-24 22:12:49,903 base.py:42 INFO] Starting compliance check for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/
+[2026-02-24 22:12:49,903 base.py:45 INFO] All compliance check checks passed for: ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/
+[2026-02-24 22:12:49,903 loader.py:194 INFO] Loading System log from ./closed/MangoBoost/systems/8xMI325X_2xEPYC_9655.json
+[2026-02-24 22:12:49,903 loader.py:194 INFO] Loading Performance log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,906 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-24 22:12:49,906 loader.py:194 INFO] Loading Accuracy log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,908 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt.
+[2026-02-24 22:12:49,908 loader.py:194 INFO] Loading AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/accuracy/accuracy.txt
+[2026-02-24 22:12:49,908 loader.py:194 INFO] Loading AccuracyJSON log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/accuracy/mlperf_log_accuracy.json
+[2026-02-24 22:12:49,908 loader.py:194 INFO] Loading Measurements log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/measurements.json
+[2026-02-24 22:12:49,908 loader.py:211 INFO] Could not load Performance log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:49,908 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,908 loader.py:211 INFO] Could not load Performance log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:49,908 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,908 loader.py:194 INFO] Loading AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/TEST06/verify_accuracy.txt
+[2026-02-24 22:12:49,908 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,908 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:49,908 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,908 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,908 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:49,908 base.py:42 INFO] Starting performance checks for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,909 performance_check.py:275 INFO] Target latency: None, Latency: 2836338726984, Scenario: Offline
+[2026-02-24 22:12:49,909 base.py:45 INFO] All performance checks checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,909 base.py:42 INFO] Starting accuracy checks for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,909 accuracy_check.py:220 INFO] ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt Skipping dataset size check
+[2026-02-24 22:12:49,909 base.py:45 INFO] All accuracy checks checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,909 base.py:42 INFO] Starting system checks for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655
+[2026-02-24 22:12:49,909 base.py:45 INFO] All system checks checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655
+[2026-02-24 22:12:49,909 base.py:42 INFO] Starting measurement checks for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/measurements.json
+[2026-02-24 22:12:49,909 base.py:45 INFO] All measurement checks checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/measurements.json
+[2026-02-24 22:12:49,909 base.py:42 INFO] Starting base checks for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/performance/power
+[2026-02-24 22:12:49,909 base.py:45 INFO] All base checks checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/performance/power
+[2026-02-24 22:12:49,909 base.py:42 INFO] Starting compliance check for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/
+[2026-02-24 22:12:49,909 base.py:45 INFO] All compliance check checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/
+[2026-02-24 22:12:49,909 loader.py:194 INFO] Loading Performance log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,912 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt.
+[2026-02-24 22:12:49,912 loader.py:194 INFO] Loading Accuracy log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,914 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt.
+[2026-02-24 22:12:49,914 loader.py:194 INFO] Loading AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/accuracy/accuracy.txt
+[2026-02-24 22:12:49,915 loader.py:194 INFO] Loading AccuracyJSON log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/accuracy/mlperf_log_accuracy.json
+[2026-02-24 22:12:49,915 loader.py:194 INFO] Loading Measurements log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/measurements.json
+[2026-02-24 22:12:49,915 loader.py:211 INFO] Could not load Performance log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:49,915 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,915 loader.py:211 INFO] Could not load Performance log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:49,915 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,915 loader.py:194 INFO] Loading AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/TEST06/verify_accuracy.txt
+[2026-02-24 22:12:49,915 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,915 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:49,915 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,915 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,915 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:49,915 base.py:42 INFO] Starting performance checks for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,915 performance_check.py:256 INFO] Target latency: 20000000000, Early Stopping Latency: 0, Scenario: Server
+[2026-02-24 22:12:49,915 base.py:45 INFO] All performance checks checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,915 base.py:42 INFO] Starting accuracy checks for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,915 accuracy_check.py:220 INFO] ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt Skipping dataset size check
+[2026-02-24 22:12:49,915 base.py:45 INFO] All accuracy checks checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,915 base.py:42 INFO] Starting system checks for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655
+[2026-02-24 22:12:49,915 base.py:45 INFO] All system checks checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655
+[2026-02-24 22:12:49,915 base.py:42 INFO] Starting measurement checks for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/measurements.json
+[2026-02-24 22:12:49,916 base.py:45 INFO] All measurement checks checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/measurements.json
+[2026-02-24 22:12:49,916 base.py:42 INFO] Starting base checks for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/performance/power
+[2026-02-24 22:12:49,916 base.py:45 INFO] All base checks checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/performance/power
+[2026-02-24 22:12:49,916 base.py:42 INFO] Starting compliance check for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/
+[2026-02-24 22:12:49,916 base.py:45 INFO] All compliance check checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/
+[2026-02-24 22:12:49,916 loader.py:194 INFO] Loading Performance log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,918 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-24 22:12:49,918 loader.py:194 INFO] Loading Accuracy log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,921 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt.
+[2026-02-24 22:12:49,921 loader.py:194 INFO] Loading AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/accuracy/accuracy.txt
+[2026-02-24 22:12:49,921 loader.py:194 INFO] Loading AccuracyJSON log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/accuracy/mlperf_log_accuracy.json
+[2026-02-24 22:12:49,921 loader.py:194 INFO] Loading Measurements log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/measurements.json
+[2026-02-24 22:12:49,921 loader.py:211 INFO] Could not load Performance log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:49,921 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,921 loader.py:211 INFO] Could not load Performance log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:49,921 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,921 loader.py:194 INFO] Loading AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/TEST06/verify_accuracy.txt
+[2026-02-24 22:12:49,921 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,921 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:49,921 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,921 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,921 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:49,921 base.py:42 INFO] Starting performance checks for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,921 performance_check.py:275 INFO] Target latency: None, Latency: 2836338726984, Scenario: Offline
+[2026-02-24 22:12:49,922 base.py:45 INFO] All performance checks checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,922 base.py:42 INFO] Starting accuracy checks for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,922 accuracy_check.py:220 INFO] ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt Skipping dataset size check
+[2026-02-24 22:12:49,922 base.py:45 INFO] All accuracy checks checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,922 base.py:42 INFO] Starting system checks for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655
+[2026-02-24 22:12:49,922 base.py:45 INFO] All system checks checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655
+[2026-02-24 22:12:49,922 base.py:42 INFO] Starting measurement checks for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/measurements.json
+[2026-02-24 22:12:49,922 base.py:45 INFO] All measurement checks checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/measurements.json
+[2026-02-24 22:12:49,922 base.py:42 INFO] Starting base checks for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/performance/power
+[2026-02-24 22:12:49,922 base.py:45 INFO] All base checks checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/performance/power
+[2026-02-24 22:12:49,922 base.py:42 INFO] Starting compliance check for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/
+[2026-02-24 22:12:49,922 base.py:45 INFO] All compliance check checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/
+[2026-02-24 22:12:49,922 loader.py:194 INFO] Loading Performance log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,925 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt.
+[2026-02-24 22:12:49,925 loader.py:194 INFO] Loading Accuracy log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,931 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt.
+[2026-02-24 22:12:49,931 loader.py:194 INFO] Loading AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/accuracy/accuracy.txt
+[2026-02-24 22:12:49,931 loader.py:194 INFO] Loading AccuracyJSON log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/accuracy/mlperf_log_accuracy.json
+[2026-02-24 22:12:49,931 loader.py:194 INFO] Loading Measurements log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/measurements.json
+[2026-02-24 22:12:49,931 loader.py:211 INFO] Could not load Performance log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:49,931 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,931 loader.py:211 INFO] Could not load Performance log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:49,931 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,931 loader.py:194 INFO] Loading AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/TEST06/verify_accuracy.txt
+[2026-02-24 22:12:49,931 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,931 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:49,932 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,932 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:49,932 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:49,932 base.py:42 INFO] Starting performance checks for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,932 performance_check.py:256 INFO] Target latency: 20000000000, Early Stopping Latency: 0, Scenario: Server
+[2026-02-24 22:12:49,932 base.py:45 INFO] All performance checks checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:49,932 base.py:42 INFO] Starting accuracy checks for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,932 accuracy_check.py:220 INFO] ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt Skipping dataset size check
+[2026-02-24 22:12:49,932 base.py:45 INFO] All accuracy checks checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:49,932 base.py:42 INFO] Starting system checks for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655
+[2026-02-24 22:12:49,932 base.py:45 INFO] All system checks checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655
+[2026-02-24 22:12:49,932 base.py:42 INFO] Starting measurement checks for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/measurements.json
+[2026-02-24 22:12:49,932 base.py:45 INFO] All measurement checks checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/measurements.json
+[2026-02-24 22:12:49,932 base.py:42 INFO] Starting base checks for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/performance/power
+[2026-02-24 22:12:49,932 base.py:45 INFO] All base checks checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/performance/power
+[2026-02-24 22:12:49,932 base.py:42 INFO] Starting compliance check for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/
+[2026-02-24 22:12:49,932 base.py:45 INFO] All compliance check checks passed for: ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/
+[2026-02-24 22:12:49,933 main.py:220 INFO] ---
+[2026-02-24 22:12:49,933 main.py:224 INFO] Results ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt 27598.7
+[2026-02-24 22:12:49,933 main.py:224 INFO] Results ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt 25463.1
+[2026-02-24 22:12:49,933 main.py:224 INFO] Results ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt 27598.7
+[2026-02-24 22:12:49,933 main.py:224 INFO] Results ./closed/MangoBoost/results/8xMI300X_2xEPYC_9534/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt 25463.1
+[2026-02-24 22:12:49,933 main.py:224 INFO] Results ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt 33880.4
+[2026-02-24 22:12:49,933 main.py:224 INFO] Results ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt 31888.9
+[2026-02-24 22:12:49,933 main.py:224 INFO] Results ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt 33880.4
+[2026-02-24 22:12:49,933 main.py:224 INFO] Results ./closed/MangoBoost/results/8xMI325X_2xEPYC_9655/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt 31888.9
+[2026-02-24 22:12:49,933 main.py:226 INFO] ---
+[2026-02-24 22:12:49,933 main.py:315 INFO] ---
+[2026-02-24 22:12:49,933 main.py:316 INFO] Results=8, NoResults=0, Power Results=0
+[2026-02-24 22:12:49,933 main.py:323 INFO] ---
+[2026-02-24 22:12:49,933 main.py:324 INFO] Closed Results=8, Closed Power Results=0
+
+[2026-02-24 22:12:49,933 main.py:329 INFO] Open Results=0, Open Power Results=0
+
+[2026-02-24 22:12:49,933 main.py:334 INFO] Network Results=0, Network Power Results=0
+
+[2026-02-24 22:12:49,933 main.py:339 INFO] ---
+[2026-02-24 22:12:49,933 main.py:341 INFO] Systems=2, Power Systems=0
+[2026-02-24 22:12:49,933 main.py:345 INFO] Closed Systems=2, Closed Power Systems=0
+[2026-02-24 22:12:49,933 main.py:350 INFO] Open Systems=0, Open Power Systems=0
+[2026-02-24 22:12:49,933 main.py:355 INFO] Network Systems=0, Network Power Systems=0
+[2026-02-24 22:12:49,933 main.py:360 INFO] ---
+[2026-02-24 22:12:49,933 main.py:365 INFO] SUMMARY: submission looks OK

@@ -1,0 +1,15 @@
+diff --git a/aiter/ops/triton/_triton_kernels/activation.py b/aiter/ops/triton/_triton_kernels/activation.py
+index 72b0006b..3d506eb4 100644
+--- a/aiter/ops/triton/_triton_kernels/activation.py
++++ b/aiter/ops/triton/_triton_kernels/activation.py
+@@ -6,8 +6,8 @@ import triton.language as tl
+ 
+ @triton.jit
+ def _silu(x):
+-    return x * tl.sigmoid(x)
+-
++    #return x * tl.sigmoid(x)
++    return x * tl.minimum(tl.maximum((x + 1.6), 0.0), 6.0) / 6.0
+ 
+ @triton.jit
+ def _silu_exp2(x):

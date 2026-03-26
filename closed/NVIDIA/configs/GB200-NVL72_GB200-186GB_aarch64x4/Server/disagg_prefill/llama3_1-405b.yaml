@@ -1,0 +1,36 @@
+backend: pytorch
+
+max_batch_size: 128
+max_num_tokens: 4096
+max_seq_len: 22000
+
+tensor_parallel_size: 4
+moe_expert_parallel_size: 1
+enable_attention_dp: false
+pipeline_parallel_size: 1
+
+print_iter_log: true
+enable_iter_perf_stats: true
+cuda_graph_config: null
+sampler_type: TRTLLMSampler
+disable_overlap_scheduler: true
+enable_chunked_prefill: true
+stream_interval: 20
+
+kv_cache_config:
+  enable_block_reuse: false
+  free_gpu_memory_fraction: 0.95
+  dtype: fp8
+
+cache_transceiver_config:
+  max_tokens_in_buffer: 20192
+  backend: UCX
+
+scheduler_config:
+  capacity_scheduler_policy: MAX_UTILIZATION
+  context_chunking_policy: FIRST_COME_FIRST_SERVED
+
+torch_compile_config:
+  enable_fullgraph: true
+  enable_piecewise_cuda_graph: true
+  enable_userbuffers: false

@@ -1,0 +1,84 @@
+[2026-02-12 23:11:44,964 main.py:237 INFO] Detected system ID: go_spr
+[2026-02-12 23:11:44,981 generate_conf_files.py:107 INFO] Generated measurements/ entries for go_spr_TRT/resnet50/Offline
+[2026-02-12 23:11:44,981 harness.py:357 INFO] Using harness launch command...
+[2026-02-12 23:11:44,981 __init__.py:46 INFO] Running command: ./build/bin/harness_default --logfile_outdir="/home/ubuntu/MLC/repos/local/cache/get-mlperf-inference-results-dir_fa9372ba/valid_results/d986d93afc0b-nvidia_original-gpu-tensorrt-vdefault-default_config/resnet50/offline/accuracy" --logfile_prefix="mlperf_log_" --performance_sample_count=2048 --test_mode="AccuracyOnly" --gpu_copy_streams=2 --gpu_inference_streams=1 --run_infer_on_copy_streams=false --use_deque_limit=true --gpu_batch_size=64 --map_path="data_maps/imagenet/val_map.txt" --mlperf_conf_path="/home/ubuntu/MLC/repos/local/cache/get-git-repo_inference-src_08c59f8e/inference/mlperf.conf" --tensor_path="build/preprocessed_data/imagenet/ResNet50/int8_linear" --use_graphs=false --user_conf_path="/home/ubuntu/MLC/repos/gateoverflow@mlperf-automations/script/generate-mlperf-inference-user-conf/tmp/df2810de8b874c159e9659242a5b31c3.conf" --gpu_engine_batch_size="64" --gpu_engines="./build/engines/go_spr/resnet50/Offline/resnet50-Offline-gpu-resnet50-b64-int8.lwis_k_99_MaxP.plan" --max_dlas=0 --scenario="Offline" --model="resnet50" --scenario Offline --model resnet50
+[2026-02-12 23:11:44,981 __init__.py:53 INFO] Overriding Environment
+benchmark : Benchmark.ResNet50
+buffer_manager_thread_count : 0
+data_dir : /home/ubuntu/MLC/repos/local/cache/get-mlperf-inference-nvidia-scratch-space_83aa595c/data
+gpu_batch_size : 64
+gpu_copy_streams : 2
+gpu_inference_streams : 1
+input_dtype : int8
+input_format : linear
+log_dir : /home/ubuntu/MLC/repos/local/cache/get-git-repo_mlperf-inferenc_66404c60/repo/closed/NVIDIA/build/logs/2026.02.12-23.11.42
+map_path : data_maps/imagenet/val_map.txt
+mlperf_conf_path : /home/ubuntu/MLC/repos/local/cache/get-git-repo_inference-src_08c59f8e/inference/mlperf.conf
+offline_expected_qps : 0.0
+precision : int8
+preprocessed_data_dir : /home/ubuntu/MLC/repos/local/cache/get-mlperf-inference-nvidia-scratch-space_83aa595c/preprocessed_data
+run_infer_on_copy_streams : False
+scenario : Scenario.Offline
+system : System(cpu=CPU(name='Intel(R) Xeon(R) w7-2495X', architecture=<CPUArchitecture.x86_64: AliasedName(name='x86_64', aliases=(), patterns=())>, vendor='GenuineIntel', cores_per_group=24, threads_per_core=2, n_groups=1, group_type=<GroupType.Socket: 'socket'>, numa_nodes=[[Interval(start=0, end=47)]], flags={'serialize', 'pln', 'rdt_a', 'avx512_vpopcntdq', 'xsaveopt', 'avx512dq', 'split_lock_detect', 'est', 'intel_ppin', 'pclmulqdq', 'fma', 'avx2', 'ida', 'aes', 'syscall', 'de', 'vaes', 'fxsr', 'enqcmd', 'clwb', 'tsc', 'mce', 'cqm', 'pdpe1gb', 'xsavec', 'pni', 'aperfmperf', 'pts', 'waitpkg', 'cqm_llc', 'cat_l2', 'pconfig', 'amx_int8', 'ospke', 'vpclmulqdq', 'ht', 'mba', 'avx512_vbmi2', 'ibrs_enhanced', 'monitor', 'ds_cpl', 'cqm_mbm_total', 'rep_good', 'msr', 'ss', 'dtes64', 'pcid', 'hwp_pkg_req', 'rdpid', 'ssse3', 'rdrand', 'rdseed', 'art', 'cat_l3', 'cdp_l3', 'movbe', 'flush_l1d', 'cqm_mbm_local', 'erms', 'clflushopt', 'pse36', 'avx', 'user_shstk', 'avx512_vnni', 'dca', 'lm', 'acpi', 'flexpriority', 'dtherm', 'tm', 'avx512cd', 'xtopology', 'ibt', 'movdiri', 'sdbg', 'sse2', 'vmx', 'apic', 'cqm_occup_llc', 'avx512vl', 'nx', 'cx16', 'avx512bw', 'x2apic', 'pat', 'sep', 'ibrs', 'abm', 'cpuid_fault', 'avx512vbmi', 'sse4_2', 'cldemote', 'xgetbv1', 'tsc_deadline_timer', 'vpid', 'bmi2', 'cpuid', 'pbe', 'pae', 'tpr_shadow', 'tsc_adjust', 'pge', 'hwp_act_window', 'la57', 'adx', 'arch_capabilities', 'pebs', 'bmi1', 'xsaves', 'xsave', 'avx512_bf16', 'constant_tsc', 'mca', 'intel_pt', 'avx512ifma', 'mtrr', 'cdp_l2', 'tm2', 'ept_ad', 'fsrm', 'umip', 'amx_tile', 'avx512_fp16', 'epb', 'clflush', 'avx_vnni', 'sse', 'sha_ni', 'vnmi', 'rdtscp', 'bus_lock_detect', 'smx', 'arch_perfmon', 'lahf_lm', 'ssbd', 'md_clear', 'smap', 'vme', 'tsc_known_freq', '3dnowprefetch', 'popcnt', 'hwp_epp', 'bts', 'arch_lbr', 'pse', 'cx8', 'pdcm', 'ibpb', 'ept', 'stibp', 'tsxldtrk', 'hwp', 'pku', 'mmx', 'nopl', 'cmov', 'invpcid', 'movdir64b', 'fsgsbase', 'amx_bf16', 'sse4_1', 'xtpr', 'wbnoinvd', 'smep', 'arat', 'gfni', 'f16c', 'avx512_bitalg', 'dts', 'avx512f', 'fpu', 'nonstop_tsc'}, vulnerabilities={'old microcode': 'Vulnerable', 'spec store bypass': 'Mitigation; Speculative Store Bypass disabled via prctl', 'spectre v1': 'Mitigation; usercopy/swapgs barriers and __user pointer sanitization', 'spectre v2': 'Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S', 'vmscape': 'Mitigation; IBPB before exit to userspace'}), host_memory=HostMemory(capacity=Memory(quantity=197.333544, byte_suffix=<ByteSuffix.GB: (1000, 3)>, _num_bytes=197333544000)), accelerators={<class 'nvmitten.nvidia.accelerator.GPU'>: [GPU(name='NVIDIA GeForce RTX 4090', pci_id='0x268410DE', compute_sm=ComputeSM(major=8, minor=9), vram=Memory(quantity=23.5164794921875, byte_suffix=<ByteSuffix.GiB: (1024, 3)>, _num_bytes=25250627584), max_power_limit=450.0, is_integrated=False, gpu_index=0), GPU(name='NVIDIA GeForce RTX 4090', pci_id='0x268410DE', compute_sm=ComputeSM(major=8, minor=9), vram=Memory(quantity=23.5135498046875, byte_suffix=<ByteSuffix.GiB: (1024, 3)>, _num_bytes=25247481856), max_power_limit=500.0, is_integrated=False, gpu_index=1)], <class 'nvmitten.nvidia.accelerator.DLA'>: []}, extras={'id': 'go_spr', 'tags': {'is_ampere', 'custom', 'gpu_based', 'multi_gpu', 'is_ada'}, 'name': 'go_spr', 'primary_compute_sm': ComputeSM(major=8, minor=9)})
+tensor_path : build/preprocessed_data/imagenet/ResNet50/int8_linear
+test_mode : AccuracyOnly
+use_deque_limit : True
+use_graphs : False
+user_conf_path : /home/ubuntu/MLC/repos/gateoverflow@mlperf-automations/script/generate-mlperf-inference-user-conf/tmp/df2810de8b874c159e9659242a5b31c3.conf
+system_id : go_spr
+config_name : go_spr_resnet50_Offline
+workload_setting : WorkloadSetting(HarnessType.LWIS, AccuracyTarget.k_99, PowerSetting.MaxP)
+optimization_level : plugin-enabled
+num_profiles : 2
+config_ver : lwis_k_99_MaxP
+accuracy_level : 99%
+inference_server : lwis
+skip_file_checks : False
+power_limit : None
+cpu_freq : None
+gpu_engine_batch_size : 64
+&&&& RUNNING Default_Harness # ./build/bin/harness_default
+[I] mlperf.conf path: /home/ubuntu/MLC/repos/local/cache/get-git-repo_inference-src_08c59f8e/inference/mlperf.conf
+[I] user.conf path: /home/ubuntu/MLC/repos/gateoverflow@mlperf-automations/script/generate-mlperf-inference-user-conf/tmp/df2810de8b874c159e9659242a5b31c3.conf
+Creating QSL.
+Finished Creating QSL.
+Setting up SUT.
+[I] [TRT] Loaded engine size: 32 MiB
+[I] Device:0.GPU: [0] ./build/engines/go_spr/resnet50/Offline/resnet50-Offline-gpu-resnet50-b64-int8.lwis_k_99_MaxP.plan has been successfully loaded.
+[I] [TRT] Loaded engine size: 32 MiB
+[W] [TRT] Using an engine plan file across different models of devices is not recommended and is likely to affect performance or even cause errors.
+[I] Device:1.GPU: [0] ./build/engines/go_spr/resnet50/Offline/resnet50-Offline-gpu-resnet50-b64-int8.lwis_k_99_MaxP.plan has been successfully loaded.
+[I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +98, now: CPU 0, GPU 137 (MiB)
+[I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +98, now: CPU 0, GPU 235 (MiB)
+[I] [TRT] Switching optimization profile from: 0 to 1. Please ensure there are no enqueued operations pending in this context prior to switching profiles
+[I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +98, now: CPU 0, GPU 333 (MiB)
+[I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +98, now: CPU 0, GPU 431 (MiB)
+[I] [TRT] Switching optimization profile from: 0 to 1. Please ensure there are no enqueued operations pending in this context prior to switching profiles
+[I] Creating batcher thread: 0 EnableBatcherThreadPerDevice: false
+Finished setting up SUT.
+Starting warmup. Running for a minimum of 5 seconds.
+Finished warmup. Ran for 5.02992s.
+Starting running actual test.
+
+No warnings encountered during test.
+
+No errors encountered during test.
+Finished running actual test.
+Device Device:0.GPU processed:
+  1 batches of size 16
+  391 batches of size 64
+  Memcpy Calls: 0
+  PerSampleCudaMemcpy Calls: 0
+  BatchedCudaMemcpy Calls: 392
+Device Device:1.GPU processed:
+  390 batches of size 64
+  Memcpy Calls: 0
+  PerSampleCudaMemcpy Calls: 0
+  BatchedCudaMemcpy Calls: 390
+&&&& PASSED Default_Harness # ./build/bin/harness_default
+[2026-02-12 23:11:56,865 run_harness.py:170 INFO] Result: Accuracy run detected.
+[2026-02-12 23:11:56,866 __init__.py:46 INFO] Running command: PYTHONPATH=/home/ubuntu/MLC/repos/local/cache/get-git-repo_mlperf-inferenc_66404c60/repo/closed/NVIDIA:/usr/lib/python312.zip:/usr/lib/python3.12:/usr/lib/python3.12/lib-dynload:/home/ubuntu/.local/lib/python3.12/site-packages:/usr/local/lib/python3.12/dist-packages:/usr/local/lib/python3.12/dist-packages/nvfuser-0.2.23a0+6627725-py3.12-linux-x86_64.egg:/usr/local/lib/python3.12/dist-packages/lightning_thunder-0.2.0.dev0-py3.12.egg:/usr/local/lib/python3.12/dist-packages/dill-0.3.9-py3.12.egg:/usr/local/lib/python3.12/dist-packages/opt_einsum-3.4.0-py3.12.egg:/usr/local/lib/python3.12/dist-packages/lightning_utilities-0.12.0.dev0-py3.12.egg:/usr/local/lib/python3.12/dist-packages/looseversion-1.3.0-py3.12.egg:/usr/lib/python3/dist-packages python3 -S /home/ubuntu/MLC/repos/local/cache/get-git-repo_mlperf-inferenc_66404c60/repo/closed/NVIDIA/build/inference/vision/classification_and_detection/tools/accuracy-imagenet.py --mlperf-accuracy-file /home/ubuntu/MLC/repos/local/cache/get-mlperf-inference-results-dir_fa9372ba/valid_results/d986d93afc0b-nvidia_original-gpu-tensorrt-vdefault-default_config/resnet50/offline/accuracy/mlperf_log_accuracy.json --imagenet-val-file data_maps/imagenet/val_map.txt --dtype int32
+accuracy=76.078%, good=38039, total=50000
+ 
+======================== Result summaries: ========================
+

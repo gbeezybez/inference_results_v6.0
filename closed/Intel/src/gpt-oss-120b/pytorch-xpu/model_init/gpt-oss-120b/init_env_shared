@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# export WORKLOAD_NAME="llama2-70b"
+export MODEL_NAME="/model/gpt-oss-120b-mxfp4"
+export MODEL_NAME_FULL="/model/gpt-oss-120b-mxfp4"
+
+export SAMPLING_TEMPERATURE=1.0
+export SAMPLING_TOP_P=1.0
+export SAMPLING_TOP_K=-1
+
+export KV_CACHE_DTYPE="fp8"
+
+export CALIBRATION_PATH="/data/gpt-oss-120b/calib"
+export OUTPUT_DIR=$PWD/log/gpt-oss-120b
+export EVALUATION_DIR=$ROOT_DIR/evaluation_scripts
+export EVAL_SCRIPT=$EVALUATION_DIR/eval_mlperf_accuracy.py
+
+if [[ "$MODE" == "perf" || "$MODE" == test* ]]; then
+    export DATASET_PATH="/data/gpt-oss-120b/v2/perf/perf_eval_ref.pkl"
+    export TOTAL_SAMPLE_COUNT=6396
+    export SAMPLING_MAX_TOKENS=10240
+    if [[ "$MODE" == test* ]]; then
+        if [[ "$MODE" == "test07" ]]; then
+            export TOTAL_SAMPLE_COUNT=990
+            export DATASET_PATH="/data/gpt-oss-120b/compliance/acc_eval_compliance_gpqa.parquet"
+        fi
+        export COMPLIANCE_DIR=$ROOT_DIR/compliance/${MODE}
+        export COMPLIANCE_SCRIPT=${COMPLIANCE_DIR}/run_verification.py
+        export AUDIT_CONFIG=${COMPLIANCE_DIR}/audit.config
+        cp ${AUDIT_CONFIG} ${ROOT_DIR}
+    fi
+else
+    export DATASET_PATH="/data/gpt-oss-120b/v4/acc/acc_eval_inputs.pkl"
+    export TOTAL_SAMPLE_COUNT=4395
+    export SAMPLING_MAX_TOKENS=32768
+fi
+
+source init_env_base
+export MAX_MODEL_LEN=131072
+#
+# B60, B70 supported
+export XPU_SUPPORTED_DEVICE_IDS=(57873 57891)

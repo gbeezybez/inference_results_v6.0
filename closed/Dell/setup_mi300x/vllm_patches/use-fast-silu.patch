@@ -1,0 +1,58 @@
+From a3a1250acc0a1d9b6e6e303fb460ca39059911c0 Mon Sep 17 00:00:00 2001
+From: MLPerf <mlperf>
+Date: Wed, 1 Jan 2025 00:00:00 +0000
+Subject: [PATCH] use fast silu
+
+---
+ csrc/activation_kernels.cu | 22 ++++++++++++++++++++--
+ 1 file changed, 20 insertions(+), 2 deletions(-)
+
+diff --git a/csrc/activation_kernels.cu b/csrc/activation_kernels.cu
+index 1004d48e5..88714b048 100644
+--- a/csrc/activation_kernels.cu
++++ b/csrc/activation_kernels.cu
+@@ -59,7 +59,24 @@ __global__ void scaled_act_and_mul_kernel(
+ template <typename T>
+ __device__ __forceinline__ T silu_kernel(const T& x) {
+   // x * sigmoid(x)
+-  return (T)(((float)x) / (1.0f + expf((float)-x)));
++  // return (T)(((float)x) / (1.0f + expf((float)-x)));
++  
++  return (float)x * fminf(fmaxf((float)x + 2.83f, 0.0f), 6.0f);;
++}
++
++
++template<>
++__device__ __forceinline__ c10::Half silu_kernel<c10::Half>(const c10::Half& x) {
++  __half hx = *reinterpret_cast<const __half*>(&x);
++
++  const __half h_a = __float2half(2.83f);
++  const __half h_6 = __float2half(6.0f);
++
++  __half result = __hmin(__hmax(hx+h_a, 0), h_6) * hx;
++  c10::Half out;
++  out.x = *reinterpret_cast<uint16_t*>(&result);
++
++  return out;
+ }
+ 
+ template <typename T>
+@@ -116,13 +133,14 @@ __device__ __forceinline__ T gelu_tanh_kernel(const T& x) {
+     dim3 block(std::min(d, 1024));                                    \
+     const at::cuda::OptionalCUDAGuard device_guard(device_of(input)); \
+     const cudaStream_t stream = at::cuda::getCurrentCUDAStream();     \
++    const float oneOverSix = 1.0f/6.0f;                               \
+     VLLM_DISPATCH_FLOATING_TYPES(                                     \
+         input.scalar_type(), "scaled_act_and_mul_kernel", [&] {       \
+           vllm::scaled_act_and_mul_kernel<scalar_t, KERNEL<scalar_t>> \
+               <<<grid, block, 0, stream>>>(                           \
+                   out.data_ptr<c10::Float8_e4m3fnuz>(),               \
+                   input.data_ptr<scalar_t>(), d,                      \
+-                  1.0 / (*scale.data_ptr<float>()));                  \
++                  oneOverSix / (*scale.data_ptr<float>()));                  \
+         });
+ #endif
+ 
+-- 
+2.43.0
+

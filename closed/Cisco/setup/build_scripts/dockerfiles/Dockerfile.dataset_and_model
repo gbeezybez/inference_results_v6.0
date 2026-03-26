@@ -1,0 +1,66 @@
+ARG BASE_IMAGE
+FROM $BASE_IMAGE
+
+# Clear any pip/proxy settings from base image and set correct proxy
+ENV http_proxy=http://173.36.224.108:80/
+ENV https_proxy=http://173.36.224.108:80/
+ENV HTTP_PROXY=http://173.36.224.108:80/
+ENV HTTPS_PROXY=http://173.36.224.108:80/
+ENV PIP_PROXY=http://173.36.224.108:80/
+
+# Configure pip with correct proxy
+RUN rm -f /root/.config/pip/pip.conf /etc/pip.conf /root/.pip/pip.conf /etc/xdg/pip/pip.conf 2>/dev/null || true \
+ && mkdir -p /root/.config/pip \
+ && printf '[global]\nproxy = http://173.36.224.108:80/\n' > /root/.config/pip/pip.conf
+
+# Configure git with correct proxy
+RUN git config --global http.proxy http://173.36.224.108:80/ \
+ && git config --global https.proxy http://173.36.224.108:80/
+
+# Clear any curl and huggingface proxy config from base image
+RUN rm -f /root/.curlrc /etc/curlrc 2>/dev/null || true \
+ && rm -rf /root/.cache/huggingface 2>/dev/null || true \
+ && mkdir -p /root/.cache/huggingface \
+ && printf 'HF_HUB_DISABLE_PROGRESS_BARS=1\n' > /root/.cache/huggingface/env
+
+# Clear any Python site-packages proxy configuration
+RUN find /opt/venv -name "sitecustomize.py" -delete 2>/dev/null || true \
+ && rm -f /opt/venv/pip.conf 2>/dev/null || true \
+ && rm -rf /opt/venv/.pip 2>/dev/null || true
+
+ARG DEBIAN_FRONTEND=noninteractive
+
+WORKDIR /lab-mlperf-inference/
+USER root
+
+RUN pip uninstall -y cmake
+# Clear apt proxy config from base image and set correct proxy
+RUN rm -f /etc/apt/apt.conf.d/*proxy* /etc/apt/apt.conf 2>/dev/null || true \
+ && printf 'Acquire::http::Proxy "http://173.36.224.108:80/";\nAcquire::https::Proxy "http://173.36.224.108:80/";\n' > /etc/apt/apt.conf.d/99proxy \
+ && apt update && apt install -y unzip nano cmake
+
+RUN pip install \
+accelerate==1.12.0 \
+datasets==4.4.1 \
+evaluate==0.4.6 \
+numpy==2.1.3 \
+py-libnuma==1.2 \
+onnx==1.19.0 \
+onnxruntime==1.22.1 \
+onnxruntime_genai==0.9.2 \
+onnxruntime_extensions==0.14.0 \
+onnxsim==0.4.36 \
+rouge_score==0.1.2 \
+transformers==4.57.3 \
+mlc-scripts==1.1.0
+
+RUN curl -x http://173.36.224.108:80/ https://rclone.org/install.sh | bash \
+&& rclone config create mlc-inference s3 provider=Cloudflare access_key_id=f65ba5eef400db161ea49967de89f47b secret_access_key=fbea333914c292b854f14d3fe232bad6c5407bf0ab1bebf78833c2b359bdfd2b endpoint=https://c2686074cb2caf5cbaf6d134bdba8b47.r2.cloudflarestorage.com
+
+
+RUN wget -e use_proxy=yes -e http_proxy=http://173.36.224.108:80/ -e https_proxy=http://173.36.224.108:80/ https://download.amd.com/opendownload/Quark/amd_quark-0.10.zip && unzip amd_quark-0.10.zip
+RUN sed -i '294,302d' amd_quark-0.10/examples/torch/language_modeling/llm_ptq/quantize_quark.py
+RUN sed -i '241a\    elif dataset_name.endswith('\''pkl'\''):\n        from calib import get_mlperf_data\n        return get_mlperf_data(dataset_name, **kwargs)' amd_quark-0.10/examples/torch/language_modeling/llm_utils/data_preparation.py
+
+COPY tools/calib.py amd_quark-0.10/examples/torch/language_modeling/llm_ptq/
+RUN pip install amd_quark-0.10/amd_quark-0.10-py3-none-any.whl

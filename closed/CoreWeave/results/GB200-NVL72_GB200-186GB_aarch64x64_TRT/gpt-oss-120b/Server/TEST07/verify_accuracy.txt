@@ -1,0 +1,78 @@
+2026-02-13 17:06:51,409 - INFO - Loading MLPerf log from /work/build/compliance_logs/TEST07/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/mlperf_log_accuracy.json
+2026-02-13 17:06:51,464 - INFO - Loaded 990 log entries
+2026-02-13 17:06:51,464 - INFO - Loading reference data from /work/build/data/gpt-oss/v4/acc/acc_eval_compliance_gpqa.parquet
+2026-02-13 17:06:51,568 - INFO - Loaded reference data from Parquet file
+2026-02-13 17:06:51,575 - INFO - Reference data shape: (990, 6)
+2026-02-13 17:06:51,575 - INFO - Reference columns: ['input_tokens', 'num_tokens', 'text_input', 'original_messages', 'ground_truth', 'dataset']
+2026-02-13 17:06:51,575 - INFO - Unique datasets in reference data (1 total):
+2026-02-13 17:06:51,576 - INFO -   'gpqa_diamond' (990 samples)
+2026-02-13 17:06:51,576 - INFO - 
+Sample rows from reference data:
+2026-02-13 17:06:51,576 - INFO -   Row 0: dataset='gpqa_diamond'
+2026-02-13 17:06:51,576 - INFO -   Row 1: dataset='gpqa_diamond'
+2026-02-13 17:06:51,576 - INFO -   Row 2: dataset='gpqa_diamond'
+2026-02-13 17:06:51,576 - INFO - 
+Expected Dataset → Evaluator mapping:
+2026-02-13 17:06:51,576 - INFO -   'gpqa_diamond' (normalized: 'gpqa_diamond') → 'gpqa'
+2026-02-13 17:06:51,576 - INFO - Loading tokenizer: openai/gpt-oss-120b
+2026-02-13 17:06:53,008 - INFO - Grouping MLPerf log entries by dataset...
+2026-02-13 17:06:53,035 - INFO - Grouped entries by dataset:
+2026-02-13 17:06:53,035 - INFO -   gpqa_diamond: 990 entries
+2026-02-13 17:06:53,035 - INFO - Total entries: 990
+2026-02-13 17:06:53,035 - INFO - 
+Processing MLPerf log entries by dataset...
+2026-02-13 17:06:53,035 - INFO - 
+================================================================================
+2026-02-13 17:06:53,035 - INFO - Processing gpqa_diamond: 990 samples
+2026-02-13 17:06:53,035 - INFO - ================================================================================
+
+Evaluating gpqa_diamond:   0%|          | 0/990 [00:00<?, ?entry/s]
+Evaluating gpqa_diamond:  27%|██▋       | 264/990 [00:00<00:00, 2631.54entry/s]
+Evaluating gpqa_diamond:  53%|█████▎    | 528/990 [00:00<00:00, 1346.62entry/s]
+Evaluating gpqa_diamond:  70%|███████   | 696/990 [00:00<00:00, 711.34entry/s] 
+Evaluating gpqa_diamond:  81%|████████▏ | 805/990 [00:01<00:00, 550.44entry/s]
+Evaluating gpqa_diamond:  89%|████████▉ | 884/990 [00:01<00:00, 484.22entry/s]
+Evaluating gpqa_diamond:  96%|█████████▌| 946/990 [00:01<00:00, 439.72entry/s]
+Evaluating gpqa_diamond: 100%|██████████| 990/990 [00:01<00:00, 573.53entry/s]
+2026-02-13 17:06:54,762 - INFO - 
+Calculating final scores...
+2026-02-13 17:06:54,762 - INFO - Evaluation complete!
+
+================================================================================
+MLPerf Accuracy Evaluation Results
+================================================================================
+Total samples evaluated: 990
+Overall raw accuracy: 62.32% (617/990)
+================================================================================
+
+Per-Dataset Breakdown:
+--------------------------------------------------------------------------------
+Dataset                    Correct    Total  Repeats      Score   Accuracy
+--------------------------------------------------------------------------------
+gpqa_diamond                   617      990        5     123.40     62.32%
+================================================================================
+
+Final Score Calculation:
+--------------------------------------------------------------------------------
+Formula: gpqa_diamond/5
+Score:   = 617/5
+         = 123.40
+         = 123.40
+Max:     = 990/5
+         = 198.00
+
+FINAL SCORE: 62.32% (123.40/198.00)
+================================================================================
+
+
+Printing for submission_checker:
+
+'exact_match': 62.323
+
+================================================================================
+TEST07 Verification Summary
+================================================================================
+Accuracy score: 62.323
+Accuracy threshold: 60.698
+Accuracy check pass: True
+TEST PASS

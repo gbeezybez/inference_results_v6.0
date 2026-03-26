@@ -1,0 +1,91 @@
+[2026-02-04 17:07:41,013 loader.py:176 INFO] Loading System log from build/submission/closed/Inventec/systems/P9000AG7_B200-SXM-180GBx8_TRT.json
+[2026-02-04 17:07:41,016 loader.py:176 INFO] Loading Performance log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-04 17:07:41,019 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-04 17:07:41,019 loader.py:176 INFO] Loading Accuracy log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-04 17:07:41,021 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt.
+[2026-02-04 17:07:41,021 loader.py:176 INFO] Loading AccuracyResult log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/accuracy/accuracy.txt
+[2026-02-04 17:07:41,022 loader.py:176 INFO] Loading AccuracyJSON log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/accuracy/mlperf_log_accuracy.json
+[2026-02-04 17:07:41,022 loader.py:176 INFO] Loading Measurements log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/measurements.json
+[2026-02-04 17:07:41,023 loader.py:193 INFO] Could not load Performance log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-04 17:07:41,023 loader.py:193 INFO] Could not load AccuracyResult log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-04 17:07:41,023 loader.py:193 INFO] Could not load Performance log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-04 17:07:41,023 loader.py:193 INFO] Could not load AccuracyResult log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-04 17:07:41,024 loader.py:176 INFO] Loading AccuracyResult log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/TEST06/verify_accuracy.txt
+[2026-02-04 17:07:41,025 base.py:42 INFO] Starting performance checks for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-04 17:07:41,025 performance_check.py:242 INFO] Target latency: None, Latency: 2693304322180, Scenario: Offline
+[2026-02-04 17:07:41,025 base.py:45 INFO] All performance checks checks passed for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-04 17:07:41,025 base.py:42 INFO] Starting accuracy checks for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-04 17:07:41,025 base.py:45 INFO] All accuracy checks checks passed for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-04 17:07:41,025 base.py:42 INFO] Starting system checks for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT
+[2026-02-04 17:07:41,025 base.py:45 INFO] All system checks checks passed for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT
+[2026-02-04 17:07:41,025 base.py:42 INFO] Starting measurement checks for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/measurements.json
+[2026-02-04 17:07:41,026 base.py:45 INFO] All measurement checks checks passed for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/measurements.json
+[2026-02-04 17:07:41,026 base.py:42 INFO] Starting base checks for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/performance/power
+[2026-02-04 17:07:41,026 base.py:45 INFO] All base checks checks passed for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/performance/power
+[2026-02-04 17:07:41,028 loader.py:176 INFO] Loading Performance log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-04 17:07:41,030 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-04 17:07:41,030 loader.py:176 INFO] Loading Accuracy log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-04 17:07:41,031 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/accuracy/mlperf_log_detail.txt.
+[2026-02-04 17:07:41,031 loader.py:176 INFO] Loading AccuracyResult log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/accuracy/accuracy.txt
+[2026-02-04 17:07:41,031 loader.py:176 INFO] Loading AccuracyJSON log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/accuracy/mlperf_log_accuracy.json
+[2026-02-04 17:07:41,031 loader.py:176 INFO] Loading Measurements log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/measurements.json
+[2026-02-04 17:07:41,032 loader.py:193 INFO] Could not load Performance log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-04 17:07:41,032 loader.py:193 INFO] Could not load AccuracyResult log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-04 17:07:41,033 loader.py:193 INFO] Could not load Performance log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-04 17:07:41,033 loader.py:193 INFO] Could not load AccuracyResult log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-04 17:07:41,033 loader.py:176 INFO] Loading AccuracyResult log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/TEST06/verify_accuracy.txt
+[2026-02-04 17:07:41,035 base.py:42 INFO] Starting performance checks for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-04 17:07:41,035 performance_check.py:242 INFO] Target latency: None, Latency: 3261298116735, Scenario: Offline
+[2026-02-04 17:07:41,035 base.py:45 INFO] All performance checks checks passed for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-04 17:07:41,035 base.py:42 INFO] Starting accuracy checks for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-04 17:07:41,035 base.py:45 INFO] All accuracy checks checks passed for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-04 17:07:41,035 base.py:42 INFO] Starting system checks for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT
+[2026-02-04 17:07:41,035 base.py:45 INFO] All system checks checks passed for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT
+[2026-02-04 17:07:41,035 base.py:42 INFO] Starting measurement checks for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/measurements.json
+[2026-02-04 17:07:41,035 base.py:45 INFO] All measurement checks checks passed for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/measurements.json
+[2026-02-04 17:07:41,035 base.py:42 INFO] Starting base checks for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/performance/power
+[2026-02-04 17:07:41,035 base.py:45 INFO] All base checks checks passed for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/performance/power
+[2026-02-04 17:07:41,037 loader.py:176 INFO] Loading Performance log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-04 17:07:41,039 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-04 17:07:41,039 loader.py:176 INFO] Loading Accuracy log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-04 17:07:41,041 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/accuracy/mlperf_log_detail.txt.
+[2026-02-04 17:07:41,041 loader.py:176 INFO] Loading AccuracyResult log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/accuracy/accuracy.txt
+[2026-02-04 17:07:41,041 loader.py:176 INFO] Loading AccuracyJSON log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/accuracy/mlperf_log_accuracy.json
+[2026-02-04 17:07:41,041 loader.py:176 INFO] Loading Measurements log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/measurements.json
+[2026-02-04 17:07:41,042 loader.py:193 INFO] Could not load Performance log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-04 17:07:41,042 loader.py:193 INFO] Could not load AccuracyResult log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-04 17:07:41,042 loader.py:193 INFO] Could not load Performance log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-04 17:07:41,042 loader.py:193 INFO] Could not load AccuracyResult log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-04 17:07:41,043 loader.py:176 INFO] Loading AccuracyResult log from build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/TEST06/verify_accuracy.txt
+[2026-02-04 17:07:41,044 base.py:42 INFO] Starting performance checks for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-04 17:07:41,044 performance_check.py:242 INFO] Target latency: None, Latency: 655975016562, Scenario: Offline
+[2026-02-04 17:07:41,044 base.py:45 INFO] All performance checks checks passed for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-04 17:07:41,044 base.py:42 INFO] Starting accuracy checks for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-04 17:07:41,044 base.py:45 INFO] All accuracy checks checks passed for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-04 17:07:41,044 base.py:42 INFO] Starting system checks for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT
+[2026-02-04 17:07:41,044 base.py:45 INFO] All system checks checks passed for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT
+[2026-02-04 17:07:41,044 base.py:42 INFO] Starting measurement checks for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/measurements.json
+[2026-02-04 17:07:41,045 base.py:45 INFO] All measurement checks checks passed for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/measurements.json
+[2026-02-04 17:07:41,045 base.py:42 INFO] Starting base checks for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/performance/power
+[2026-02-04 17:07:41,045 base.py:45 INFO] All base checks checks passed for: build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/performance/power
+[2026-02-04 17:07:41,048 main.py:215 INFO] ---
+[2026-02-04 17:07:41,048 main.py:219 INFO] Results build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt 100291.0
+[2026-02-04 17:07:41,048 main.py:219 INFO] Results build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/performance/run_1/mlperf_log_detail.txt 1632.1
+[2026-02-04 17:07:41,048 main.py:219 INFO] Results build/submission/closed/Inventec/results/P9000AG7_B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/performance/run_1/mlperf_log_detail.txt 142508.0
+[2026-02-04 17:07:41,048 main.py:221 INFO] ---
+[2026-02-04 17:07:41,048 main.py:310 INFO] ---
+[2026-02-04 17:07:41,048 main.py:311 INFO] Results=3, NoResults=0, Power Results=0
+[2026-02-04 17:07:41,048 main.py:318 INFO] ---
+[2026-02-04 17:07:41,048 main.py:319 INFO] Closed Results=3, Closed Power Results=0
+
+[2026-02-04 17:07:41,048 main.py:324 INFO] Open Results=0, Open Power Results=0
+
+[2026-02-04 17:07:41,049 main.py:329 INFO] Network Results=0, Network Power Results=0
+
+[2026-02-04 17:07:41,049 main.py:334 INFO] ---
+[2026-02-04 17:07:41,049 main.py:336 INFO] Systems=1, Power Systems=0
+[2026-02-04 17:07:41,049 main.py:340 INFO] Closed Systems=1, Closed Power Systems=0
+[2026-02-04 17:07:41,049 main.py:345 INFO] Open Systems=0, Open Power Systems=0
+[2026-02-04 17:07:41,049 main.py:350 INFO] Network Systems=0, Network Power Systems=0
+[2026-02-04 17:07:41,049 main.py:355 INFO] ---
+[2026-02-04 17:07:41,049 main.py:360 INFO] SUMMARY: submission looks OK

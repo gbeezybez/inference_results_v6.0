@@ -1,0 +1,28 @@
+ARG BASE_IMAGE
+FROM $BASE_IMAGE
+
+# Clear any pip/proxy settings from base image and set correct proxy
+ENV http_proxy=http://173.36.224.108:80/
+ENV https_proxy=http://173.36.224.108:80/
+ENV HTTP_PROXY=http://173.36.224.108:80/
+ENV HTTPS_PROXY=http://173.36.224.108:80/
+ENV PIP_PROXY=http://173.36.224.108:80/
+
+ARG DEBIAN_FRONTEND=noninteractive
+ARG AITER_DIR=setup/aiter
+ARG GPU_ARCH
+
+# Configure pip with correct proxy
+RUN rm -f /root/.config/pip/pip.conf /etc/pip.conf /root/.pip/pip.conf /etc/xdg/pip/pip.conf 2>/dev/null || true \
+ && mkdir -p /root/.config/pip \
+ && printf '[global]\nproxy = http://173.36.224.108:80/\n' > /root/.config/pip/pip.conf
+
+# Re-install aiter using pip (which respects proxy settings)
+COPY ${AITER_DIR} /lab-mlperf-inference/aiter
+RUN cd /lab-mlperf-inference/aiter \
+    && rm -rf /root/.triton/cache/ \
+    && python3 -m pip uninstall -y aiter \
+    && pip install -U 'setuptools<80' \
+    && pip install .
+
+WORKDIR /lab-mlperf-inference/code/

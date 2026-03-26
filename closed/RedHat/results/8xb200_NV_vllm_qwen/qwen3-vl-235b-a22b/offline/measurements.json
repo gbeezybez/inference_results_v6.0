@@ -1,0 +1,44 @@
+{
+  "division": "closed",
+  "submitter": "RedHat",
+  "status": "available",
+
+  "system_name": "B200x8_RHEL10.1_EMR_2S",
+  "system_type": "datacenter",
+  "number_of_nodes": 1,
+
+  "accelerators_per_node": 8,
+  "accelerator_model_name": "NVIDIA B200",
+  "accelerator_host_interconnect": "NVLink (NV18 between all GPU pairs)",
+  "accelerator_frequency": "1965 MHz (max graphics/SM), 3996 MHz (max mem)",
+  "accelerator_memory_capacity": "179 GB",
+  "accelerator_memory_configuration": "HBM3e",
+  "accelerator_on-chip_memories": "L1/L2: <optional; not reported here>",
+
+  "accelerator_vbios_version": "97.00.88.00.11",
+  "accelerator_idle_temperature": "21-24 C",
+
+  "host_processors_per_node": 2,
+  "host_processor_model_name": "INTEL(R) XEON(R) PLATINUM 8570",
+  "host_processor_core_count": 112,
+  "host_processor_frequency": "NA",
+  "host_memory_capacity": "~2.0 TiB",
+  "host_memory_configuration": "ECC RAM (dmidecode not provided)",
+
+  "host_storage_capacity": "30.72 TB NVMe (4x 7.68 TB) + 960 GB OS disk",
+  "host_storage_type": "Dell NVMe ISE PS1010 RI U.2 7.68TB (4 drives) + Dell BOSS-N1 960GB OS disk",
+
+  "operating_system": "Red Hat Enterprise Linux 10.1 (Coughlan), kernel 6.12.0-124.35.1.el10_1.x86_64",
+  "framework": "vLLM + NVIDIA-dynamo + MLPerf Inference Qwen3-VL harness",
+  "other_software_stack": "Python <fill>, PyTorch <fill>, CUDA <fill>, cuDNN <fill>, NCCL <present>, Triton <fill>",
+
+  "input_data_types": "fp16/bf16 (images), int32 (tokens)",
+  "weight_data_types": "fp4",
+  "weight_transformations": "quantization",
+  "retraining": "none",
+
+  "starting_weights_filename": "https://huggingface.co/nvidia/Qwen3-VL-235B-A22B-Instruct-NVFP4-MLPerf-Inference-Closed-V6.0",
+
+  "hw_notes": "1 node with 8x NVIDIA B200 GPUs; all-to-all NVLink connectivity (NV18); 2-socket Intel Xeon Platinum 8570 host; 224 logical CPUs (112 physical cores), NUMA=2; ~2.0 TiB system RAM; 4x 7.68TB Dell NVMe ISE PS1010 RI U.2 + 960GB Dell BOSS-N1 OS disk",
+  "sw_notes": "MLPerf multimodal Qwen3-VL harness; vLLM via Dynamo backend; async scheduling enabled; SJF scheduling enabled when --scheduling-policy=sjf; CUDA Graph capture enabled via compilation config"
+}

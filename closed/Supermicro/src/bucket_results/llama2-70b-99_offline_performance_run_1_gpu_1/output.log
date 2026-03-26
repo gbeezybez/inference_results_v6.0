@@ -1,0 +1,240 @@
+2026-02-11 00:46:07 WARNING  Overriding default sample count with 3000
+2026-02-11 00:46:07 WARNING  Overriding default duration with 1000 ms
+env_config={'HARNESS_DISABLE_VLLM_LOGS': 1, 'HARNESS_GC_LIMIT': 100000, 'HIP_FORCE_DEV_KERNARG': 1, 'VLLM_USE_V1': 1, 'VLLM_LOGGING_LEVEL': 'ERROR', 'VLLM_USE_TRITON_FLASH_ATTN': 0, 'VLLM_ENGINE_ITERATION_TIMEOUT_S': 36000, 'AITER_LOG_LEVEL': 'ERROR', 'RAY_EXPERIMENTAL_NOSET_ROCR_VISIBLE_DEVICES': 1, 'VLLM_ROCM_USE_AITER': 1, 'USE_FASTSAFETENSOR': 1, 'SAFETENSORS_FAST_GPU': 1, 'VLLM_ROCM_USE_AITER_RMSNORM': 1, 'VLLM_ROCM_USE_AITER_MHA': 1, 'VLLM_ROCM_USE_AITER_FP4_ASM_GEMM': 1, 'VLLM_MIN_REQUEST_DECODE_STEP': 3840, 'VLLM_SUBSEQUENT_DECODE_STEPS': 17, 'VLLM_ROCM_USE_AITER_TRITON_ROPE': 1, 'GPU_MAX_HW_QUEUES': 2, 'HSA_KERNARG_POOL_SIZE': 4000000}
+2026-02-11 00:46:19 INFO     Setting HARNESS_DISABLE_VLLM_LOGS to 1
+2026-02-11 00:46:19 INFO     Setting HARNESS_GC_LIMIT to 100000
+2026-02-11 00:46:19 INFO     Setting HIP_FORCE_DEV_KERNARG to 1
+2026-02-11 00:46:19 INFO     Setting VLLM_USE_V1 to 1
+2026-02-11 00:46:19 INFO     Setting VLLM_LOGGING_LEVEL to ERROR
+2026-02-11 00:46:19 INFO     Setting VLLM_USE_TRITON_FLASH_ATTN to 0
+2026-02-11 00:46:19 INFO     Setting VLLM_ENGINE_ITERATION_TIMEOUT_S to 36000
+2026-02-11 00:46:19 INFO     Setting AITER_LOG_LEVEL to ERROR
+2026-02-11 00:46:19 INFO     Setting RAY_EXPERIMENTAL_NOSET_ROCR_VISIBLE_DEVICES to 1
+2026-02-11 00:46:19 INFO     Setting VLLM_ROCM_USE_AITER to 1
+2026-02-11 00:46:19 INFO     Setting USE_FASTSAFETENSOR to 1
+2026-02-11 00:46:19 INFO     Setting SAFETENSORS_FAST_GPU to 1
+2026-02-11 00:46:19 INFO     Setting VLLM_ROCM_USE_AITER_RMSNORM to 1
+2026-02-11 00:46:19 INFO     Setting VLLM_ROCM_USE_AITER_MHA to 1
+2026-02-11 00:46:19 INFO     Setting VLLM_ROCM_USE_AITER_FP4_ASM_GEMM to 1
+2026-02-11 00:46:19 INFO     Setting VLLM_MIN_REQUEST_DECODE_STEP to 3840
+2026-02-11 00:46:19 INFO     Setting VLLM_SUBSEQUENT_DECODE_STEPS to 17
+2026-02-11 00:46:19 INFO     Setting VLLM_ROCM_USE_AITER_TRITON_ROPE to 1
+2026-02-11 00:46:19 INFO     Setting GPU_MAX_HW_QUEUES to 2
+2026-02-11 00:46:19 INFO     Setting HSA_KERNARG_POOL_SIZE to 4000000
+2026-02-11 00:46:19 INFO     Init Offline SUT
+2026-02-11 00:46:19 INFO     Init SUT
+2026-02-11 00:46:19 INFO     Loading dataset...
+2026-02-11 00:46:20 INFO     Finished loading dataset.
+2026-02-11 00:46:20 INFO     Instantiating SUT
+2026-02-11 00:46:20 INFO     SUT start
+2026-02-11 00:46:24 INFO     GPU: 1
+2026-02-11 00:46:24 INFO     Nearest nodes = [1]
+2026-02-11 00:46:24 INFO     cudagraph_capture_sizes will be generated due to cudagraph_capture_range
+2026-02-11 00:46:24 INFO     llm_config={'model': '/model/llama2-70b-chat-hf/fp4_quantized', 'dtype': 'bfloat16', 'kv_cache_dtype': 'fp8', 'quantization': 'quark', 'pipeline_parallel_size': 1, 'tensor_parallel_size': 1, 'data_parallel_size': 1, 'gpu_memory_utilization': 0.95, 'max_model_len': 2048, 'swap_space': 4, 'block_size': 16, 'enforce_eager': False, 'max_num_batched_tokens': 65536, 'max_num_seqs': 3392, 'disable_custom_all_reduce': True, 'disable_log_stats': True, 'enable_chunked_prefill': True, 'enable_prefix_caching': False, 'use_tqdm_on_load': False, 'compilation_config': {'level': None, 'mode': None, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': [], 'splitting_ops': None, 'compile_mm_encoder': False, 'compile_sizes': [2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192], 'compile_ranges_split_points': None, 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_AND_PIECEWISE: (2, 1)>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [4096, 4088, 4080, 4072, 4064, 4056, 4048, 4040, 4032, 4024, 4016, 4008, 4000, 3992, 3984, 3976, 3968, 3960, 3952, 3944, 3936, 3928, 3920, 3912, 3904, 3896, 3888, 3880, 3872, 3864, 3856, 3848, 3840, 3832, 3824, 3816, 3808, 3800, 3792, 3784, 3776, 3768, 3760, 3752, 3744, 3736, 3728, 3720, 3712, 3704, 3696, 3688, 3680, 3672, 3664, 3656, 3648, 3640, 3632, 3624, 3616, 3608, 3600, 3592, 3584, 3576, 3568, 3560, 3552, 3544, 3536, 3528, 3520, 3512, 3504, 3496, 3488, 3480, 3472, 3464, 3456, 3448, 3440, 3432, 3424, 3416, 3408, 3400, 3392, 3384, 3376, 3368, 3360, 3352, 3344, 3336, 3328, 3320, 3312, 3304, 3296, 3288, 3280, 3272, 3264, 3256, 3248, 3240, 3232, 3224, 3216, 3208, 3200, 3192, 3184, 3176, 3168, 3160, 3152, 3144, 3136, 3128, 3120, 3112, 3104, 3096, 3088, 3080, 3072, 3064, 3056, 3048, 3040, 3032, 3024, 3016, 3008, 3000, 2992, 2984, 2976, 2968, 2960, 2952, 2944, 2936, 2928, 2920, 2912, 2904, 2896, 2888, 2880, 2872, 2864, 2856, 2848, 2840, 2832, 2824, 2816, 2808, 2800, 2792, 2784, 2776, 2768, 2760, 2752, 2744, 2736, 2728, 2720, 2712, 2704, 2696, 2688, 2680, 2672, 2664, 2656, 2648, 2640, 2632, 2624, 2616, 2608, 2600, 2592, 2584, 2576, 2568, 2560, 2552, 2544, 2536, 2528, 2520, 2512, 2504, 2496, 2488, 2480, 2472, 2464, 2456, 2448, 2440, 2432, 2424, 2416, 2408, 2400, 2392, 2384, 2376, 2368, 2360, 2352, 2344, 2336, 2328, 2320, 2312, 2304, 2296, 2288, 2280, 2272, 2264, 2256, 2248, 2240, 2232, 2224, 2216, 2208, 2200, 2192, 2184, 2176, 2168, 2160, 2152, 2144, 2136, 2128, 2120, 2112, 2104, 2096, 2088, 2080, 2072, 2064, 2056, 2048, 2040, 2032, 2024, 2016, 2008, 2000, 1992, 1984, 1976, 1968, 1960, 1952, 1944, 1936, 1928, 1920, 1912, 1904, 1896, 1888, 1880, 1872, 1864, 1856, 1848, 1840, 1832, 1824, 1816, 1808, 1800, 1792, 1784, 1776, 1768, 1760, 1752, 1744, 1736, 1728, 1720, 1712, 1704, 1696, 1688, 1680, 1672, 1664, 1656, 1648, 1640, 1632, 1624, 1616, 1608, 1600, 1592, 1584, 1576, 1568, 1560, 1552, 1544, 1536, 1528, 1520, 1512, 1504, 1496, 1488, 1480, 1472, 1464, 1456, 1448, 1440, 1432, 1424, 1416, 1408, 1400, 1392, 1384, 1376, 1368, 1360, 1352, 1344, 1336, 1328, 1320, 1312, 1304, 1296, 1288, 1280, 1272, 1264, 1256, 1248, 1240, 1232, 1224, 1216, 1208, 1200, 1192, 1184, 1176, 1168, 1160, 1152, 1144, 1136, 1128, 1120, 1112, 1104, 1096, 1088, 1080, 1072, 1064, 1056, 1048, 1040, 1032, 1024, 1016, 1008, 1000, 992, 984, 976, 968, 960, 952, 944, 936, 928, 920, 912, 904, 896, 888, 880, 872, 864, 856, 848, 840, 832, 824, 816, 808, 800, 792, 784, 776, 768, 760, 752, 744, 736, 728, 720, 712, 704, 696, 688, 680, 672, 664, 656, 648, 640, 632, 624, 616, 608, 600, 592, 584, 576, 568, 560, 552, 544, 536, 528, 520, 512, 504, 496, 488, 480, 472, 464, 456, 448, 440, 432, 424, 416, 408, 400, 392, 384, 376, 368, 360, 352, 344, 336, 328, 320, 312, 304, 296, 288, 280, 272, 264, 256, 248, 240, 232, 224, 216, 208, 200, 192, 184, 176, 168, 160, 152, 144, 136, 128, 120, 112, 104, 96, 88, 80, 72, 64, 56, 48, 40, 32, 24, 16, 8, 4, 2, 1], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': None, 'pass_config': {}, 'max_cudagraph_capture_size': None, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': True}, 'local_cache_dir': None}, 'async_scheduling': True}
+[0;36m(EngineCore_DP0 pid=2046)[0;0m [aiter] type hints mismatch, override to --> dynamic_per_group_scaled_quant_fp4(out: torch.Tensor, input: torch.Tensor, scales: torch.Tensor, group_size: int = 32, shuffle_scale: bool = True, num_rows: Optional[torch.Tensor] = None, num_rows_factor: int = 1) -> None
+[0;36m(EngineCore_DP0 pid=2046)[0;0m 2026-02-11 01:04:46 WARNING  type hints mismatch, override to --> dynamic_per_group_scaled_quant_fp4(out: torch.Tensor, input: torch.Tensor, scales: torch.Tensor, group_size: int = 32, shuffle_scale: bool = True, num_rows: Optional[torch.Tensor] = None, num_rows_factor: int = 1) -> None
+[aiter] hipModuleLoad: /lab-mlperf-inference/aiter/hsa/gfx950/f4gemm/f4gemm_bf16_per1x32Fp4_BpreShuffle_256x256.co GetFunction: _ZN5aiter42f4gemm_bf16_per1x32Fp4_BpreShuffle_256x256E Success
+[0;36m(EngineCore_DP0 pid=2046)[0;0m /lab-mlperf-inference/vllm/vllm/model_executor/layers/utils.py:161: UserWarning: Failed validator: GCN_ARCH_NAME (Triggered internally at /app/pytorch/aten/src/ATen/hip/tunable/Tunable.cpp:364.)
+[0;36m(EngineCore_DP0 pid=2046)[0;0m   return torch.nn.functional.linear(x, weight, bias)
+[aiter] hipModuleLoad: /lab-mlperf-inference/aiter/hsa/gfx950/f4gemm/f4gemm_bf16_per1x32Fp4_BpreShuffle_224x256.co GetFunction: _ZN5aiter42f4gemm_bf16_per1x32Fp4_BpreShuffle_224x256E Success
+[aiter] hipModuleLoad: /lab-mlperf-inference/aiter/hsa/gfx950/f4gemm/f4gemm_bf16_per1x32Fp4_BpreShuffle_160x384.co GetFunction: _ZN5aiter42f4gemm_bf16_per1x32Fp4_BpreShuffle_160x384E Success
+[aiter] hipModuleLoad: /lab-mlperf-inference/aiter/hsa/gfx950/f4gemm/f4gemm_bf16_per1x32Fp4_BpreShuffle_192x256.co GetFunction: _ZN5aiter42f4gemm_bf16_per1x32Fp4_BpreShuffle_192x256E Success
+[aiter] hipModuleLoad: /lab-mlperf-inference/aiter/hsa/gfx950/f4gemm/f4gemm_bf16_per1x32Fp4_BpreShuffle_128x512.co GetFunction: _ZN5aiter42f4gemm_bf16_per1x32Fp4_BpreShuffle_128x512E Success
+[aiter] hipModuleLoad: /lab-mlperf-inference/aiter/hsa/gfx950/f4gemm/f4gemm_bf16_per1x32Fp4_BpreShuffle_160x256.co GetFunction: _ZN5aiter42f4gemm_bf16_per1x32Fp4_BpreShuffle_160x256E Success
+[aiter] hipModuleLoad: /lab-mlperf-inference/aiter/hsa/gfx950/f4gemm/f4gemm_bf16_per1x32Fp4_BpreShuffle_128x256.co GetFunction: _ZN5aiter42f4gemm_bf16_per1x32Fp4_BpreShuffle_128x256E Success
+[aiter] hipModuleLoad: /lab-mlperf-inference/aiter/hsa/gfx950/f4gemm/f4gemm_bf16_per1x32Fp4_BpreShuffle_224x128.co GetFunction: _ZN5aiter42f4gemm_bf16_per1x32Fp4_BpreShuffle_224x128E Success
+[aiter] hipModuleLoad: /lab-mlperf-inference/aiter/hsa/gfx950/f4gemm/f4gemm_bf16_per1x32Fp4_BpreShuffle_192x128.co GetFunction: _ZN5aiter42f4gemm_bf16_per1x32Fp4_BpreShuffle_192x128E Success
+[aiter] hipModuleLoad: /lab-mlperf-inference/aiter/hsa/gfx950/f4gemm/f4gemm_bf16_per1x32Fp4_BpreShuffle_96x256.co GetFunction: _ZN5aiter41f4gemm_bf16_per1x32Fp4_BpreShuffle_96x256E Success
+[aiter] hipModuleLoad: /lab-mlperf-inference/aiter/hsa/gfx950/f4gemm/f4gemm_bf16_per1x32Fp4_BpreShuffle_160x128.co GetFunction: _ZN5aiter42f4gemm_bf16_per1x32Fp4_BpreShuffle_160x128E Success
+[aiter] hipModuleLoad: /lab-mlperf-inference/aiter/hsa/gfx950/f4gemm/f4gemm_bf16_per1x32Fp4_BpreShuffle_128x128.co GetFunction: _ZN5aiter42f4gemm_bf16_per1x32Fp4_BpreShuffle_128x128E Success
+[aiter] hipModuleLoad: /lab-mlperf-inference/aiter/hsa/gfx950/f4gemm/f4gemm_bf16_per1x32Fp4_BpreShuffle_96x128.co GetFunction: _ZN5aiter41f4gemm_bf16_per1x32Fp4_BpreShuffle_96x128E Success
+[aiter] hipModuleLoad: /lab-mlperf-inference/aiter/hsa/gfx950/f4gemm/f4gemm_bf16_per1x32Fp4_BpreShuffle_128x384.co GetFunction: _ZN5aiter42f4gemm_bf16_per1x32Fp4_BpreShuffle_128x384E Success
+[aiter] hipModuleLoad: /lab-mlperf-inference/aiter/hsa/gfx950/f4gemm/f4gemm_bf16_per1x32Fp4_BpreShuffle_64x128.co GetFunction: _ZN5aiter41f4gemm_bf16_per1x32Fp4_BpreShuffle_64x128E Success
+[aiter] hipModuleLoad: /lab-mlperf-inference/aiter/hsa/gfx950/f4gemm/f4gemm_bf16_per1x32Fp4_BpreShuffle_32x128.co GetFunction: _ZN5aiter41f4gemm_bf16_per1x32Fp4_BpreShuffle_32x128E Success
+[aiter] hipModuleLoad: /lab-mlperf-inference/aiter/hsa/gfx950/pa/pa_bf16_pertokenFp8_gqa8_2tg_4w_hp.co GetFunction: _ZN5aiter34pa_bf16_pertokenFp8_gqa8_2tg_4w_hpE Success
+2026-02-11 01:09:28 INFO     LLM is loaded
+2026-02-11 01:09:28 INFO     Running warmup
+2026-02-11 01:09:28 INFO     Waiting for server[0] warmup to complete...
+[0;36m(EngineCore_DP0 pid=2046)[0;0m [aiter] type hints mismatch, override to --> fmha_v3_varlen_fwd(q: torch.Tensor, k: torch.Tensor, v: torch.Tensor, cu_seqlens_q: torch.Tensor, cu_seqlens_k: Optional[torch.Tensor], max_seqlen_q: int, max_seqlen_k: int, min_seqlen_q: int, dropout_p: float, softmax_scale: float, logits_soft_cap: float, zero_tensors: bool, is_causal: bool, window_size_left: int, window_size_right: int, return_softmax_lse: bool, return_dropout_randval: bool, how_v3_bf16_cvt: int, out: Optional[torch.Tensor] = None, block_table: Optional[torch.Tensor] = None, bias: Optional[torch.Tensor] = None, alibi_slopes: Optional[torch.Tensor] = None, gen: Optional[torch.Generator] = None) -> List[torch.Tensor]
+[0;36m(EngineCore_DP0 pid=2046)[0;0m 2026-02-11 01:09:52 WARNING  type hints mismatch, override to --> fmha_v3_varlen_fwd(q: torch.Tensor, k: torch.Tensor, v: torch.Tensor, cu_seqlens_q: torch.Tensor, cu_seqlens_k: Optional[torch.Tensor], max_seqlen_q: int, max_seqlen_k: int, min_seqlen_q: int, dropout_p: float, softmax_scale: float, logits_soft_cap: float, zero_tensors: bool, is_causal: bool, window_size_left: int, window_size_right: int, return_softmax_lse: bool, return_dropout_randval: bool, how_v3_bf16_cvt: int, out: Optional[torch.Tensor] = None, block_table: Optional[torch.Tensor] = None, bias: Optional[torch.Tensor] = None, alibi_slopes: Optional[torch.Tensor] = None, gen: Optional[torch.Generator] = None) -> List[torch.Tensor]
+2026-02-11 01:10:04 INFO     VLLM finished
+2026-02-11 01:10:04 INFO     output tokens collected
+2026-02-11 01:10:04 INFO     Processed output | start, end = 0, None
+2026-02-11 01:10:04 INFO     Running warmup finished
+2026-02-11 01:10:04 INFO     Time spent from start to inference start: 1424.5036990642548
+2026-02-11 01:10:04 INFO     Issue queries  |  number of queries = 3000
+2026-02-11 01:10:04 INFO     Converted queries to prompt tokens  |  number of queries = 3000
+2026-02-11 01:10:04 INFO     Put prompt tokens in pipe #0
+2026-02-11 01:11:02 INFO     VLLM finished
+2026-02-11 01:11:02 INFO     output tokens collected
+2026-02-11 01:11:02 INFO     Processed output | start, end = 0, 3000
+2026-02-11 01:11:02 INFO     LLM is stopping
+2026-02-11 01:11:02 INFO     vLLM engine thread finished for device_ids=(1,)
+2026-02-11 01:11:02 INFO     Got item  |  start, end = 0, 3000  |  n outputs = 3000
+2026-02-11 01:11:02 INFO     Signaling LoadGen output
+[rank0]:[W211 01:11:02.942315160 ProcessGroupNCCL.cpp:1524] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+2026-02-11 01:11:02 INFO     Query chunk done. Remaining GPUs: 1
+================================================
+MLPerf Results Summary
+================================================
+SUT name : PySUT
+Scenario : Offline
+Mode     : PerformanceOnly
+Samples per second: 51.9945
+Tokens per second: 12562.2
+Result is : VALID
+  Min duration satisfied : Yes
+  Min queries satisfied : Yes
+  Early stopping satisfied: Yes
+
+================================================
+Additional Stats
+================================================
+Min latency (ns)                : 57653913399
+Max latency (ns)                : 57698408409
+Mean latency (ns)               : 57678735681
+50.00 percentile latency (ns)   : 57680845065
+90.00 percentile latency (ns)   : 57695052638
+95.00 percentile latency (ns)   : 57696818969
+97.00 percentile latency (ns)   : 57697410449
+99.00 percentile latency (ns)   : 57698113899
+99.90 percentile latency (ns)   : 57698387419
+
+
+================================================
+Test Parameters Used
+================================================
+samples_per_query : 3000
+target_qps : 450
+ttft_latency (ns): 2000000000
+tpot_latency (ns): 200000000
+max_async_queries : 1
+min_duration (ms): 1000
+max_duration (ms): 1000
+min_query_count : 1
+max_query_count : 3000
+qsl_rng_seed : 2465351861681999779
+sample_index_rng_seed : 14276810075590677512
+schedule_rng_seed : 3936089224930324775
+accuracy_log_rng_seed : 0
+accuracy_log_probability : 0
+accuracy_log_sampling_target : 0
+print_timestamps : 0
+performance_issue_unique : 0
+performance_issue_same : 0
+performance_issue_same_index : 0
+performance_sample_count : 24576
+WARNING: sample_concatenate_permutation was set to true. 
+Generated samples per query might be different as the one in the setting.
+Check the generated_samples_per_query line in the detailed log for the real
+samples_per_query value
+
+1 warning encountered. See detailed log.
+
+No errors encountered during test.
+2026-02-11 01:11:02 INFO     Completed benchmark run
+2026-02-11 01:11:02 INFO     Total time spent with run: 1482.2332880496979
+2026-02-11 01:11:02 INFO     Run Completed!
+2026-02-11 01:11:02 INFO     Destroying SUT...
+2026-02-11 01:11:02 INFO     Destroying QSL...
+benchmark_name: llama2-70b
+scenario: offline
+test_mode: performance
+backend: vllm
+engine_version: sync
+env_config:
+  HARNESS_DISABLE_VLLM_LOGS: 1
+  HARNESS_GC_LIMIT: 100000
+  HIP_FORCE_DEV_KERNARG: 1
+  VLLM_USE_V1: 1
+  VLLM_LOGGING_LEVEL: ERROR
+  VLLM_USE_TRITON_FLASH_ATTN: 0
+  VLLM_ENGINE_ITERATION_TIMEOUT_S: 36000
+  AITER_LOG_LEVEL: ERROR
+  RAY_EXPERIMENTAL_NOSET_ROCR_VISIBLE_DEVICES: 1
+  VLLM_ROCM_USE_AITER: 1
+  USE_FASTSAFETENSOR: 1
+  SAFETENSORS_FAST_GPU: 1
+  VLLM_ROCM_USE_AITER_RMSNORM: 1
+  VLLM_ROCM_USE_AITER_MHA: 1
+  VLLM_ROCM_USE_AITER_FP4_ASM_GEMM: 1
+  VLLM_MIN_REQUEST_DECODE_STEP: 3840
+  VLLM_SUBSEQUENT_DECODE_STEPS: 17
+  VLLM_ROCM_USE_AITER_TRITON_ROPE: 1
+  GPU_MAX_HW_QUEUES: 2
+  HSA_KERNARG_POOL_SIZE: 4000000
+harness_config:
+  target_qps: -1
+  total_sample_count: 3000
+  accuracy_sample_count: -1
+  duration_sec: 1
+  enable_log_trace: False
+  enable_warmup: True
+  schedule_algo: shortest_queue
+  enable_batcher: False
+  batcher_threshold: 0.1
+  gpu_batch_size: 128
+  dataset_path: /data/processed-openorca/open_orca_gpt4_tokenized_llama.sampled_24576.pkl
+  accuracy_dataset_path: MISSING
+  mlperf_conf_path: /lab-mlperf-inference/mlperf_inference/mlperf.conf
+  user_conf_path: /lab-mlperf-inference/code/llama2-70b-99/user_mi355x.conf
+  output_log_dir: bucket_results/llama2-70b-99_offline_performance_run_1_gpu_1
+  load_balance_token_weight: 0.02
+  load_balance_window_size: 10
+  resource_checker_abort_on_failure: False
+  tensor_parallelism: 1
+  pipeline_parallelism: 1
+  data_parallelism: 1
+  max_num_batched_tokens: 65536
+  debug_dump_model_output: False
+  debug_record_sample_latencies: False
+  debug_latency_output_path: samples_latency_data.txt
+  debug_model_output_path: model_output.txt
+  debug_print_finished: False
+  debug_dataset_sampling_size: 0
+  debug_dataset_sampling_num_bins: 10
+  debug_dataset_sampling_random_seed: 42
+  sorting:
+    strategy: ignore
+    buckets: 12.561189029102493, 12.54463595706173, 12.5885115696999, 12.54483539166463, 12.536658572945699, 12.399248131547063, 12.333235277986908, 12.491686069991575
+  device_count: 1
+config_path: llama2-70b-99/
+config_name: offline_mi355x
+llm_config:
+  model: /model/llama2-70b-chat-hf/fp4_quantized
+  dtype: bfloat16
+  kv_cache_dtype: fp8
+  quantization: quark
+  pipeline_parallel_size: 1
+  tensor_parallel_size: 1
+  data_parallel_size: 1
+  gpu_memory_utilization: 0.95
+  max_model_len: 2048
+  swap_space: 4
+  block_size: 16
+  enforce_eager: False
+  max_num_batched_tokens: 65536
+  max_num_seqs: 3392
+  disable_custom_all_reduce: True
+  disable_log_stats: True
+  enable_chunked_prefill: True
+  enable_prefix_caching: False
+  use_tqdm_on_load: False
+  compilation_config:
+    cudagraph_mode: FULL_AND_PIECEWISE
+    compile_sizes: 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192
+    cudagraph_capture_range: [4096, 0, -8], 4, 2, 1
+  async_scheduling: True
+sampling_params:
+  n: 1
+  presence_penalty: 0.0
+  frequency_penalty: 0.0
+  repetition_penalty: 1.0
+  temperature: 0.0
+  top_p: 0.001
+  top_k: 1
+  min_p: 0
+  max_tokens: 1024
+  min_tokens: 1
+  ignore_eos: False
+  detokenize: False

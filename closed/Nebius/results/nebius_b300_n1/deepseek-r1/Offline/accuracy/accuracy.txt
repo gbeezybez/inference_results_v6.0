@@ -1,0 +1,3 @@
+{'exact_match': 81.58614402917047, 'tokens_per_sample': 3722.1116681859617, 'num-samples': 4388}
+
+hash=35cca4d46a6f5a5ff5995dafaaceddc149b510aaacccd1a512b7d6282bb72454

@@ -1,0 +1,130 @@
+[2026-02-12 23:15:20,240 main.py:237 INFO] Detected system ID: go_spr
+[2026-02-12 23:15:20,257 generate_conf_files.py:107 INFO] Generated measurements/ entries for go_spr_TRT/resnet50/Offline
+[2026-02-12 23:15:20,257 harness.py:357 INFO] Using harness launch command...
+[2026-02-12 23:15:20,257 __init__.py:46 INFO] Running command: ./build/bin/harness_default --logfile_outdir="/home/ubuntu/MLC/repos/local/cache/get-mlperf-inference-results-dir_fa9372ba/valid_results/d986d93afc0b-nvidia_original-gpu-tensorrt-vdefault-default_config/resnet50/offline/performance/run_1" --logfile_prefix="mlperf_log_" --performance_sample_count=2048 --test_mode="PerformanceOnly" --gpu_copy_streams=2 --gpu_inference_streams=1 --run_infer_on_copy_streams=false --use_deque_limit=true --gpu_batch_size=64 --map_path="data_maps/imagenet/val_map.txt" --mlperf_conf_path="/home/ubuntu/MLC/repos/local/cache/get-git-repo_inference-src_08c59f8e/inference/mlperf.conf" --tensor_path="build/preprocessed_data/imagenet/ResNet50/int8_linear" --use_graphs=false --user_conf_path="/home/ubuntu/MLC/repos/gateoverflow@mlperf-automations/script/generate-mlperf-inference-user-conf/tmp/7219def11ee1444c9c68e20c1bbecee4.conf" --gpu_engine_batch_size="64" --gpu_engines="./build/engines/go_spr/resnet50/Offline/resnet50-Offline-gpu-resnet50-b64-int8.lwis_k_99_MaxP.plan" --max_dlas=0 --scenario="Offline" --model="resnet50" --scenario Offline --model resnet50
+[2026-02-12 23:15:20,257 __init__.py:53 INFO] Overriding Environment
+benchmark : Benchmark.ResNet50
+buffer_manager_thread_count : 0
+data_dir : /home/ubuntu/MLC/repos/local/cache/get-mlperf-inference-nvidia-scratch-space_83aa595c/data
+gpu_batch_size : 64
+gpu_copy_streams : 2
+gpu_inference_streams : 1
+input_dtype : int8
+input_format : linear
+log_dir : /home/ubuntu/MLC/repos/local/cache/get-git-repo_mlperf-inferenc_66404c60/repo/closed/NVIDIA/build/logs/2026.02.12-23.15.17
+map_path : data_maps/imagenet/val_map.txt
+mlperf_conf_path : /home/ubuntu/MLC/repos/local/cache/get-git-repo_inference-src_08c59f8e/inference/mlperf.conf
+offline_expected_qps : 0.0
+precision : int8
+preprocessed_data_dir : /home/ubuntu/MLC/repos/local/cache/get-mlperf-inference-nvidia-scratch-space_83aa595c/preprocessed_data
+run_infer_on_copy_streams : False
+scenario : Scenario.Offline
+system : System(cpu=CPU(name='Intel(R) Xeon(R) w7-2495X', architecture=<CPUArchitecture.x86_64: AliasedName(name='x86_64', aliases=(), patterns=())>, vendor='GenuineIntel', cores_per_group=24, threads_per_core=2, n_groups=1, group_type=<GroupType.Socket: 'socket'>, numa_nodes=[[Interval(start=0, end=47)]], flags={'tsc', 'smap', 'sse', 'avx512_bitalg', 'pku', 'amx_tile', 'sse4_2', 'ibt', 'clwb', 'pni', 'dtes64', 'sdbg', 'amx_int8', 'monitor', 'user_shstk', 'vme', 'art', 'intel_pt', 'avx512vbmi', 'smx', 'sep', 'cdp_l3', 'ht', 'sse2', 'rep_good', 'dts', 'hwp', 'md_clear', 'constant_tsc', 'hwp_pkg_req', 'adx', 'amx_bf16', 'tsc_known_freq', 'umip', 'msr', 'nx', 'cldemote', 'x2apic', 'erms', 'cqm_mbm_total', 'bus_lock_detect', 'cpuid', 'tsc_adjust', 'mce', 'xtpr', 'stibp', 'rdtscp', 'movdir64b', 'avx512_bf16', 'pdcm', '3dnowprefetch', 'rdt_a', 'tsxldtrk', 'xsaveopt', 'aperfmperf', 'cx8', 'arch_perfmon', 'pebs', 'cqm_occup_llc', 'xsavec', 'pat', 'nopl', 'mca', 'smep', 'arat', 'ospke', 'gfni', 'fxsr', 'movbe', 'syscall', 'lahf_lm', 'rdpid', 'mba', 'pdpe1gb', 'avx512ifma', 'avx', 'xsaves', 'pcid', 'cmov', 'tsc_deadline_timer', 'clflush', 'xsave', 'vpid', 'cat_l2', 'cqm_llc', 'tm', 'mmx', 'acpi', 'clflushopt', 'fpu', 'de', 'pse36', 'pclmulqdq', 'ds_cpl', 'ss', 'rdrand', 'cqm', 'apic', 'pae', 'pconfig', 'avx512dq', 'bmi1', 'pse', 'ibrs_enhanced', 'ibrs', 'avx512_fp16', 'aes', 'avx512_vbmi2', 'avx512_vnni', 'flush_l1d', 'split_lock_detect', 'ssse3', 'cat_l3', 'bmi2', 'lm', 'hwp_epp', 'intel_ppin', 'serialize', 'hwp_act_window', 'ssbd', 'epb', 'pge', 'dca', 'pts', 'ept_ad', 'avx_vnni', 'rdseed', 'cqm_mbm_local', 'sha_ni', 'xgetbv1', 'vnmi', 'flexpriority', 'tpr_shadow', 'avx512cd', 'dtherm', 'avx2', 'ept', 'la57', 'waitpkg', 'ida', 'fma', 'cdp_l2', 'popcnt', 'mtrr', 'xtopology', 'avx512f', 'pln', 'enqcmd', 'wbnoinvd', 'avx512vl', 'vaes', 'arch_lbr', 'arch_capabilities', 'sse4_1', 'invpcid', 'pbe', 'fsrm', 'avx512_vpopcntdq', 'avx512bw', 'abm', 'bts', 'f16c', 'tm2', 'cx16', 'nonstop_tsc', 'ibpb', 'movdiri', 'vpclmulqdq', 'vmx', 'est', 'fsgsbase', 'cpuid_fault'}, vulnerabilities={'old microcode': 'Vulnerable', 'spec store bypass': 'Mitigation; Speculative Store Bypass disabled via prctl', 'spectre v1': 'Mitigation; usercopy/swapgs barriers and __user pointer sanitization', 'spectre v2': 'Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S', 'vmscape': 'Mitigation; IBPB before exit to userspace'}), host_memory=HostMemory(capacity=Memory(quantity=197.333544, byte_suffix=<ByteSuffix.GB: (1000, 3)>, _num_bytes=197333544000)), accelerators={<class 'nvmitten.nvidia.accelerator.GPU'>: [GPU(name='NVIDIA GeForce RTX 4090', pci_id='0x268410DE', compute_sm=ComputeSM(major=8, minor=9), vram=Memory(quantity=23.5164794921875, byte_suffix=<ByteSuffix.GiB: (1024, 3)>, _num_bytes=25250627584), max_power_limit=450.0, is_integrated=False, gpu_index=0), GPU(name='NVIDIA GeForce RTX 4090', pci_id='0x268410DE', compute_sm=ComputeSM(major=8, minor=9), vram=Memory(quantity=23.5135498046875, byte_suffix=<ByteSuffix.GiB: (1024, 3)>, _num_bytes=25247481856), max_power_limit=500.0, is_integrated=False, gpu_index=1)], <class 'nvmitten.nvidia.accelerator.DLA'>: []}, extras={'id': 'go_spr', 'tags': {'gpu_based', 'is_ada', 'is_ampere', 'multi_gpu', 'custom'}, 'name': 'go_spr', 'primary_compute_sm': ComputeSM(major=8, minor=9)})
+tensor_path : build/preprocessed_data/imagenet/ResNet50/int8_linear
+test_mode : PerformanceOnly
+use_deque_limit : True
+use_graphs : False
+user_conf_path : /home/ubuntu/MLC/repos/gateoverflow@mlperf-automations/script/generate-mlperf-inference-user-conf/tmp/7219def11ee1444c9c68e20c1bbecee4.conf
+system_id : go_spr
+config_name : go_spr_resnet50_Offline
+workload_setting : WorkloadSetting(HarnessType.LWIS, AccuracyTarget.k_99, PowerSetting.MaxP)
+optimization_level : plugin-enabled
+num_profiles : 2
+config_ver : lwis_k_99_MaxP
+accuracy_level : 99%
+inference_server : lwis
+skip_file_checks : False
+power_limit : None
+cpu_freq : None
+gpu_engine_batch_size : 64
+&&&& RUNNING Default_Harness # ./build/bin/harness_default
+[I] mlperf.conf path: /home/ubuntu/MLC/repos/local/cache/get-git-repo_inference-src_08c59f8e/inference/mlperf.conf
+[I] user.conf path: /home/ubuntu/MLC/repos/gateoverflow@mlperf-automations/script/generate-mlperf-inference-user-conf/tmp/7219def11ee1444c9c68e20c1bbecee4.conf
+Creating QSL.
+Finished Creating QSL.
+Setting up SUT.
+[I] [TRT] Loaded engine size: 32 MiB
+[I] Device:0.GPU: [0] ./build/engines/go_spr/resnet50/Offline/resnet50-Offline-gpu-resnet50-b64-int8.lwis_k_99_MaxP.plan has been successfully loaded.
+[I] [TRT] Loaded engine size: 32 MiB
+[W] [TRT] Using an engine plan file across different models of devices is not recommended and is likely to affect performance or even cause errors.
+[I] Device:1.GPU: [0] ./build/engines/go_spr/resnet50/Offline/resnet50-Offline-gpu-resnet50-b64-int8.lwis_k_99_MaxP.plan has been successfully loaded.
+[I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +98, now: CPU 0, GPU 137 (MiB)
+[I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +98, now: CPU 0, GPU 235 (MiB)
+[I] [TRT] Switching optimization profile from: 0 to 1. Please ensure there are no enqueued operations pending in this context prior to switching profiles
+[I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +98, now: CPU 0, GPU 333 (MiB)
+[I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +98, now: CPU 0, GPU 431 (MiB)
+[I] [TRT] Switching optimization profile from: 0 to 1. Please ensure there are no enqueued operations pending in this context prior to switching profiles
+[I] Creating batcher thread: 0 EnableBatcherThreadPerDevice: false
+Finished setting up SUT.
+Starting warmup. Running for a minimum of 5 seconds.
+Finished warmup. Ran for 5.03057s.
+Starting running actual test.
+================================================
+MLPerf Results Summary
+================================================
+SUT name : LWIS_Server
+Scenario : Offline
+Mode     : PerformanceOnly
+Samples per second: 87945.5
+Result is : VALID
+  Min duration satisfied : Yes
+  Min queries satisfied : Yes
+  Early stopping satisfied: Yes
+
+================================================
+Additional Stats
+================================================
+Min latency (ns)                : 371307691
+Max latency (ns)                : 666210016309
+Mean latency (ns)               : 18080330952
+50.00 percentile latency (ns)   : 332924303638
+90.00 percentile latency (ns)   : 599495763454
+95.00 percentile latency (ns)   : 632845998315
+97.00 percentile latency (ns)   : 646186366589
+99.00 percentile latency (ns)   : 659529610978
+99.90 percentile latency (ns)   : 665534701275
+
+================================================
+Test Parameters Used
+================================================
+samples_per_query : 58590140
+target_qps : 88772.9
+target_latency (ns): 0
+max_async_queries : 1
+min_duration (ms): 600000
+max_duration (ms): 0
+min_query_count : 1
+max_query_count : 0
+qsl_rng_seed : 2465351861681999779
+sample_index_rng_seed : 14276810075590677512
+schedule_rng_seed : 3936089224930324775
+accuracy_log_rng_seed : 0
+accuracy_log_probability : 0
+accuracy_log_sampling_target : 0
+print_timestamps : 0
+performance_issue_unique : 0
+performance_issue_same : 0
+performance_issue_same_index : 0
+performance_sample_count : 1024
+accuracy_sample_count : 50000
+
+No warnings encountered during test.
+
+No errors encountered during test.
+Finished running actual test.
+Device Device:0.GPU processed:
+  456998 batches of size 64
+  Memcpy Calls: 0
+  PerSampleCudaMemcpy Calls: 0
+  BatchedCudaMemcpy Calls: 456998
+Device Device:1.GPU processed:
+  1 batches of size 60
+  458472 batches of size 64
+  Memcpy Calls: 0
+  PerSampleCudaMemcpy Calls: 0
+  BatchedCudaMemcpy Calls: 458473
+&&&& PASSED Default_Harness # ./build/bin/harness_default
+[2026-02-12 23:26:37,942 run_harness.py:170 INFO] Result: result_samples_per_second: 87945.5, Result is VALID, 10-min runtime requirement met: True
+ 
+======================== Result summaries: ========================
+

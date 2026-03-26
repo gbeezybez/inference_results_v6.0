@@ -1,0 +1,79 @@
+diff --git a/vllm/engine/output_processor/stop_checker.py b/vllm/engine/output_processor/stop_checker.py
+old mode 100644
+new mode 100755
+index 6cad9ec8f..4242bb525
+--- a/vllm/engine/output_processor/stop_checker.py
++++ b/vllm/engine/output_processor/stop_checker.py
+@@ -68,6 +68,14 @@ class StopChecker:
+             seq.stop_reason = last_token_id
+             return
+ 
++         # check if a stop sequence was encountered
++        if sampling_params.stop_seq_ids:
++            assert isinstance(sampling_params.stop_seq_ids, tuple)
++            stop_seq_ids_len = len(sampling_params.stop_seq_ids)
++            if seq.get_output_len() > stop_seq_ids_len and seq.get_last_n_output_token_ids(stop_seq_ids_len) == sampling_params.stop_seq_ids:
++                seq.status = SequenceStatus.FINISHED_STOPPED
++                return
++
+         # Check if any stop strings are matched.
+         stop = self.check_stop_strings(
+             seq.output_text, new_char_count, sampling_params.stop,
+diff --git a/vllm/sampling_params.py b/vllm/sampling_params.py
+old mode 100644
+new mode 100755
+index 0be4910e5..67ca5aa70
+--- a/vllm/sampling_params.py
++++ b/vllm/sampling_params.py
+@@ -4,7 +4,7 @@ import copy
+ from dataclasses import dataclass
+ from enum import Enum, IntEnum
+ from functools import cached_property
+-from typing import Annotated, Any, Optional, Union
++from typing import Annotated, Any, Optional, Union, Tuple
+ 
+ import msgspec
+ from pydantic import BaseModel
+@@ -210,6 +210,7 @@ class SamplingParams(
+     seed: Optional[int] = None
+     stop: Optional[Union[str, list[str]]] = None
+     stop_token_ids: Optional[list[int]] = None
++    stop_seq_ids: Optional[Tuple[int]] = None
+     ignore_eos: bool = False
+     max_tokens: Optional[int] = 16
+     min_tokens: int = 0
+diff --git a/vllm/sequence.py b/vllm/sequence.py
+old mode 100644
+new mode 100755
+index 6a7b1e62a..95f162299
+--- a/vllm/sequence.py
++++ b/vllm/sequence.py
+@@ -9,7 +9,7 @@ from collections.abc import Mapping
+ from collections.abc import Sequence as GenericSequence
+ from dataclasses import dataclass, field
+ from functools import reduce
+-from typing import Any, Callable, Optional, Union
++from typing import Any, Callable, Optional, Union, Tuple
+ 
+ import msgspec
+ import torch
+@@ -357,6 +357,9 @@ class SequenceData(msgspec.Struct,
+     def get_output_token_ids(self) -> tuple[int, ...]:
+         return self.output_token_ids
+ 
++    def get_last_n_output_token_ids(self, n) -> Tuple[int, ...]:
++        return self.output_token_ids[-n:]
++
+     def get_delta_and_reset(self) -> SequenceDataDelta:
+         delta = SequenceDataDelta(self._new_appended_tokens,
+                                   self._cumulative_logprob,
+@@ -575,6 +578,9 @@ class Sequence:
+     def get_output_token_ids(self) -> tuple[int, ...]:
+         return self.data.get_output_token_ids()
+ 
++    def get_last_n_output_token_ids(self, n) -> Tuple[int, ...]:
++        return self.data.get_last_n_output_token_ids(n)
++
+     def get_cumulative_logprob(self) -> float:
+         return self.data.cumulative_logprob
+ 

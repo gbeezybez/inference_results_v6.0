@@ -1,0 +1,405 @@
+[2026-02-24 22:12:46,897 loader.py:194 INFO] Loading System log from ./closed/Dell_MangoBoost/systems/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965.json
+[2026-02-24 22:12:46,897 loader.py:194 INFO] Loading Performance log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,900 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,900 loader.py:194 INFO] Loading Accuracy log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,902 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,902 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/accuracy/accuracy.txt
+[2026-02-24 22:12:46,902 loader.py:194 INFO] Loading AccuracyJSON log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/accuracy/mlperf_log_accuracy.json
+[2026-02-24 22:12:46,902 loader.py:194 INFO] Loading Measurements log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/measurements.json
+[2026-02-24 22:12:46,902 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,902 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,902 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,902 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,902 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/TEST06/verify_accuracy.txt
+[2026-02-24 22:12:46,903 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,903 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,903 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,903 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,903 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,903 base.py:42 INFO] Starting performance checks for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,903 performance_check.py:275 INFO] Target latency: None, Latency: 4281449015777, Scenario: Offline
+[2026-02-24 22:12:46,903 base.py:45 INFO] All performance checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,903 base.py:42 INFO] Starting accuracy checks for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,904 accuracy_check.py:220 INFO] ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt Skipping dataset size check
+[2026-02-24 22:12:46,904 base.py:45 INFO] All accuracy checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,904 base.py:42 INFO] Starting system checks for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965
+[2026-02-24 22:12:46,904 base.py:45 INFO] All system checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965
+[2026-02-24 22:12:46,904 base.py:42 INFO] Starting measurement checks for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/measurements.json
+[2026-02-24 22:12:46,904 base.py:45 INFO] All measurement checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/measurements.json
+[2026-02-24 22:12:46,904 base.py:42 INFO] Starting base checks for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/performance/power
+[2026-02-24 22:12:46,904 base.py:45 INFO] All base checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/performance/power
+[2026-02-24 22:12:46,904 base.py:42 INFO] Starting compliance check for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/
+[2026-02-24 22:12:46,904 base.py:45 INFO] All compliance check checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/
+[2026-02-24 22:12:46,904 loader.py:194 INFO] Loading Performance log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,907 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,907 loader.py:194 INFO] Loading Accuracy log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,909 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,910 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/accuracy/accuracy.txt
+[2026-02-24 22:12:46,910 loader.py:194 INFO] Loading AccuracyJSON log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/accuracy/mlperf_log_accuracy.json
+[2026-02-24 22:12:46,910 loader.py:194 INFO] Loading Measurements log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/measurements.json
+[2026-02-24 22:12:46,910 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,910 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,910 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,910 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,910 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/TEST06/verify_accuracy.txt
+[2026-02-24 22:12:46,910 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,910 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,910 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,910 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,910 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,910 base.py:42 INFO] Starting performance checks for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,910 performance_check.py:256 INFO] Target latency: 20000000000, Early Stopping Latency: 0, Scenario: Server
+[2026-02-24 22:12:46,910 base.py:45 INFO] All performance checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,910 base.py:42 INFO] Starting accuracy checks for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,911 accuracy_check.py:220 INFO] ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt Skipping dataset size check
+[2026-02-24 22:12:46,911 base.py:45 INFO] All accuracy checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,911 base.py:42 INFO] Starting system checks for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965
+[2026-02-24 22:12:46,911 base.py:45 INFO] All system checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965
+[2026-02-24 22:12:46,911 base.py:42 INFO] Starting measurement checks for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/measurements.json
+[2026-02-24 22:12:46,911 base.py:45 INFO] All measurement checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/measurements.json
+[2026-02-24 22:12:46,911 base.py:42 INFO] Starting base checks for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/performance/power
+[2026-02-24 22:12:46,911 base.py:45 INFO] All base checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/performance/power
+[2026-02-24 22:12:46,911 base.py:42 INFO] Starting compliance check for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/
+[2026-02-24 22:12:46,911 base.py:45 INFO] All compliance check checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/
+[2026-02-24 22:12:46,911 loader.py:194 INFO] Loading Performance log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,914 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,914 loader.py:194 INFO] Loading Accuracy log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,916 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,916 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/accuracy/accuracy.txt
+[2026-02-24 22:12:46,916 loader.py:194 INFO] Loading AccuracyJSON log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/accuracy/mlperf_log_accuracy.json
+[2026-02-24 22:12:46,916 loader.py:194 INFO] Loading Measurements log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/measurements.json
+[2026-02-24 22:12:46,916 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,916 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,916 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,916 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,916 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/TEST06/verify_accuracy.txt
+[2026-02-24 22:12:46,916 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,916 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,916 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,916 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,916 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,916 base.py:42 INFO] Starting performance checks for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,917 performance_check.py:275 INFO] Target latency: None, Latency: 4281449015777, Scenario: Offline
+[2026-02-24 22:12:46,917 base.py:45 INFO] All performance checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,917 base.py:42 INFO] Starting accuracy checks for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,917 accuracy_check.py:220 INFO] ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt Skipping dataset size check
+[2026-02-24 22:12:46,917 base.py:45 INFO] All accuracy checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,917 base.py:42 INFO] Starting system checks for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965
+[2026-02-24 22:12:46,917 base.py:45 INFO] All system checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965
+[2026-02-24 22:12:46,917 base.py:42 INFO] Starting measurement checks for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/measurements.json
+[2026-02-24 22:12:46,917 base.py:45 INFO] All measurement checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/measurements.json
+[2026-02-24 22:12:46,917 base.py:42 INFO] Starting base checks for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/performance/power
+[2026-02-24 22:12:46,917 base.py:45 INFO] All base checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/performance/power
+[2026-02-24 22:12:46,917 base.py:42 INFO] Starting compliance check for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/
+[2026-02-24 22:12:46,917 base.py:45 INFO] All compliance check checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/
+[2026-02-24 22:12:46,917 loader.py:194 INFO] Loading Performance log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,920 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,920 loader.py:194 INFO] Loading Accuracy log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,922 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,922 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/accuracy/accuracy.txt
+[2026-02-24 22:12:46,922 loader.py:194 INFO] Loading AccuracyJSON log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/accuracy/mlperf_log_accuracy.json
+[2026-02-24 22:12:46,922 loader.py:194 INFO] Loading Measurements log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/measurements.json
+[2026-02-24 22:12:46,922 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,922 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,922 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,922 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,922 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/TEST06/verify_accuracy.txt
+[2026-02-24 22:12:46,922 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,923 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,923 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,923 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,923 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,923 base.py:42 INFO] Starting performance checks for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,923 performance_check.py:256 INFO] Target latency: 20000000000, Early Stopping Latency: 0, Scenario: Server
+[2026-02-24 22:12:46,923 base.py:45 INFO] All performance checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,923 base.py:42 INFO] Starting accuracy checks for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,923 accuracy_check.py:220 INFO] ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt Skipping dataset size check
+[2026-02-24 22:12:46,923 base.py:45 INFO] All accuracy checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,923 base.py:42 INFO] Starting system checks for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965
+[2026-02-24 22:12:46,923 base.py:45 INFO] All system checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965
+[2026-02-24 22:12:46,923 base.py:42 INFO] Starting measurement checks for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/measurements.json
+[2026-02-24 22:12:46,923 base.py:45 INFO] All measurement checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/measurements.json
+[2026-02-24 22:12:46,923 base.py:42 INFO] Starting base checks for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/performance/power
+[2026-02-24 22:12:46,923 base.py:45 INFO] All base checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/performance/power
+[2026-02-24 22:12:46,923 base.py:42 INFO] Starting compliance check for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/
+[2026-02-24 22:12:46,923 base.py:45 INFO] All compliance check checks passed for: ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/
+[2026-02-24 22:12:46,923 loader.py:194 INFO] Loading System log from ./closed/Dell_MangoBoost/systems/8xMI355X_2xEPYC_9965.json
+[2026-02-24 22:12:46,924 loader.py:194 INFO] Loading Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,926 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,926 loader.py:194 INFO] Loading Accuracy log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,928 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,928 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/accuracy/accuracy.txt
+[2026-02-24 22:12:46,928 loader.py:194 INFO] Loading AccuracyJSON log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/accuracy/mlperf_log_accuracy.json
+[2026-02-24 22:12:46,928 loader.py:194 INFO] Loading Measurements log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/measurements.json
+[2026-02-24 22:12:46,928 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,929 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,929 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,929 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,929 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/TEST06/verify_accuracy.txt
+[2026-02-24 22:12:46,929 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,929 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,929 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,929 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,929 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,929 base.py:42 INFO] Starting performance checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,929 performance_check.py:275 INFO] Target latency: None, Latency: 8493029848798, Scenario: Offline
+[2026-02-24 22:12:46,929 base.py:45 INFO] All performance checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,929 base.py:42 INFO] Starting accuracy checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,929 accuracy_check.py:220 INFO] ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt Skipping dataset size check
+[2026-02-24 22:12:46,929 base.py:45 INFO] All accuracy checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,929 base.py:42 INFO] Starting system checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965
+[2026-02-24 22:12:46,929 base.py:45 INFO] All system checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965
+[2026-02-24 22:12:46,929 base.py:42 INFO] Starting measurement checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/measurements.json
+[2026-02-24 22:12:46,929 base.py:45 INFO] All measurement checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/measurements.json
+[2026-02-24 22:12:46,929 base.py:42 INFO] Starting base checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/performance/power
+[2026-02-24 22:12:46,929 base.py:45 INFO] All base checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/performance/power
+[2026-02-24 22:12:46,929 base.py:42 INFO] Starting compliance check for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/
+[2026-02-24 22:12:46,929 base.py:45 INFO] All compliance check checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/
+[2026-02-24 22:12:46,930 loader.py:194 INFO] Loading Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,932 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,932 loader.py:194 INFO] Loading Accuracy log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,935 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,935 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/accuracy/accuracy.txt
+[2026-02-24 22:12:46,935 loader.py:194 INFO] Loading AccuracyJSON log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/accuracy/mlperf_log_accuracy.json
+[2026-02-24 22:12:46,935 loader.py:194 INFO] Loading Measurements log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/measurements.json
+[2026-02-24 22:12:46,935 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,935 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,935 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,935 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,935 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/TEST06/verify_accuracy.txt
+[2026-02-24 22:12:46,935 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,935 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,935 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,935 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,935 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,935 base.py:42 INFO] Starting performance checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,935 performance_check.py:256 INFO] Target latency: 20000000000, Early Stopping Latency: 0, Scenario: Server
+[2026-02-24 22:12:46,935 base.py:45 INFO] All performance checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,935 base.py:42 INFO] Starting accuracy checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,936 accuracy_check.py:220 INFO] ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt Skipping dataset size check
+[2026-02-24 22:12:46,936 base.py:45 INFO] All accuracy checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,936 base.py:42 INFO] Starting system checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965
+[2026-02-24 22:12:46,936 base.py:45 INFO] All system checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965
+[2026-02-24 22:12:46,936 base.py:42 INFO] Starting measurement checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/measurements.json
+[2026-02-24 22:12:46,936 base.py:45 INFO] All measurement checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/measurements.json
+[2026-02-24 22:12:46,936 base.py:42 INFO] Starting base checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/performance/power
+[2026-02-24 22:12:46,936 base.py:45 INFO] All base checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/performance/power
+[2026-02-24 22:12:46,936 base.py:42 INFO] Starting compliance check for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/
+[2026-02-24 22:12:46,936 base.py:45 INFO] All compliance check checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/
+[2026-02-24 22:12:46,936 loader.py:194 INFO] Loading Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,939 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,939 loader.py:194 INFO] Loading Accuracy log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,941 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,941 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/accuracy/accuracy.txt
+[2026-02-24 22:12:46,941 loader.py:194 INFO] Loading AccuracyJSON log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/accuracy/mlperf_log_accuracy.json
+[2026-02-24 22:12:46,941 loader.py:194 INFO] Loading Measurements log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/measurements.json
+[2026-02-24 22:12:46,941 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,941 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,941 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,941 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,941 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/TEST06/verify_accuracy.txt
+[2026-02-24 22:12:46,942 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,942 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,942 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,942 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,942 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,942 base.py:42 INFO] Starting performance checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,942 performance_check.py:275 INFO] Target latency: None, Latency: 8493029848798, Scenario: Offline
+[2026-02-24 22:12:46,942 base.py:45 INFO] All performance checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,942 base.py:42 INFO] Starting accuracy checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,942 accuracy_check.py:220 INFO] ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt Skipping dataset size check
+[2026-02-24 22:12:46,942 base.py:45 INFO] All accuracy checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,942 base.py:42 INFO] Starting system checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965
+[2026-02-24 22:12:46,942 base.py:45 INFO] All system checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965
+[2026-02-24 22:12:46,942 base.py:42 INFO] Starting measurement checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/measurements.json
+[2026-02-24 22:12:46,942 base.py:45 INFO] All measurement checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/measurements.json
+[2026-02-24 22:12:46,942 base.py:42 INFO] Starting base checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/performance/power
+[2026-02-24 22:12:46,942 base.py:45 INFO] All base checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/performance/power
+[2026-02-24 22:12:46,942 base.py:42 INFO] Starting compliance check for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/
+[2026-02-24 22:12:46,942 base.py:45 INFO] All compliance check checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/
+[2026-02-24 22:12:46,943 loader.py:194 INFO] Loading Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,945 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,945 loader.py:194 INFO] Loading Accuracy log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,951 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,951 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/accuracy/accuracy.txt
+[2026-02-24 22:12:46,951 loader.py:194 INFO] Loading AccuracyJSON log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/accuracy/mlperf_log_accuracy.json
+[2026-02-24 22:12:46,951 loader.py:194 INFO] Loading Measurements log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/measurements.json
+[2026-02-24 22:12:46,951 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,951 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,951 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,951 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,951 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/TEST06/verify_accuracy.txt
+[2026-02-24 22:12:46,951 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,951 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,951 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,951 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,952 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,952 base.py:42 INFO] Starting performance checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,952 performance_check.py:256 INFO] Target latency: 20000000000, Early Stopping Latency: 0, Scenario: Server
+[2026-02-24 22:12:46,952 base.py:45 INFO] All performance checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,952 base.py:42 INFO] Starting accuracy checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,952 accuracy_check.py:220 INFO] ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt Skipping dataset size check
+[2026-02-24 22:12:46,952 base.py:45 INFO] All accuracy checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,952 base.py:42 INFO] Starting system checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965
+[2026-02-24 22:12:46,952 base.py:45 INFO] All system checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965
+[2026-02-24 22:12:46,952 base.py:42 INFO] Starting measurement checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/measurements.json
+[2026-02-24 22:12:46,952 base.py:45 INFO] All measurement checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/measurements.json
+[2026-02-24 22:12:46,952 base.py:42 INFO] Starting base checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/performance/power
+[2026-02-24 22:12:46,952 base.py:45 INFO] All base checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/performance/power
+[2026-02-24 22:12:46,952 base.py:42 INFO] Starting compliance check for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/
+[2026-02-24 22:12:46,952 base.py:45 INFO] All compliance check checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/
+[2026-02-24 22:12:46,952 loader.py:194 INFO] Loading System log from ./closed/Dell_MangoBoost/systems/8xMI355X_2xEPYC_9965_Power_Cap_1000W.json
+[2026-02-24 22:12:46,953 loader.py:194 INFO] Loading Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,954 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,954 loader.py:194 INFO] Loading Accuracy log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,956 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,956 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/accuracy/accuracy.txt
+[2026-02-24 22:12:46,956 loader.py:194 INFO] Loading AccuracyJSON log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/accuracy/mlperf_log_accuracy.json
+[2026-02-24 22:12:46,956 loader.py:194 INFO] Loading Measurements log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/measurements.json
+[2026-02-24 22:12:46,956 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,956 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,956 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,956 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,956 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/TEST06/verify_accuracy.txt
+[2026-02-24 22:12:46,956 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,957 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,957 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,957 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,957 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,957 base.py:42 INFO] Starting performance checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,957 performance_check.py:275 INFO] Target latency: None, Latency: 4637649282967, Scenario: Offline
+[2026-02-24 22:12:46,957 base.py:45 INFO] All performance checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,957 base.py:42 INFO] Starting accuracy checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,957 accuracy_check.py:220 INFO] ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt Skipping dataset size check
+[2026-02-24 22:12:46,957 base.py:45 INFO] All accuracy checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,957 base.py:42 INFO] Starting system checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W
+[2026-02-24 22:12:46,957 base.py:45 INFO] All system checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W
+[2026-02-24 22:12:46,957 base.py:42 INFO] Starting measurement checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/measurements.json
+[2026-02-24 22:12:46,957 base.py:45 INFO] All measurement checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/measurements.json
+[2026-02-24 22:12:46,957 base.py:42 INFO] Starting base checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/performance/power
+[2026-02-24 22:12:46,957 base.py:45 INFO] All base checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/performance/power
+[2026-02-24 22:12:46,957 base.py:42 INFO] Starting compliance check for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/
+[2026-02-24 22:12:46,957 base.py:45 INFO] All compliance check checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/
+[2026-02-24 22:12:46,957 loader.py:194 INFO] Loading Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,960 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,960 loader.py:194 INFO] Loading Accuracy log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,962 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,962 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/accuracy/accuracy.txt
+[2026-02-24 22:12:46,962 loader.py:194 INFO] Loading AccuracyJSON log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/accuracy/mlperf_log_accuracy.json
+[2026-02-24 22:12:46,962 loader.py:194 INFO] Loading Measurements log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/measurements.json
+[2026-02-24 22:12:46,962 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,962 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,962 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,962 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,962 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/TEST06/verify_accuracy.txt
+[2026-02-24 22:12:46,962 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,962 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,962 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,962 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,962 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,962 base.py:42 INFO] Starting performance checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,963 performance_check.py:256 INFO] Target latency: 20000000000, Early Stopping Latency: 0, Scenario: Server
+[2026-02-24 22:12:46,963 base.py:45 INFO] All performance checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,963 base.py:42 INFO] Starting accuracy checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,963 accuracy_check.py:220 INFO] ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt Skipping dataset size check
+[2026-02-24 22:12:46,963 base.py:45 INFO] All accuracy checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,963 base.py:42 INFO] Starting system checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W
+[2026-02-24 22:12:46,963 base.py:45 INFO] All system checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W
+[2026-02-24 22:12:46,963 base.py:42 INFO] Starting measurement checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/measurements.json
+[2026-02-24 22:12:46,963 base.py:45 INFO] All measurement checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/measurements.json
+[2026-02-24 22:12:46,963 base.py:42 INFO] Starting base checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/performance/power
+[2026-02-24 22:12:46,963 base.py:45 INFO] All base checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/performance/power
+[2026-02-24 22:12:46,963 base.py:42 INFO] Starting compliance check for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/
+[2026-02-24 22:12:46,963 base.py:45 INFO] All compliance check checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/
+[2026-02-24 22:12:46,963 loader.py:194 INFO] Loading Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,965 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,966 loader.py:194 INFO] Loading Accuracy log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,968 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,968 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/accuracy/accuracy.txt
+[2026-02-24 22:12:46,968 loader.py:194 INFO] Loading AccuracyJSON log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/accuracy/mlperf_log_accuracy.json
+[2026-02-24 22:12:46,968 loader.py:194 INFO] Loading Measurements log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/measurements.json
+[2026-02-24 22:12:46,968 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,968 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,968 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,968 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,968 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/TEST06/verify_accuracy.txt
+[2026-02-24 22:12:46,968 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,968 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,968 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,968 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,968 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,968 base.py:42 INFO] Starting performance checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,968 performance_check.py:275 INFO] Target latency: None, Latency: 4637649282967, Scenario: Offline
+[2026-02-24 22:12:46,968 base.py:45 INFO] All performance checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,968 base.py:42 INFO] Starting accuracy checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,969 accuracy_check.py:220 INFO] ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt Skipping dataset size check
+[2026-02-24 22:12:46,969 base.py:45 INFO] All accuracy checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,969 base.py:42 INFO] Starting system checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W
+[2026-02-24 22:12:46,969 base.py:45 INFO] All system checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W
+[2026-02-24 22:12:46,969 base.py:42 INFO] Starting measurement checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/measurements.json
+[2026-02-24 22:12:46,969 base.py:45 INFO] All measurement checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/measurements.json
+[2026-02-24 22:12:46,969 base.py:42 INFO] Starting base checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/performance/power
+[2026-02-24 22:12:46,969 base.py:45 INFO] All base checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/performance/power
+[2026-02-24 22:12:46,969 base.py:42 INFO] Starting compliance check for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/
+[2026-02-24 22:12:46,969 base.py:45 INFO] All compliance check checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/
+[2026-02-24 22:12:46,969 loader.py:194 INFO] Loading Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,971 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,971 loader.py:194 INFO] Loading Accuracy log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,973 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt.
+[2026-02-24 22:12:46,973 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/accuracy/accuracy.txt
+[2026-02-24 22:12:46,973 loader.py:194 INFO] Loading AccuracyJSON log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/accuracy/mlperf_log_accuracy.json
+[2026-02-24 22:12:46,973 loader.py:194 INFO] Loading Measurements log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/measurements.json
+[2026-02-24 22:12:46,973 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,973 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,973 loader.py:211 INFO] Could not load Performance log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-24 22:12:46,973 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,973 loader.py:194 INFO] Loading AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/TEST06/verify_accuracy.txt
+[2026-02-24 22:12:46,973 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,974 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,974 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,974 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-24 22:12:46,974 loader.py:211 INFO] Could not load AccuracyResult log from ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-24 22:12:46,974 base.py:42 INFO] Starting performance checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,974 performance_check.py:256 INFO] Target latency: 20000000000, Early Stopping Latency: 0, Scenario: Server
+[2026-02-24 22:12:46,974 base.py:45 INFO] All performance checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-24 22:12:46,974 base.py:42 INFO] Starting accuracy checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,974 accuracy_check.py:220 INFO] ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt Skipping dataset size check
+[2026-02-24 22:12:46,974 base.py:45 INFO] All accuracy checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt
+[2026-02-24 22:12:46,974 base.py:42 INFO] Starting system checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W
+[2026-02-24 22:12:46,974 base.py:45 INFO] All system checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W
+[2026-02-24 22:12:46,974 base.py:42 INFO] Starting measurement checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/measurements.json
+[2026-02-24 22:12:46,974 base.py:45 INFO] All measurement checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/measurements.json
+[2026-02-24 22:12:46,974 base.py:42 INFO] Starting base checks for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/performance/power
+[2026-02-24 22:12:46,974 base.py:45 INFO] All base checks checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/performance/power
+[2026-02-24 22:12:46,974 base.py:42 INFO] Starting compliance check for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/
+[2026-02-24 22:12:46,974 base.py:45 INFO] All compliance check checks passed for: ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/
+[2026-02-24 22:12:46,975 main.py:220 INFO] ---
+[2026-02-24 22:12:46,975 main.py:224 INFO] Results ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt 151843.0
+[2026-02-24 22:12:46,975 main.py:224 INFO] Results ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt 141521.0
+[2026-02-24 22:12:46,975 main.py:224 INFO] Results ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt 151843.0
+[2026-02-24 22:12:46,975 main.py:224 INFO] Results ./closed/Dell_MangoBoost/results/8xMI300X_2xEPYC_9534_8xMI325X_2xEPYC_9655_8xMI355X_2xEPYC_9965/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt 141521.0
+[2026-02-24 22:12:46,975 main.py:224 INFO] Results ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt 97535.1
+[2026-02-24 22:12:46,975 main.py:224 INFO] Results ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt 93272.4
+[2026-02-24 22:12:46,975 main.py:224 INFO] Results ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt 97535.1
+[2026-02-24 22:12:46,975 main.py:224 INFO] Results ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt 93272.4
+[2026-02-24 22:12:46,975 main.py:224 INFO] Results ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt 81870.5
+[2026-02-24 22:12:46,975 main.py:224 INFO] Results ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt 76359.5
+[2026-02-24 22:12:46,975 main.py:224 INFO] Results ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt 81870.5
+[2026-02-24 22:12:46,975 main.py:224 INFO] Results ./closed/Dell_MangoBoost/results/8xMI355X_2xEPYC_9965_Power_Cap_1000W/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt 76359.5
+[2026-02-24 22:12:46,975 main.py:226 INFO] ---
+[2026-02-24 22:12:46,975 main.py:315 INFO] ---
+[2026-02-24 22:12:46,975 main.py:316 INFO] Results=12, NoResults=0, Power Results=0
+[2026-02-24 22:12:46,975 main.py:323 INFO] ---
+[2026-02-24 22:12:46,975 main.py:324 INFO] Closed Results=12, Closed Power Results=0
+
+[2026-02-24 22:12:46,976 main.py:329 INFO] Open Results=0, Open Power Results=0
+
+[2026-02-24 22:12:46,976 main.py:334 INFO] Network Results=0, Network Power Results=0
+
+[2026-02-24 22:12:46,976 main.py:339 INFO] ---
+[2026-02-24 22:12:46,976 main.py:341 INFO] Systems=3, Power Systems=0
+[2026-02-24 22:12:46,976 main.py:345 INFO] Closed Systems=3, Closed Power Systems=0
+[2026-02-24 22:12:46,976 main.py:350 INFO] Open Systems=0, Open Power Systems=0
+[2026-02-24 22:12:46,976 main.py:355 INFO] Network Systems=0, Network Power Systems=0
+[2026-02-24 22:12:46,976 main.py:360 INFO] ---
+[2026-02-24 22:12:46,976 main.py:365 INFO] SUMMARY: submission looks OK

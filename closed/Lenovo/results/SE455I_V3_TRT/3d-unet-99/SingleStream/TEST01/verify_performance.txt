@@ -1,0 +1,6 @@
+[2026-02-19 01:32:29,936 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from /work/build/submission-staging/closed/NVIDIA/results/SE455I_V3_TRT/3d-unet-99.9/SingleStream/performance/run_1/mlperf_log_detail.txt.
+[2026-02-19 01:32:29,936 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from build/compliance_logs/TEST01/SE455I_V3_TRT/3d-unet-99.9/SingleStream/mlperf_log_detail.txt.
+Verifying performance.
+Reference score = 1879824522.0
+Test score = 1863467402.0
+TEST PASS

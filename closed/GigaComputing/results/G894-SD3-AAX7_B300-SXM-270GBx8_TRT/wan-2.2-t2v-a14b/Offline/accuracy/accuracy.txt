@@ -1,0 +1,24 @@
+============================================================
+VBench Evaluation Results
+============================================================
+
+Dimension Scores:
+------------------------------------------------------------
+  appearance_style              : 0.2112
+  background_consistency        : 0.9159
+  dynamic_degree                : 0.9444
+  motion_smoothness             : 0.9190
+  scene                         : 0.3176
+  subject_consistency           : 0.9083
+vbench_score: 70.2730
+{'vbench_score': 70.2730}
+------------------------------------------------------------
+  Overall Average               : 0.7027 (70.27%)
+
+Threshold: 69.7752%
+Pass: Yes
+============================================================
+Detailed results: /work/build/logs/default/AccuracyOnly/G894-SD3-AAX7_B300-SXM-270GBx8_TRT/wan-2.2-t2v-a14b/Offline/vbench_results/results_2026-02-13-01:52:07_eval_results.json
+============================================================
+
+hash=14d0c90e13eb8ff68442ec46625ffeefae4fe0dd1f9d085498e8beab709080e0

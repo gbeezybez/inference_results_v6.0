@@ -1,0 +1,10 @@
+ARG BASE_IMAGE
+FROM $BASE_IMAGE
+
+ARG DEBIAN_FRONTEND=noninteractive
+ARG AITER_DIR=setup/aiter
+
+# Re-install aiter
+COPY ${AITER_DIR} /app/aiter
+
+WORKDIR /lab-mlperf-inference/code/

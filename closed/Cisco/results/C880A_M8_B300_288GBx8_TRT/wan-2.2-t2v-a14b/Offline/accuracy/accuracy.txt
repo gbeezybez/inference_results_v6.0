@@ -1,0 +1,23 @@
+============================================================
+VBench Evaluation Results
+============================================================
+
+Dimension Scores:
+------------------------------------------------------------
+  appearance_style              : 0.2115
+  background_consistency        : 0.9185
+  dynamic_degree                : 0.9444
+  motion_smoothness             : 0.9193
+  scene                         : 0.3103
+  subject_consistency           : 0.9057
+'vbench_score': 70.1617
+------------------------------------------------------------
+  Overall Average               : 0.7016 (70.16%)
+
+Threshold: 69.7752%
+Pass: Yes
+============================================================
+Detailed results: /work/build/logs/2026.02.12-08.07.14/C880_B300_288GBx8_TRT/wan-2.2-t2v-a14b/Offline/vbench_results/results_2026-02-12-10:08:55_eval_results.json
+============================================================
+
+hash=c6ccd99b2640547990259632bb9553fdb928516d85a54dfa2c06f4c564d13f8f

@@ -1,0 +1,6 @@
+[2026-02-13 05:34:58,452 log_parser.py:72 INFO] Sucessfully loaded MLPerf log from /root/MLC/repos/local/cache/get-mlperf-inference-results-dir_4e561222/valid_results/c508a7704375-reference-gpu-pytorch-v2.5.0a0-cu126/yolo-99/offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-13 05:34:58,453 log_parser.py:72 INFO] Sucessfully loaded MLPerf log from /root/MLC/repos/local/cache/get-mlperf-inference-results-dir_4e561222/valid_results/c508a7704375-reference-gpu-pytorch-v2.5.0a0-cu126/yolo-99/offline/TEST01/mlperf_log_detail.txt.
+Verifying performance.
+Reference score = 24.187
+Test score = 24.0844
+TEST PASS

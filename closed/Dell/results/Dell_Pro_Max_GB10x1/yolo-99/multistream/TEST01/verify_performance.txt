@@ -1,0 +1,6 @@
+[2026-02-12 20:22:27,650 log_parser.py:72 INFO] Sucessfully loaded MLPerf log from /home/delluser/mlp6/inference/vision/classification_and_detection/yolo/Dell/results/Dell_Pro_Max_GB10x1/yolo-99/multistream/performance/run_1/mlperf_log_detail.txt.
+[2026-02-12 20:22:27,650 log_parser.py:72 INFO] Sucessfully loaded MLPerf log from /home/delluser/mlp6/inference/vision/classification_and_detection/yolo/Dell/results/Dell_Pro_Max_GB10x1/yolo-99/multistream/TEST01/mlperf_log_detail.txt.
+Verifying performance.
+Reference score = 4891380208.0
+Test score = 4897747008.0
+TEST PASS

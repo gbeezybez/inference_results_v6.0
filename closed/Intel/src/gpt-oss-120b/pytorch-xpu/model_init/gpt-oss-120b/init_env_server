@@ -1,0 +1,50 @@
+#!/bin/bash
+
+source $MODEL_INIT_DIR/init_env_shared
+# Validate and set Tensor parallel and Instances
+export TP=1
+export NUM_INSTS=1
+
+if (( XPU_COUNT > 0 )); then
+    # XPU
+    export TP=4
+    export MAX_NUM_BATCHED_TOKENS=3072
+    export BATCH_SIZE=128
+    export GPU_MEMORY_UTILIZATION=0.85
+    if (( XPU_DEVICE_ID == 57891 )); then
+        # B70
+        export QPS_PER_XPU=0.175 # 0.7
+
+        if [[ "$MODE" == "perf" || "$MODE" == test* ]]; then
+            true 
+        else
+            true 
+        fi
+    elif (( XPU_DEVICE_ID == 57873 )); then
+        # B60
+        if (( XPU_COUNT > 4 )); then
+            export QPS_PER_XPU=0.08125 # 0.65
+        else
+            export QPS_PER_XPU=0.0825 # 0.33
+        fi
+
+        if [[ "$MODE" == "perf" || "$MODE" == test* ]]; then
+            true
+        else
+            true
+        fi
+    else
+        echo "Error: XPU device ID $XPU_DEVICE_ID is not in allowed set (${XPU_SUPPORTED_DEVICE_IDS[*]})."
+        return 1
+    fi
+
+    export NUM_INSTS=$((XPU_COUNT / (TP*PP)))
+    export VLLM_USE_TRITON_XPU_ATTN=1
+    # Target QPS settings
+    QPS_LINE=gpt-oss-120b.Server.target_qps
+    TARGET_QPS=$(echo "scale=2; $QPS_PER_XPU * $XPU_COUNT" | bc)
+    sed -i "/$QPS_LINE/c\\$QPS_LINE = $TARGET_QPS" $ROOT_DIR/user.conf
+else
+    # CPU
+    echo "Error: No XPU found. CPU is not enabled for this scenario"
+fi

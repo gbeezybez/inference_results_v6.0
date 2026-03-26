@@ -1,0 +1,27 @@
+# Install LoadGen
+.PHONY: install_loadgen
+install_loadgen:
+	@WHL_FILE=$$(ls $(LOADGEN_INCLUDE_DIR)/mlcommons_*.whl 2>/dev/null | head -n 1); \
+	if [ -n "$$WHL_FILE" ]; then \
+		echo "Found existing wheel: $$WHL_FILE. Installing..." \
+		&& pip install --user --force-reinstall $$WHL_FILE; \
+	else \
+		echo "No existing wheel found. Run 'make build_loadgen' first."; \
+		exit 1; \
+	fi
+
+# Install TRT-LLM wheel.
+.PHONY: install_trt_llm
+install_trt_llm:
+	@if [ -f "$(TRTLLM_BUILD_DIR)/tensorrt"*.whl ]; then \
+		echo "Installing TRT-LLM wheel..."; \
+		pip install $(TRTLLM_BUILD_DIR)/tensorrt*.whl; \
+	else \
+		echo "Error: TRT-LLM wheel not found in $(TRTLLM_BUILD_DIR)"; \
+		echo "Please run 'make build_trt_llm' first"; \
+		exit 1; \
+	fi
+
+.PHONY: install
+install: install_loadgen install_trt_llm
+

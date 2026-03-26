@@ -1,0 +1,6 @@
+[2026-02-05 23:00:21,268 log_parser.py:72 INFO] Sucessfully loaded MLPerf log from /work/build/submission-staging/closed/HPE/results/HPE_PROLIANT_DL145_RTX_PRO_4500_PCIE_32GBx1_TRT_TRT/resnet/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-05 23:00:21,269 log_parser.py:72 INFO] Sucessfully loaded MLPerf log from /work/build/compliance_logs/TEST01/HPE_PROLIANT_DL145_RTX_PRO_4500_PCIE_32GBx1_TRT_TRT/resnet/Offline/mlperf_log_detail.txt.
+Verifying performance.
+Reference score = 19114.1
+Test score = 19149.1
+TEST PASS

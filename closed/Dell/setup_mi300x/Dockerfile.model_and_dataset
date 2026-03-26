@@ -1,0 +1,35 @@
+ARG BASE_IMAGE
+FROM $BASE_IMAGE
+
+ARG DEBIAN_FRONTEND=noninteractive
+
+WORKDIR /lab-mlperf-inference/setup/
+USER root
+
+RUN pip install \
+absl-py \
+datasets \
+evaluate \
+nltk \
+numpy==1.26.4 \
+py-libnuma \
+onnx==1.17.0 \
+onnxruntime==1.19.0 \
+rouge_score \
+transformers==4.46.3 \
+accelerate==1.8.1
+
+RUN curl https://rclone.org/install.sh | bash \
+&& rclone config create mlc-inference s3 provider=Cloudflare access_key_id=f65ba5eef400db161ea49967de89f47b secret_access_key=fbea333914c292b854f14d3fe232bad6c5407bf0ab1bebf78833c2b359bdfd2b endpoint=https://c2686074cb2caf5cbaf6d134bdba8b47.r2.cloudflarestorage.com
+
+
+RUN wget https://download.amd.com/opendownload/Quark/amd_quark-0.9.zip && unzip amd_quark-0.9.zip
+RUN sed -i 's/, choices=\["pileval",/) # , choices=["pileval",/' amd_quark-0.9/examples/torch/language_modeling/llm_ptq/quantize_quark.py
+RUN sed -i '222a\    elif dataset_name.endswith('\''pkl'\''):\n        from calib import get_mlperf_data\n        return get_mlperf_data(dataset_name, **kwargs)' amd_quark-0.9/examples/torch/language_modeling/llm_utils/data_preparation.py
+RUN sed -i '111d' amd_quark-0.9/examples/torch/language_modeling/llm_utils/model_preparation.py
+
+ARG SCRIPTS_DIR
+ADD ${SCRIPTS_DIR} .
+
+RUN cp calib.py amd_quark-0.9/examples/torch/language_modeling/llm_ptq/
+RUN pip install amd_quark-0.9/amd_quark-0.9-py3-none-any.whl

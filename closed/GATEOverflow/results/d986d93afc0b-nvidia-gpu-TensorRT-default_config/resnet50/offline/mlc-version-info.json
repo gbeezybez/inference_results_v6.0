@@ -1,0 +1,3 @@
+{
+  "app-mlperf-inference,d775cac873ee4231:nvidia,resnet50,tensorrt,cuda,valid,r6.0-dev_default,offline": []
+}

@@ -1,0 +1,3 @@
+# Accuracy overrides for prefill worker (deep-merged on top of gpt-oss-120b.yml)
+# Applied automatically when --test_mode=AccuracyOnly
+max_seq_len: 35840

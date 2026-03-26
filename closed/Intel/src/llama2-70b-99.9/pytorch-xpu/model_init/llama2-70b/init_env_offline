@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Validate and set Tensor parallel and Instances
+
+if (( XPU_COUNT > 0 )); then
+    # XPU
+    if (( XPU_DEVICE_ID == 57891 )); then
+        # B70
+        export PP=2
+        export NUM_INSTS=$((XPU_COUNT / (TP*PP)))
+        export BATCH_SIZE=1024
+        export MAX_NUM_BATCHED_TOKENS=320
+        export GPU_MEMORY_UTILIZATION=0.99
+    elif (( XPU_DEVICE_ID == 57873 )); then
+        # B60
+        export PP=4
+        export NUM_INSTS=$((XPU_COUNT / (TP*PP)))
+        export BATCH_SIZE=1024
+        export MAX_NUM_BATCHED_TOKENS=320
+        export GPU_MEMORY_UTILIZATION=0.93
+    else
+        echo "Error: XPU device ID $XPU_DEVICE_ID is not in allowed set (${XPU_SUPPORTED_DEVICE_IDS[*]})."
+        return 1
+    fi
+else
+    # CPU
+    export NUM_NUMA_NODES=$(lscpu | grep "NUMA node(s)" | awk '{print $NF}')
+    export NUM_CORES=$(($(lscpu | grep "Socket(s):" | awk '{print $2}') * $(lscpu | grep "Core(s) per socket:" | awk '{print $4}')))
+    export CORES_PER_NODE=$(($NUM_CORES / $NUM_NUMA_NODES))
+    export CORES_PER_INST=$CORES_PER_NODE
+    export INSTS_PER_NODE=$((${CORES_PER_NODE} / ${CORES_PER_INST}))
+    export NUM_INSTS=$((${INSTS_PER_NODE} * ${NUM_NUMA_NODES}))
+    export OMP_NUM_THREADS=${CORES_PER_INST} 
+
+    export BATCH_SIZE=128
+    #Batch size * 4 * 40 (20 if 8-bit kv cache) / 1024
+    export VLLM_CPU_KVCACHE_SPACE=20
+    export MAX_NUM_BATCHED_TOKENS=2048
+fi

@@ -1,0 +1,428 @@
+[2026-02-13 19:00:08,868 loader.py:193 INFO] Loading System log from build/submission/closed/CoreWeave/systems/B200-SXM-180GBx16_TRT.json
+[2026-02-13 19:00:08,869 loader.py:193 INFO] Loading Performance log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,870 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,870 loader.py:193 INFO] Loading Accuracy log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,871 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/accuracy/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,871 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/accuracy/accuracy.txt
+[2026-02-13 19:00:08,872 loader.py:193 INFO] Loading AccuracyJSON log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/accuracy/mlperf_log_accuracy.json
+[2026-02-13 19:00:08,872 loader.py:193 INFO] Loading Measurements log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/measurements.json
+[2026-02-13 19:00:08,872 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,873 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,873 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,873 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,873 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/TEST06/verify_accuracy.txt
+[2026-02-13 19:00:08,874 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,874 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-13 19:00:08,874 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,875 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,875 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-13 19:00:08,875 base.py:42 INFO] Starting performance checks for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,875 performance_check.py:263 INFO] Target latency: None, Latency: 4219765676360, Scenario: Offline
+[2026-02-13 19:00:08,875 base.py:45 INFO] All performance checks checks passed for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,875 base.py:42 INFO] Starting accuracy checks for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,876 base.py:45 INFO] All accuracy checks checks passed for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,876 base.py:42 INFO] Starting system checks for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT
+[2026-02-13 19:00:08,876 base.py:45 INFO] All system checks checks passed for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT
+[2026-02-13 19:00:08,876 base.py:42 INFO] Starting measurement checks for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/measurements.json
+[2026-02-13 19:00:08,878 base.py:45 INFO] All measurement checks checks passed for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/measurements.json
+[2026-02-13 19:00:08,878 base.py:42 INFO] Starting base checks for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/performance/power
+[2026-02-13 19:00:08,878 base.py:45 INFO] All base checks checks passed for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/performance/power
+[2026-02-13 19:00:08,878 loader.py:193 INFO] Loading Performance log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,879 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,879 loader.py:193 INFO] Loading Accuracy log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,880 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/accuracy/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,880 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/accuracy/accuracy.txt
+[2026-02-13 19:00:08,881 loader.py:193 INFO] Loading AccuracyJSON log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/accuracy/mlperf_log_accuracy.json
+[2026-02-13 19:00:08,881 loader.py:193 INFO] Loading Measurements log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/measurements.json
+[2026-02-13 19:00:08,882 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,882 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,882 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,882 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,882 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/TEST06/verify_accuracy.txt
+[2026-02-13 19:00:08,883 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,883 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-13 19:00:08,883 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,884 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,884 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-13 19:00:08,884 base.py:42 INFO] Starting performance checks for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,884 performance_check.py:244 INFO] Target latency: 60000000000, Early Stopping Latency: 0, Scenario: Server
+[2026-02-13 19:00:08,884 base.py:45 INFO] All performance checks checks passed for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,884 base.py:42 INFO] Starting accuracy checks for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,885 base.py:45 INFO] All accuracy checks checks passed for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,885 base.py:42 INFO] Starting system checks for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT
+[2026-02-13 19:00:08,885 base.py:45 INFO] All system checks checks passed for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT
+[2026-02-13 19:00:08,885 base.py:42 INFO] Starting measurement checks for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/measurements.json
+[2026-02-13 19:00:08,887 base.py:45 INFO] All measurement checks checks passed for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/measurements.json
+[2026-02-13 19:00:08,887 base.py:42 INFO] Starting base checks for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/performance/power
+[2026-02-13 19:00:08,887 base.py:45 INFO] All base checks checks passed for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/performance/power
+[2026-02-13 19:00:08,888 loader.py:193 INFO] Loading Performance log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,889 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,889 loader.py:193 INFO] Loading Accuracy log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,889 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/accuracy/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,890 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/accuracy/accuracy.txt
+[2026-02-13 19:00:08,890 loader.py:193 INFO] Loading AccuracyJSON log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/accuracy/mlperf_log_accuracy.json
+[2026-02-13 19:00:08,890 loader.py:193 INFO] Loading Measurements log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/measurements.json
+[2026-02-13 19:00:08,891 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,891 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,891 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,892 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,892 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/TEST06/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,892 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/TEST07/verify_accuracy.txt
+[2026-02-13 19:00:08,893 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/TEST09/verify_output_len.txt
+[2026-02-13 19:00:08,893 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,893 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/TEST07/verify_accuracy.txt
+[2026-02-13 19:00:08,893 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/TEST09/verify_output_len.txt
+[2026-02-13 19:00:08,894 base.py:42 INFO] Starting performance checks for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,894 performance_check.py:263 INFO] Target latency: None, Latency: 1059883625752, Scenario: Offline
+[2026-02-13 19:00:08,894 base.py:45 INFO] All performance checks checks passed for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,894 base.py:42 INFO] Starting accuracy checks for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,894 base.py:45 INFO] All accuracy checks checks passed for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,894 base.py:42 INFO] Starting system checks for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT
+[2026-02-13 19:00:08,894 base.py:45 INFO] All system checks checks passed for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT
+[2026-02-13 19:00:08,894 base.py:42 INFO] Starting measurement checks for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/measurements.json
+[2026-02-13 19:00:08,895 base.py:45 INFO] All measurement checks checks passed for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/measurements.json
+[2026-02-13 19:00:08,895 base.py:42 INFO] Starting base checks for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/performance/power
+[2026-02-13 19:00:08,895 base.py:45 INFO] All base checks checks passed for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/performance/power
+[2026-02-13 19:00:08,896 loader.py:193 INFO] Loading Performance log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,897 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/performance/run_1/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,897 loader.py:193 INFO] Loading Accuracy log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,898 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/accuracy/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,898 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/accuracy/accuracy.txt
+[2026-02-13 19:00:08,899 loader.py:193 INFO] Loading AccuracyJSON log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/accuracy/mlperf_log_accuracy.json
+[2026-02-13 19:00:08,899 loader.py:193 INFO] Loading Measurements log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/measurements.json
+[2026-02-13 19:00:08,899 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,900 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,900 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,900 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,901 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/TEST06/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,901 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/TEST07/verify_accuracy.txt
+[2026-02-13 19:00:08,901 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/TEST09/verify_output_len.txt
+[2026-02-13 19:00:08,902 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,902 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/TEST07/verify_accuracy.txt
+[2026-02-13 19:00:08,902 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/TEST09/verify_output_len.txt
+[2026-02-13 19:00:08,902 base.py:42 INFO] Starting performance checks for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,902 performance_check.py:244 INFO] Target latency: 60000000000, Early Stopping Latency: 0, Scenario: Server
+[2026-02-13 19:00:08,902 base.py:45 INFO] All performance checks checks passed for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,903 base.py:42 INFO] Starting accuracy checks for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,903 base.py:45 INFO] All accuracy checks checks passed for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,903 base.py:42 INFO] Starting system checks for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT
+[2026-02-13 19:00:08,903 base.py:45 INFO] All system checks checks passed for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT
+[2026-02-13 19:00:08,903 base.py:42 INFO] Starting measurement checks for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/measurements.json
+[2026-02-13 19:00:08,904 base.py:45 INFO] All measurement checks checks passed for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/measurements.json
+[2026-02-13 19:00:08,904 base.py:42 INFO] Starting base checks for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/performance/power
+[2026-02-13 19:00:08,904 base.py:45 INFO] All base checks checks passed for: build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/performance/power
+[2026-02-13 19:00:08,905 loader.py:193 INFO] Loading System log from build/submission/closed/CoreWeave/systems/GB200-NVL72_GB200-186GB_aarch64x64_TRT.json
+[2026-02-13 19:00:08,906 loader.py:193 INFO] Loading Performance log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,906 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,906 loader.py:193 INFO] Loading Accuracy log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,907 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/accuracy/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,907 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/accuracy/accuracy.txt
+[2026-02-13 19:00:08,908 loader.py:193 INFO] Loading AccuracyJSON log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/accuracy/mlperf_log_accuracy.json
+[2026-02-13 19:00:08,908 loader.py:193 INFO] Loading Measurements log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/measurements.json
+[2026-02-13 19:00:08,909 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,909 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,909 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,910 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,910 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/TEST06/verify_accuracy.txt
+[2026-02-13 19:00:08,910 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,911 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-13 19:00:08,911 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,911 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,911 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-13 19:00:08,912 base.py:42 INFO] Starting performance checks for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,912 performance_check.py:263 INFO] Target latency: None, Latency: 4129426733026, Scenario: Offline
+[2026-02-13 19:00:08,912 base.py:45 INFO] All performance checks checks passed for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,912 base.py:42 INFO] Starting accuracy checks for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,913 base.py:45 INFO] All accuracy checks checks passed for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,913 base.py:42 INFO] Starting system checks for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT
+[2026-02-13 19:00:08,913 base.py:45 INFO] All system checks checks passed for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT
+[2026-02-13 19:00:08,913 base.py:42 INFO] Starting measurement checks for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/measurements.json
+[2026-02-13 19:00:08,914 base.py:45 INFO] All measurement checks checks passed for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/measurements.json
+[2026-02-13 19:00:08,914 base.py:42 INFO] Starting base checks for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/performance/power
+[2026-02-13 19:00:08,914 base.py:45 INFO] All base checks checks passed for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/performance/power
+[2026-02-13 19:00:08,915 loader.py:193 INFO] Loading Performance log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,916 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,916 loader.py:193 INFO] Loading Accuracy log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,917 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/accuracy/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,917 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/accuracy/accuracy.txt
+[2026-02-13 19:00:08,917 loader.py:193 INFO] Loading AccuracyJSON log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/accuracy/mlperf_log_accuracy.json
+[2026-02-13 19:00:08,918 loader.py:193 INFO] Loading Measurements log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/measurements.json
+[2026-02-13 19:00:08,918 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,919 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,919 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,919 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,919 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/TEST06/verify_accuracy.txt
+[2026-02-13 19:00:08,920 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,920 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-13 19:00:08,921 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,921 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,921 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-13 19:00:08,922 base.py:42 INFO] Starting performance checks for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,922 performance_check.py:244 INFO] Target latency: 60000000000, Early Stopping Latency: 0, Scenario: Server
+[2026-02-13 19:00:08,922 base.py:45 INFO] All performance checks checks passed for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,922 base.py:42 INFO] Starting accuracy checks for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,923 base.py:45 INFO] All accuracy checks checks passed for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,923 base.py:42 INFO] Starting system checks for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT
+[2026-02-13 19:00:08,923 base.py:45 INFO] All system checks checks passed for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT
+[2026-02-13 19:00:08,923 base.py:42 INFO] Starting measurement checks for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/measurements.json
+[2026-02-13 19:00:08,924 base.py:45 INFO] All measurement checks checks passed for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/measurements.json
+[2026-02-13 19:00:08,924 base.py:42 INFO] Starting base checks for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/performance/power
+[2026-02-13 19:00:08,924 base.py:45 INFO] All base checks checks passed for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/performance/power
+[2026-02-13 19:00:08,925 loader.py:193 INFO] Loading Performance log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,926 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,926 loader.py:193 INFO] Loading Accuracy log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,927 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/accuracy/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,927 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/accuracy/accuracy.txt
+[2026-02-13 19:00:08,927 loader.py:193 INFO] Loading AccuracyJSON log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/accuracy/mlperf_log_accuracy.json
+[2026-02-13 19:00:08,928 loader.py:193 INFO] Loading Measurements log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/measurements.json
+[2026-02-13 19:00:08,928 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,928 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,929 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,929 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,929 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/TEST06/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,929 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/TEST07/verify_accuracy.txt
+[2026-02-13 19:00:08,930 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/TEST09/verify_output_len.txt
+[2026-02-13 19:00:08,930 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,930 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/TEST07/verify_accuracy.txt
+[2026-02-13 19:00:08,930 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/TEST09/verify_output_len.txt
+[2026-02-13 19:00:08,931 base.py:42 INFO] Starting performance checks for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,931 performance_check.py:263 INFO] Target latency: None, Latency: 686600203484, Scenario: Offline
+[2026-02-13 19:00:08,931 base.py:45 INFO] All performance checks checks passed for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,931 base.py:42 INFO] Starting accuracy checks for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,931 base.py:45 INFO] All accuracy checks checks passed for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,931 base.py:42 INFO] Starting system checks for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT
+[2026-02-13 19:00:08,931 base.py:45 INFO] All system checks checks passed for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT
+[2026-02-13 19:00:08,931 base.py:42 INFO] Starting measurement checks for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/measurements.json
+[2026-02-13 19:00:08,932 base.py:45 INFO] All measurement checks checks passed for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/measurements.json
+[2026-02-13 19:00:08,932 base.py:42 INFO] Starting base checks for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/performance/power
+[2026-02-13 19:00:08,932 base.py:45 INFO] All base checks checks passed for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/performance/power
+[2026-02-13 19:00:08,933 loader.py:193 INFO] Loading Performance log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,934 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/performance/run_1/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,934 loader.py:193 INFO] Loading Accuracy log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,935 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/accuracy/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,935 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/accuracy/accuracy.txt
+[2026-02-13 19:00:08,935 loader.py:193 INFO] Loading AccuracyJSON log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/accuracy/mlperf_log_accuracy.json
+[2026-02-13 19:00:08,935 loader.py:193 INFO] Loading Measurements log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/measurements.json
+[2026-02-13 19:00:08,936 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,936 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,936 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,937 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,937 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/TEST06/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,937 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/TEST07/verify_accuracy.txt
+[2026-02-13 19:00:08,938 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/TEST09/verify_output_len.txt
+[2026-02-13 19:00:08,938 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,938 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/TEST07/verify_accuracy.txt
+[2026-02-13 19:00:08,938 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/TEST09/verify_output_len.txt
+[2026-02-13 19:00:08,939 base.py:42 INFO] Starting performance checks for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,939 performance_check.py:244 INFO] Target latency: 60000000000, Early Stopping Latency: 0, Scenario: Server
+[2026-02-13 19:00:08,939 base.py:45 INFO] All performance checks checks passed for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,939 base.py:42 INFO] Starting accuracy checks for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,939 base.py:45 INFO] All accuracy checks checks passed for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,939 base.py:42 INFO] Starting system checks for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT
+[2026-02-13 19:00:08,939 base.py:45 INFO] All system checks checks passed for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT
+[2026-02-13 19:00:08,939 base.py:42 INFO] Starting measurement checks for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/measurements.json
+[2026-02-13 19:00:08,940 base.py:45 INFO] All measurement checks checks passed for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/measurements.json
+[2026-02-13 19:00:08,940 base.py:42 INFO] Starting base checks for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/performance/power
+[2026-02-13 19:00:08,940 base.py:45 INFO] All base checks checks passed for: build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/performance/power
+[2026-02-13 19:00:08,941 loader.py:193 INFO] Loading System log from build/submission/closed/CoreWeave/systems/GB300-NVL72_GB300-288GB_aarch64x64_TRT.json
+[2026-02-13 19:00:08,942 loader.py:193 INFO] Loading Performance log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,943 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,943 loader.py:193 INFO] Loading Accuracy log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,944 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/accuracy/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,944 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/accuracy/accuracy.txt
+[2026-02-13 19:00:08,945 loader.py:193 INFO] Loading AccuracyJSON log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/accuracy/mlperf_log_accuracy.json
+[2026-02-13 19:00:08,945 loader.py:193 INFO] Loading Measurements log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/measurements.json
+[2026-02-13 19:00:08,945 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,946 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,946 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,946 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,946 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/TEST06/verify_accuracy.txt
+[2026-02-13 19:00:08,947 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,947 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-13 19:00:08,947 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,948 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,948 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-13 19:00:08,948 base.py:42 INFO] Starting performance checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,948 performance_check.py:263 INFO] Target latency: None, Latency: 4737288392212, Scenario: Offline
+[2026-02-13 19:00:08,948 base.py:45 INFO] All performance checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,948 base.py:42 INFO] Starting accuracy checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,950 base.py:45 INFO] All accuracy checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,950 base.py:42 INFO] Starting system checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT
+[2026-02-13 19:00:08,950 base.py:45 INFO] All system checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT
+[2026-02-13 19:00:08,950 base.py:42 INFO] Starting measurement checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/measurements.json
+[2026-02-13 19:00:08,951 base.py:45 INFO] All measurement checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/measurements.json
+[2026-02-13 19:00:08,951 base.py:42 INFO] Starting base checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/performance/power
+[2026-02-13 19:00:08,951 base.py:45 INFO] All base checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/performance/power
+[2026-02-13 19:00:08,951 loader.py:193 INFO] Loading Performance log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,952 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,952 loader.py:193 INFO] Loading Accuracy log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,953 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/accuracy/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,954 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/accuracy/accuracy.txt
+[2026-02-13 19:00:08,954 loader.py:193 INFO] Loading AccuracyJSON log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/accuracy/mlperf_log_accuracy.json
+[2026-02-13 19:00:08,955 loader.py:193 INFO] Loading Measurements log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/measurements.json
+[2026-02-13 19:00:08,955 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,955 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,955 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,956 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,956 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/TEST06/verify_accuracy.txt
+[2026-02-13 19:00:08,957 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,957 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-13 19:00:08,957 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,957 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,957 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-13 19:00:08,958 base.py:42 INFO] Starting performance checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,958 performance_check.py:244 INFO] Target latency: 60000000000, Early Stopping Latency: 0, Scenario: Server
+[2026-02-13 19:00:08,958 base.py:45 INFO] All performance checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,958 base.py:42 INFO] Starting accuracy checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,959 base.py:45 INFO] All accuracy checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,959 base.py:42 INFO] Starting system checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT
+[2026-02-13 19:00:08,959 base.py:45 INFO] All system checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT
+[2026-02-13 19:00:08,959 base.py:42 INFO] Starting measurement checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/measurements.json
+[2026-02-13 19:00:08,960 base.py:45 INFO] All measurement checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/measurements.json
+[2026-02-13 19:00:08,960 base.py:42 INFO] Starting base checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/performance/power
+[2026-02-13 19:00:08,960 base.py:45 INFO] All base checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/performance/power
+[2026-02-13 19:00:08,961 loader.py:193 INFO] Loading Performance log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,962 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,962 loader.py:193 INFO] Loading Accuracy log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,963 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/accuracy/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,963 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/accuracy/accuracy.txt
+[2026-02-13 19:00:08,964 loader.py:193 INFO] Loading AccuracyJSON log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/accuracy/mlperf_log_accuracy.json
+[2026-02-13 19:00:08,964 loader.py:193 INFO] Loading Measurements log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/measurements.json
+[2026-02-13 19:00:08,965 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,965 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,965 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,965 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,966 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/TEST06/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,966 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/TEST07/verify_accuracy.txt
+[2026-02-13 19:00:08,966 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/TEST09/verify_output_len.txt
+[2026-02-13 19:00:08,967 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,967 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/TEST07/verify_accuracy.txt
+[2026-02-13 19:00:08,967 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/TEST09/verify_output_len.txt
+[2026-02-13 19:00:08,968 base.py:42 INFO] Starting performance checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,968 performance_check.py:263 INFO] Target latency: None, Latency: 660818309862, Scenario: Offline
+[2026-02-13 19:00:08,968 base.py:45 INFO] All performance checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,968 base.py:42 INFO] Starting accuracy checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,968 base.py:45 INFO] All accuracy checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,968 base.py:42 INFO] Starting system checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT
+[2026-02-13 19:00:08,968 base.py:45 INFO] All system checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT
+[2026-02-13 19:00:08,968 base.py:42 INFO] Starting measurement checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/measurements.json
+[2026-02-13 19:00:08,969 base.py:45 INFO] All measurement checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/measurements.json
+[2026-02-13 19:00:08,969 base.py:42 INFO] Starting base checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/performance/power
+[2026-02-13 19:00:08,969 base.py:45 INFO] All base checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/performance/power
+[2026-02-13 19:00:08,970 loader.py:193 INFO] Loading Performance log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,971 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/performance/run_1/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,971 loader.py:193 INFO] Loading Accuracy log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,972 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/accuracy/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,972 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/accuracy/accuracy.txt
+[2026-02-13 19:00:08,973 loader.py:193 INFO] Loading AccuracyJSON log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/accuracy/mlperf_log_accuracy.json
+[2026-02-13 19:00:08,973 loader.py:193 INFO] Loading Measurements log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/measurements.json
+[2026-02-13 19:00:08,973 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,974 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,974 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,974 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,974 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/TEST06/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,975 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/TEST07/verify_accuracy.txt
+[2026-02-13 19:00:08,975 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/TEST09/verify_output_len.txt
+[2026-02-13 19:00:08,976 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,976 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/TEST07/verify_accuracy.txt
+[2026-02-13 19:00:08,976 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/TEST09/verify_output_len.txt
+[2026-02-13 19:00:08,976 base.py:42 INFO] Starting performance checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,976 performance_check.py:244 INFO] Target latency: 60000000000, Early Stopping Latency: 0, Scenario: Server
+[2026-02-13 19:00:08,976 base.py:45 INFO] All performance checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,976 base.py:42 INFO] Starting accuracy checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,976 base.py:45 INFO] All accuracy checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,976 base.py:42 INFO] Starting system checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT
+[2026-02-13 19:00:08,976 base.py:45 INFO] All system checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT
+[2026-02-13 19:00:08,976 base.py:42 INFO] Starting measurement checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/measurements.json
+[2026-02-13 19:00:08,978 base.py:45 INFO] All measurement checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/measurements.json
+[2026-02-13 19:00:08,978 base.py:42 INFO] Starting base checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/performance/power
+[2026-02-13 19:00:08,978 base.py:45 INFO] All base checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/performance/power
+[2026-02-13 19:00:08,978 loader.py:193 INFO] Loading System log from build/submission/closed/CoreWeave/systems/GB300-NVL72_GB300-288GB_aarch64x8_TRT.json
+[2026-02-13 19:00:08,980 loader.py:193 INFO] Loading Performance log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,980 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,981 loader.py:193 INFO] Loading Accuracy log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,981 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/accuracy/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,981 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/accuracy/accuracy.txt
+[2026-02-13 19:00:08,982 loader.py:193 INFO] Loading AccuracyJSON log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/accuracy/mlperf_log_accuracy.json
+[2026-02-13 19:00:08,982 loader.py:193 INFO] Loading Measurements log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/measurements.json
+[2026-02-13 19:00:08,983 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,983 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,983 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,984 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,984 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/TEST06/verify_accuracy.txt
+[2026-02-13 19:00:08,984 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,985 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-13 19:00:08,985 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,985 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,986 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/TEST09/verify_output_len.txt, path does not exist
+[2026-02-13 19:00:08,986 base.py:42 INFO] Starting performance checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,986 performance_check.py:263 INFO] Target latency: None, Latency: 4746438056057, Scenario: Offline
+[2026-02-13 19:00:08,986 base.py:45 INFO] All performance checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,986 base.py:42 INFO] Starting accuracy checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,987 base.py:45 INFO] All accuracy checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,987 base.py:42 INFO] Starting system checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT
+[2026-02-13 19:00:08,987 base.py:45 INFO] All system checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT
+[2026-02-13 19:00:08,987 base.py:42 INFO] Starting measurement checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/measurements.json
+[2026-02-13 19:00:08,988 base.py:45 INFO] All measurement checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/measurements.json
+[2026-02-13 19:00:08,988 base.py:42 INFO] Starting base checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/performance/power
+[2026-02-13 19:00:08,988 base.py:45 INFO] All base checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/performance/power
+[2026-02-13 19:00:08,989 loader.py:193 INFO] Loading Performance log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,990 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,990 loader.py:193 INFO] Loading Accuracy log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,991 loadgen_parser.py:66 INFO] Sucessfully loaded MLPerf log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/accuracy/mlperf_log_detail.txt.
+[2026-02-13 19:00:08,991 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/accuracy/accuracy.txt
+[2026-02-13 19:00:08,992 loader.py:193 INFO] Loading AccuracyJSON log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/accuracy/mlperf_log_accuracy.json
+[2026-02-13 19:00:08,992 loader.py:193 INFO] Loading Measurements log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/measurements.json
+[2026-02-13 19:00:08,992 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/TEST01/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,993 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/TEST01/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,993 loader.py:210 INFO] Could not load Performance log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/TEST04/performance/run_1/mlperf_log_detail.txt, path does not exist
+[2026-02-13 19:00:08,993 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/TEST04/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,993 loader.py:193 INFO] Loading AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/TEST06/verify_accuracy.txt
+[2026-02-13 19:00:08,994 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,994 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-13 19:00:08,994 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/TEST08/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,995 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/TEST07/verify_accuracy.txt, path does not exist
+[2026-02-13 19:00:08,995 loader.py:210 INFO] Could not load AccuracyResult log from build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/TEST09/verify_output_len.txt, path does not exist
+[2026-02-13 19:00:08,995 base.py:42 INFO] Starting performance checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,995 performance_check.py:244 INFO] Target latency: 60000000000, Early Stopping Latency: 0, Scenario: Server
+[2026-02-13 19:00:08,995 base.py:45 INFO] All performance checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt
+[2026-02-13 19:00:08,995 base.py:42 INFO] Starting accuracy checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,996 base.py:45 INFO] All accuracy checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/accuracy/mlperf_log_detail.txt
+[2026-02-13 19:00:08,996 base.py:42 INFO] Starting system checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT
+[2026-02-13 19:00:08,996 base.py:45 INFO] All system checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT
+[2026-02-13 19:00:08,996 base.py:42 INFO] Starting measurement checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/measurements.json
+[2026-02-13 19:00:08,997 base.py:45 INFO] All measurement checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/measurements.json
+[2026-02-13 19:00:08,997 base.py:42 INFO] Starting base checks for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/performance/power
+[2026-02-13 19:00:08,997 base.py:45 INFO] All base checks checks passed for: build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/performance/power
+[2026-02-13 19:00:09,022 main.py:215 INFO] ---
+[2026-02-13 19:00:09,022 main.py:219 INFO] Results build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt 116685.0
+[2026-02-13 19:00:09,022 main.py:219 INFO] Results build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt 81664.6
+[2026-02-13 19:00:09,022 main.py:219 INFO] Results build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Offline/performance/run_1/mlperf_log_detail.txt 155946.0
+[2026-02-13 19:00:09,022 main.py:219 INFO] Results build/submission/closed/CoreWeave/results/B200-SXM-180GBx16_TRT/gpt-oss-120b/Server/performance/run_1/mlperf_log_detail.txt 37205.7
+[2026-02-13 19:00:09,022 main.py:219 INFO] Results build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt 468665.0
+[2026-02-13 19:00:09,022 main.py:219 INFO] Results build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt 311531.0
+[2026-02-13 19:00:09,022 main.py:219 INFO] Results build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Offline/performance/run_1/mlperf_log_detail.txt 774539.0
+[2026-02-13 19:00:09,022 main.py:219 INFO] Results build/submission/closed/CoreWeave/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/gpt-oss-120b/Server/performance/run_1/mlperf_log_detail.txt 743550.0
+[2026-02-13 19:00:09,022 main.py:219 INFO] Results build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt 627653.0
+[2026-02-13 19:00:09,022 main.py:219 INFO] Results build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt 269198.0
+[2026-02-13 19:00:09,022 main.py:219 INFO] Results build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Offline/performance/run_1/mlperf_log_detail.txt 910468.0
+[2026-02-13 19:00:09,022 main.py:219 INFO] Results build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x64_TRT/gpt-oss-120b/Server/performance/run_1/mlperf_log_detail.txt 956523.0
+[2026-02-13 19:00:09,022 main.py:219 INFO] Results build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt 78564.0
+[2026-02-13 19:00:09,022 main.py:219 INFO] Results build/submission/closed/CoreWeave/results/GB300-NVL72_GB300-288GB_aarch64x8_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt 44589.7
+[2026-02-13 19:00:09,022 main.py:221 INFO] ---
+[2026-02-13 19:00:09,022 main.py:310 INFO] ---
+[2026-02-13 19:00:09,022 main.py:311 INFO] Results=14, NoResults=0, Power Results=0
+[2026-02-13 19:00:09,022 main.py:318 INFO] ---
+[2026-02-13 19:00:09,022 main.py:319 INFO] Closed Results=14, Closed Power Results=0
+
+[2026-02-13 19:00:09,022 main.py:324 INFO] Open Results=0, Open Power Results=0
+
+[2026-02-13 19:00:09,022 main.py:329 INFO] Network Results=0, Network Power Results=0
+
+[2026-02-13 19:00:09,022 main.py:334 INFO] ---
+[2026-02-13 19:00:09,022 main.py:336 INFO] Systems=4, Power Systems=0
+[2026-02-13 19:00:09,022 main.py:340 INFO] Closed Systems=4, Closed Power Systems=0
+[2026-02-13 19:00:09,022 main.py:345 INFO] Open Systems=0, Open Power Systems=0
+[2026-02-13 19:00:09,022 main.py:350 INFO] Network Systems=0, Network Power Systems=0
+[2026-02-13 19:00:09,022 main.py:355 INFO] ---
+[2026-02-13 19:00:09,022 main.py:360 INFO] SUMMARY: submission looks OK

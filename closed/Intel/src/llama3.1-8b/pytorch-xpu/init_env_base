@@ -1,0 +1,15 @@
+#!/bin/bash
+
+export XPU_COUNT=$(python -c "import torch; count = 0; count = torch.xpu.device_count() if hasattr(torch, 'xpu') and torch.xpu.is_available() else 0; print(count)")
+if (( XPU_COUNT > 0 )); then
+    # XPU-specific
+    export VLLM_USE_V1=1
+    export VLLM_WORKER_MULTIPROC_METHOD=spawn
+
+    # query torch.xpu.get_device_properties(0).device_id and store in an environment variable
+    export XPU_DEVICE_ID=$(python -c "import torch; print(torch.xpu.get_device_properties(0).device_id)")
+fi
+# Set default values in case one value is not set
+# E.g.: for TP>1 case, PP doesn't have to be set
+export TP=1
+export PP=1

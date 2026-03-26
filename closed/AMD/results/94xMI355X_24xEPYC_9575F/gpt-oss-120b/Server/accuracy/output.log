@@ -1,0 +1,424 @@
+2026-02-11 13:20:38 INFO     Overriding harness_config.total_sample_count=6396 with harness_config.accuracy_sample_count=4395
+2026-02-11 13:20:38 INFO     Overriding harness_config.dataset_path='/data/gpt-oss-120b/perf_eval_ref.parquet' with harness_config.accuracy_dataset_path='/data/gpt-oss-120b/acc_eval_ref.parquet'
+2026-02-11 13:20:38 INFO     Overriding benchmark='gpt-oss-120b' with gpt-oss-120b-accuracy
+2026-02-11 13:20:38 WARNING  Accuracy run will generate the accuracy logs, but the evaluation of the log is not completed yet
+env_config={'HARNESS_DISABLE_VLLM_LOGS': 1, 'HARNESS_GC_LIMIT': 100000, 'HIP_FORCE_DEV_KERNARG': 1, 'VLLM_USE_V1': 1, 'VLLM_LOGGING_LEVEL': 'ERROR', 'VLLM_USE_TRITON_FLASH_ATTN': 0, 'VLLM_ENGINE_ITERATION_TIMEOUT_S': 36000, 'NCCL_MIN_NCHANNELS': 112, 'VLLM_ROCM_USE_AITER': 1, 'VLLM_ROCM_USE_AITER_UNIFIED_ATTENTION': 1, 'USE_FASTSAFETENSOR': 1, 'SAFETENSORS_FAST_GPU': 1, 'VLLM_ROCM_USE_AITER_MHA': 0, 'VLLM_ROCM_USE_AITER_FUSED_MOE_A16W4': 0, 'AITER_LOG_LEVEL': 'ERROR', 'AMDGCN_USE_BUFFER_OPS': 0, 'VLLM_MIN_REQUEST_DECODE_STEP': 128, 'VLLM_SUBSEQUENT_DECODE_STEPS': 10, 'GPU_MAX_HW_QUEUES': 3, 'HSA_KERNARG_POOL_SIZE': 4000000}
+2026-02-11 13:20:43 INFO     Setting HARNESS_DISABLE_VLLM_LOGS to 1
+2026-02-11 13:20:43 INFO     Setting HARNESS_GC_LIMIT to 100000
+2026-02-11 13:20:43 INFO     Setting HIP_FORCE_DEV_KERNARG to 1
+2026-02-11 13:20:43 INFO     Setting VLLM_USE_V1 to 1
+2026-02-11 13:20:43 INFO     Setting VLLM_LOGGING_LEVEL to ERROR
+2026-02-11 13:20:43 INFO     Setting VLLM_USE_TRITON_FLASH_ATTN to 0
+2026-02-11 13:20:43 INFO     Setting VLLM_ENGINE_ITERATION_TIMEOUT_S to 36000
+2026-02-11 13:20:43 INFO     Setting NCCL_MIN_NCHANNELS to 112
+2026-02-11 13:20:43 INFO     Setting VLLM_ROCM_USE_AITER to 1
+2026-02-11 13:20:43 INFO     Setting VLLM_ROCM_USE_AITER_UNIFIED_ATTENTION to 1
+2026-02-11 13:20:43 INFO     Setting USE_FASTSAFETENSOR to 1
+2026-02-11 13:20:43 INFO     Setting SAFETENSORS_FAST_GPU to 1
+2026-02-11 13:20:43 INFO     Setting VLLM_ROCM_USE_AITER_MHA to 0
+2026-02-11 13:20:43 INFO     Setting VLLM_ROCM_USE_AITER_FUSED_MOE_A16W4 to 0
+2026-02-11 13:20:43 INFO     Setting AITER_LOG_LEVEL to ERROR
+2026-02-11 13:20:43 INFO     Setting AMDGCN_USE_BUFFER_OPS to 0
+2026-02-11 13:20:43 INFO     Setting VLLM_MIN_REQUEST_DECODE_STEP to 128
+2026-02-11 13:20:43 INFO     Setting VLLM_SUBSEQUENT_DECODE_STEPS to 10
+2026-02-11 13:20:43 INFO     Setting GPU_MAX_HW_QUEUES to 3
+2026-02-11 13:20:43 INFO     Setting HSA_KERNARG_POOL_SIZE to 4000000
+2026-02-11 13:20:43 INFO     Init SUT
+2026-02-11 13:20:43 INFO     Loading dataset...
+2026-02-11 13:20:44 INFO     Finished loading dataset.
+The tokenizer you are loading from '/model/gpt-oss-120b/fp4_quantized' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+2026-02-11 13:20:44 INFO     Instantiating SUT
+2026-02-11 13:20:44 INFO     SUT - i=0/94 Wait for server register message
+2026-02-11 13:22:05 INFO     SUT - i=0/94 Got new server with identity=b'smci355-ccs-aus-m09-17-gpu3'
+2026-02-11 13:22:05 INFO     SUT - i=1/94 Wait for server register message
+2026-02-11 13:22:06 INFO     SUT - i=1/94 Got new server with identity=b'smci355-ccs-aus-m09-17-gpu1'
+2026-02-11 13:22:06 INFO     SUT - i=2/94 Wait for server register message
+2026-02-11 13:22:06 INFO     SUT - i=2/94 Got new server with identity=b'smci355-ccs-aus-m09-17-gpu2'
+2026-02-11 13:22:06 INFO     SUT - i=3/94 Wait for server register message
+2026-02-11 13:22:06 INFO     SUT - i=3/94 Got new server with identity=b'smci355-ccs-aus-m09-17-gpu6'
+2026-02-11 13:22:06 INFO     SUT - i=4/94 Wait for server register message
+2026-02-11 13:22:06 INFO     SUT - i=4/94 Got new server with identity=b'smci355-ccs-aus-m09-17-gpu7'
+2026-02-11 13:22:06 INFO     SUT - i=5/94 Wait for server register message
+2026-02-11 13:22:07 INFO     SUT - i=5/94 Got new server with identity=b'smci355-ccs-aus-m09-17-gpu0'
+2026-02-11 13:22:07 INFO     SUT - i=6/94 Wait for server register message
+2026-02-11 13:22:07 INFO     SUT - i=6/94 Got new server with identity=b'smci355-ccs-aus-m09-17-gpu4'
+2026-02-11 13:22:07 INFO     SUT - i=7/94 Wait for server register message
+2026-02-11 13:22:23 INFO     SUT - i=7/94 Got new server with identity=b'smci355-ccs-aus-n08-17-gpu1'
+2026-02-11 13:22:23 INFO     SUT - i=8/94 Wait for server register message
+2026-02-11 13:22:24 INFO     SUT - i=8/94 Got new server with identity=b'smci355-ccs-aus-n08-17-gpu4'
+2026-02-11 13:22:24 INFO     SUT - i=9/94 Wait for server register message
+2026-02-11 13:22:24 INFO     SUT - i=9/94 Got new server with identity=b'smci355-ccs-aus-n08-17-gpu7'
+2026-02-11 13:22:24 INFO     SUT - i=10/94 Wait for server register message
+2026-02-11 13:22:25 INFO     SUT - i=10/94 Got new server with identity=b'smci355-ccs-aus-m09-17-gpu5'
+2026-02-11 13:22:25 INFO     SUT - i=11/94 Wait for server register message
+2026-02-11 13:22:25 INFO     SUT - i=11/94 Got new server with identity=b'smci355-ccs-aus-n08-17-gpu3'
+2026-02-11 13:22:25 INFO     SUT - i=12/94 Wait for server register message
+2026-02-11 13:22:25 INFO     SUT - i=12/94 Got new server with identity=b'smci355-ccs-aus-n08-17-gpu6'
+2026-02-11 13:22:25 INFO     SUT - i=13/94 Wait for server register message
+2026-02-11 13:22:26 INFO     SUT - i=13/94 Got new server with identity=b'smci355-ccs-aus-n08-17-gpu5'
+2026-02-11 13:22:26 INFO     SUT - i=14/94 Wait for server register message
+2026-02-11 13:22:28 INFO     SUT - i=14/94 Got new server with identity=b'smci355-ccs-aus-m13-13-gpu2'
+2026-02-11 13:22:28 INFO     SUT - i=15/94 Wait for server register message
+2026-02-11 13:22:28 INFO     SUT - i=15/94 Got new server with identity=b'smci355-ccs-aus-m13-13-gpu1'
+2026-02-11 13:22:28 INFO     SUT - i=16/94 Wait for server register message
+2026-02-11 13:22:28 INFO     SUT - i=16/94 Got new server with identity=b'smci355-ccs-aus-m13-13-gpu3'
+2026-02-11 13:22:28 INFO     SUT - i=17/94 Wait for server register message
+2026-02-11 13:22:29 INFO     SUT - i=17/94 Got new server with identity=b'smci355-ccs-aus-n11-21-gpu0'
+2026-02-11 13:22:29 INFO     SUT - i=18/94 Wait for server register message
+2026-02-11 13:22:29 INFO     SUT - i=18/94 Got new server with identity=b'smci355-ccs-aus-m13-13-gpu0'
+2026-02-11 13:22:29 INFO     SUT - i=19/94 Wait for server register message
+2026-02-11 13:22:30 INFO     SUT - i=19/94 Got new server with identity=b'smci355-ccs-aus-m13-13-gpu7'
+2026-02-11 13:22:30 INFO     SUT - i=20/94 Wait for server register message
+2026-02-11 13:22:30 INFO     SUT - i=20/94 Got new server with identity=b'smci355-ccs-aus-n11-21-gpu2'
+2026-02-11 13:22:30 INFO     SUT - i=21/94 Wait for server register message
+2026-02-11 13:22:30 INFO     SUT - i=21/94 Got new server with identity=b'smci355-ccs-aus-m13-13-gpu6'
+2026-02-11 13:22:30 INFO     SUT - i=22/94 Wait for server register message
+2026-02-11 13:22:30 INFO     SUT - i=22/94 Got new server with identity=b'smci355-ccs-aus-m13-13-gpu5'
+2026-02-11 13:22:30 INFO     SUT - i=23/94 Wait for server register message
+2026-02-11 13:22:30 INFO     SUT - i=23/94 Got new server with identity=b'smci355-ccs-aus-n11-21-gpu4'
+2026-02-11 13:22:30 INFO     SUT - i=24/94 Wait for server register message
+2026-02-11 13:22:30 INFO     SUT - i=24/94 Got new server with identity=b'smci355-ccs-aus-m13-13-gpu4'
+2026-02-11 13:22:30 INFO     SUT - i=25/94 Wait for server register message
+2026-02-11 13:22:30 INFO     SUT - i=25/94 Got new server with identity=b'smci355-ccs-aus-n11-21-gpu1'
+2026-02-11 13:22:30 INFO     SUT - i=26/94 Wait for server register message
+2026-02-11 13:22:31 INFO     SUT - i=26/94 Got new server with identity=b'smci355-ccs-aus-n11-21-gpu5'
+2026-02-11 13:22:31 INFO     SUT - i=27/94 Wait for server register message
+2026-02-11 13:22:31 INFO     SUT - i=27/94 Got new server with identity=b'smci355-ccs-aus-n11-21-gpu6'
+2026-02-11 13:22:31 INFO     SUT - i=28/94 Wait for server register message
+2026-02-11 13:22:37 INFO     SUT - i=28/94 Got new server with identity=b'smci355-ccs-aus-n10-25-gpu0'
+2026-02-11 13:22:37 INFO     SUT - i=29/94 Wait for server register message
+2026-02-11 13:22:37 INFO     SUT - i=29/94 Got new server with identity=b'smci355-ccs-aus-m11-29-gpu1'
+2026-02-11 13:22:37 INFO     SUT - i=30/94 Wait for server register message
+2026-02-11 13:22:37 INFO     SUT - i=30/94 Got new server with identity=b'smci355-ccs-aus-n10-25-gpu1'
+2026-02-11 13:22:37 INFO     SUT - i=31/94 Wait for server register message
+2026-02-11 13:22:37 INFO     SUT - i=31/94 Got new server with identity=b'smci355-ccs-aus-n10-25-gpu2'
+2026-02-11 13:22:37 INFO     SUT - i=32/94 Wait for server register message
+2026-02-11 13:22:38 INFO     SUT - i=32/94 Got new server with identity=b'smci355-ccs-aus-m11-29-gpu2'
+2026-02-11 13:22:38 INFO     SUT - i=33/94 Wait for server register message
+2026-02-11 13:22:38 INFO     SUT - i=33/94 Got new server with identity=b'smci355-ccs-aus-m11-29-gpu6'
+2026-02-11 13:22:38 INFO     SUT - i=34/94 Wait for server register message
+2026-02-11 13:22:38 INFO     SUT - i=34/94 Got new server with identity=b'smci355-ccs-aus-m11-29-gpu3'
+2026-02-11 13:22:38 INFO     SUT - i=35/94 Wait for server register message
+2026-02-11 13:22:38 INFO     SUT - i=35/94 Got new server with identity=b'smci355-ccs-aus-m11-29-gpu0'
+2026-02-11 13:22:38 INFO     SUT - i=36/94 Wait for server register message
+2026-02-11 13:22:38 INFO     SUT - i=36/94 Got new server with identity=b'smci355-ccs-aus-m11-29-gpu5'
+2026-02-11 13:22:38 INFO     SUT - i=37/94 Wait for server register message
+2026-02-11 13:22:38 INFO     SUT - i=37/94 Got new server with identity=b'smci355-ccs-aus-m11-29-gpu4'
+2026-02-11 13:22:38 INFO     SUT - i=38/94 Wait for server register message
+2026-02-11 13:22:38 INFO     SUT - i=38/94 Got new server with identity=b'smci355-ccs-aus-m11-29-gpu7'
+2026-02-11 13:22:38 INFO     SUT - i=39/94 Wait for server register message
+2026-02-11 13:22:39 INFO     SUT - i=39/94 Got new server with identity=b'smci355-ccs-aus-n10-25-gpu7'
+2026-02-11 13:22:39 INFO     SUT - i=40/94 Wait for server register message
+2026-02-11 13:22:39 INFO     SUT - i=40/94 Got new server with identity=b'smci355-ccs-aus-n10-25-gpu3'
+2026-02-11 13:22:39 INFO     SUT - i=41/94 Wait for server register message
+2026-02-11 13:22:39 INFO     SUT - i=41/94 Got new server with identity=b'smci355-ccs-aus-n10-25-gpu4'
+2026-02-11 13:22:39 INFO     SUT - i=42/94 Wait for server register message
+2026-02-11 13:22:39 INFO     SUT - i=42/94 Got new server with identity=b'smci355-ccs-aus-n10-25-gpu5'
+2026-02-11 13:22:39 INFO     SUT - i=43/94 Wait for server register message
+2026-02-11 13:22:41 INFO     SUT - i=43/94 Got new server with identity=b'smci355-ccs-aus-n10-25-gpu6'
+2026-02-11 13:22:41 INFO     SUT - i=44/94 Wait for server register message
+2026-02-11 13:22:44 INFO     SUT - i=44/94 Got new server with identity=b'smci355-ccs-aus-n14-09-gpu3'
+2026-02-11 13:22:44 INFO     SUT - i=45/94 Wait for server register message
+2026-02-11 13:22:44 INFO     SUT - i=45/94 Got new server with identity=b'smci355-ccs-aus-n13-09-gpu4'
+2026-02-11 13:22:44 INFO     SUT - i=46/94 Wait for server register message
+2026-02-11 13:22:45 INFO     SUT - i=46/94 Got new server with identity=b'smci355-ccs-aus-n14-09-gpu4'
+2026-02-11 13:22:45 INFO     SUT - i=47/94 Wait for server register message
+2026-02-11 13:22:45 INFO     SUT - i=47/94 Got new server with identity=b'smci355-ccs-aus-n14-09-gpu2'
+2026-02-11 13:22:45 INFO     SUT - i=48/94 Wait for server register message
+2026-02-11 13:22:45 INFO     SUT - i=48/94 Got new server with identity=b'smci355-ccs-aus-n14-09-gpu5'
+2026-02-11 13:22:45 INFO     SUT - i=49/94 Wait for server register message
+2026-02-11 13:22:46 INFO     SUT - i=49/94 Got new server with identity=b'smci355-ccs-aus-n13-09-gpu5'
+2026-02-11 13:22:46 INFO     SUT - i=50/94 Wait for server register message
+2026-02-11 13:22:46 INFO     SUT - i=50/94 Got new server with identity=b'smci355-ccs-aus-n14-09-gpu0'
+2026-02-11 13:22:46 INFO     SUT - i=51/94 Wait for server register message
+2026-02-11 13:22:46 INFO     SUT - i=51/94 Got new server with identity=b'smci355-ccs-aus-n14-09-gpu1'
+2026-02-11 13:22:46 INFO     SUT - i=52/94 Wait for server register message
+2026-02-11 13:22:46 INFO     SUT - i=52/94 Got new server with identity=b'smci355-ccs-aus-n13-09-gpu2'
+2026-02-11 13:22:46 INFO     SUT - i=53/94 Wait for server register message
+2026-02-11 13:22:46 INFO     SUT - i=53/94 Got new server with identity=b'smci355-ccs-aus-n13-09-gpu3'
+2026-02-11 13:22:46 INFO     SUT - i=54/94 Wait for server register message
+2026-02-11 13:22:46 INFO     SUT - i=54/94 Got new server with identity=b'smci355-ccs-aus-n13-09-gpu0'
+2026-02-11 13:22:46 INFO     SUT - i=55/94 Wait for server register message
+2026-02-11 13:22:47 INFO     SUT - i=55/94 Got new server with identity=b'smci355-ccs-aus-n13-09-gpu1'
+2026-02-11 13:22:47 INFO     SUT - i=56/94 Wait for server register message
+2026-02-11 13:22:47 INFO     SUT - i=56/94 Got new server with identity=b'smci355-ccs-aus-n14-09-gpu6'
+2026-02-11 13:22:47 INFO     SUT - i=57/94 Wait for server register message
+2026-02-11 13:22:47 INFO     SUT - i=57/94 Got new server with identity=b'smci355-ccs-aus-n14-09-gpu7'
+2026-02-11 13:22:47 INFO     SUT - i=58/94 Wait for server register message
+2026-02-11 13:22:47 INFO     SUT - i=58/94 Got new server with identity=b'smci355-ccs-aus-n13-09-gpu7'
+2026-02-11 13:22:47 INFO     SUT - i=59/94 Wait for server register message
+2026-02-11 13:22:47 INFO     SUT - i=59/94 Got new server with identity=b'smci355-ccs-aus-n13-09-gpu6'
+2026-02-11 13:22:47 INFO     SUT - i=60/94 Wait for server register message
+2026-02-11 13:22:48 INFO     SUT - i=60/94 Got new server with identity=b'smci355-ccs-aus-n14-33-gpu1'
+2026-02-11 13:22:48 INFO     SUT - i=61/94 Wait for server register message
+2026-02-11 13:22:49 INFO     SUT - i=61/94 Got new server with identity=b'smci355-ccs-aus-n14-33-gpu5'
+2026-02-11 13:22:49 INFO     SUT - i=62/94 Wait for server register message
+2026-02-11 13:22:49 INFO     SUT - i=62/94 Got new server with identity=b'smci355-ccs-aus-n14-33-gpu3'
+2026-02-11 13:22:49 INFO     SUT - i=63/94 Wait for server register message
+2026-02-11 13:22:49 INFO     SUT - i=63/94 Got new server with identity=b'smci355-ccs-aus-n14-33-gpu2'
+2026-02-11 13:22:49 INFO     SUT - i=64/94 Wait for server register message
+2026-02-11 13:22:49 INFO     SUT - i=64/94 Got new server with identity=b'smci355-ccs-aus-n14-33-gpu6'
+2026-02-11 13:22:49 INFO     SUT - i=65/94 Wait for server register message
+2026-02-11 13:22:50 INFO     SUT - i=65/94 Got new server with identity=b'smci355-ccs-aus-n14-33-gpu0'
+2026-02-11 13:22:50 INFO     SUT - i=66/94 Wait for server register message
+2026-02-11 13:22:50 INFO     SUT - i=66/94 Got new server with identity=b'smci355-ccs-aus-n14-33-gpu4'
+2026-02-11 13:22:50 INFO     SUT - i=67/94 Wait for server register message
+2026-02-11 13:22:50 INFO     SUT - i=67/94 Got new server with identity=b'smci355-ccs-aus-n10-21-gpu7'
+2026-02-11 13:22:50 INFO     SUT - i=68/94 Wait for server register message
+2026-02-11 13:22:50 INFO     SUT - i=68/94 Got new server with identity=b'smci355-ccs-aus-n10-21-gpu3'
+2026-02-11 13:22:50 INFO     SUT - i=69/94 Wait for server register message
+2026-02-11 13:22:51 INFO     SUT - i=69/94 Got new server with identity=b'smci355-ccs-aus-n14-33-gpu7'
+2026-02-11 13:22:51 INFO     SUT - i=70/94 Wait for server register message
+2026-02-11 13:22:51 INFO     SUT - i=70/94 Got new server with identity=b'smci355-ccs-aus-n10-21-gpu1'
+2026-02-11 13:22:51 INFO     SUT - i=71/94 Wait for server register message
+2026-02-11 13:22:52 INFO     SUT - i=71/94 Got new server with identity=b'smci355-ccs-aus-n10-21-gpu4'
+2026-02-11 13:22:52 INFO     SUT - i=72/94 Wait for server register message
+2026-02-11 13:22:52 INFO     SUT - i=72/94 Got new server with identity=b'smci355-ccs-aus-n10-21-gpu0'
+2026-02-11 13:22:52 INFO     SUT - i=73/94 Wait for server register message
+2026-02-11 13:22:52 INFO     SUT - i=73/94 Got new server with identity=b'smci355-ccs-aus-n10-21-gpu6'
+2026-02-11 13:22:52 INFO     SUT - i=74/94 Wait for server register message
+2026-02-11 13:22:56 INFO     SUT - i=74/94 Got new server with identity=b'smci355-ccs-aus-n12-17-gpu4'
+2026-02-11 13:22:56 INFO     SUT - i=75/94 Wait for server register message
+2026-02-11 13:22:57 INFO     SUT - i=75/94 Got new server with identity=b'smci355-ccs-aus-n12-17-gpu0'
+2026-02-11 13:22:57 INFO     SUT - i=76/94 Wait for server register message
+2026-02-11 13:22:57 INFO     SUT - i=76/94 Got new server with identity=b'smci355-ccs-aus-n07-09-gpu0'
+2026-02-11 13:22:57 INFO     SUT - i=77/94 Wait for server register message
+2026-02-11 13:22:57 INFO     SUT - i=77/94 Got new server with identity=b'smci355-ccs-aus-n07-09-gpu1'
+2026-02-11 13:22:57 INFO     SUT - i=78/94 Wait for server register message
+2026-02-11 13:22:58 INFO     SUT - i=78/94 Got new server with identity=b'smci355-ccs-aus-n12-17-gpu3'
+2026-02-11 13:22:58 INFO     SUT - i=79/94 Wait for server register message
+2026-02-11 13:22:58 INFO     SUT - i=79/94 Got new server with identity=b'smci355-ccs-aus-n07-09-gpu7'
+2026-02-11 13:22:58 INFO     SUT - i=80/94 Wait for server register message
+2026-02-11 13:22:58 INFO     SUT - i=80/94 Got new server with identity=b'smci355-ccs-aus-n07-09-gpu2'
+2026-02-11 13:22:58 INFO     SUT - i=81/94 Wait for server register message
+2026-02-11 13:22:58 INFO     SUT - i=81/94 Got new server with identity=b'smci355-ccs-aus-n12-17-gpu1'
+2026-02-11 13:22:58 INFO     SUT - i=82/94 Wait for server register message
+2026-02-11 13:22:58 INFO     SUT - i=82/94 Got new server with identity=b'smci355-ccs-aus-n12-17-gpu2'
+2026-02-11 13:22:58 INFO     SUT - i=83/94 Wait for server register message
+2026-02-11 13:22:58 INFO     SUT - i=83/94 Got new server with identity=b'smci355-ccs-aus-n12-17-gpu6'
+2026-02-11 13:22:58 INFO     SUT - i=84/94 Wait for server register message
+2026-02-11 13:22:58 INFO     SUT - i=84/94 Got new server with identity=b'smci355-ccs-aus-n07-09-gpu6'
+2026-02-11 13:22:58 INFO     SUT - i=85/94 Wait for server register message
+2026-02-11 13:22:58 INFO     SUT - i=85/94 Got new server with identity=b'smci355-ccs-aus-n12-17-gpu5'
+2026-02-11 13:22:58 INFO     SUT - i=86/94 Wait for server register message
+2026-02-11 13:22:58 INFO     SUT - i=86/94 Got new server with identity=b'smci355-ccs-aus-n07-09-gpu4'
+2026-02-11 13:22:58 INFO     SUT - i=87/94 Wait for server register message
+2026-02-11 13:22:59 INFO     SUT - i=87/94 Got new server with identity=b'smci355-ccs-aus-n07-09-gpu3'
+2026-02-11 13:22:59 INFO     SUT - i=88/94 Wait for server register message
+2026-02-11 13:22:59 INFO     SUT - i=88/94 Got new server with identity=b'smci355-ccs-aus-n12-17-gpu7'
+2026-02-11 13:22:59 INFO     SUT - i=89/94 Wait for server register message
+2026-02-11 13:22:59 INFO     SUT - i=89/94 Got new server with identity=b'smci355-ccs-aus-n07-09-gpu5'
+2026-02-11 13:22:59 INFO     SUT - i=90/94 Wait for server register message
+2026-02-11 13:23:24 INFO     SUT - i=90/94 Got new server with identity=b'smci355-ccs-aus-n11-21-gpu3'
+2026-02-11 13:23:24 INFO     SUT - i=91/94 Wait for server register message
+2026-02-11 13:23:26 INFO     SUT - i=91/94 Got new server with identity=b'smci355-ccs-aus-n11-21-gpu7'
+2026-02-11 13:23:26 INFO     SUT - i=92/94 Wait for server register message
+2026-02-11 13:23:46 INFO     SUT - i=92/94 Got new server with identity=b'smci355-ccs-aus-n10-21-gpu2'
+2026-02-11 13:23:46 INFO     SUT - i=93/94 Wait for server register message
+2026-02-11 13:23:47 INFO     SUT - i=93/94 Got new server with identity=b'smci355-ccs-aus-n10-21-gpu5'
+2026-02-11 13:23:47 INFO     SUT - Collecting outputs started...
+2026-02-11 13:23:47 INFO     SUT - Server started with 94 workers
+
+No warnings encountered during test.
+
+No errors encountered during test.
+2026-02-11 13:28:57 INFO     Completed benchmark run
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n11-21-gpu0' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n13-09-gpu4' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m09-17-gpu6' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n14-09-gpu3' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n08-17-gpu5' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m09-17-gpu4' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n13-09-gpu1' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n08-17-gpu6' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m11-29-gpu1' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m13-13-gpu2' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n08-17-gpu1' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n10-21-gpu3' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n10-25-gpu6' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n11-21-gpu2' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n10-21-gpu0' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n10-25-gpu5' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n14-09-gpu5' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n14-33-gpu0' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m09-17-gpu1' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n08-17-gpu4' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n13-09-gpu2' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n07-09-gpu1' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n08-17-gpu7' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n13-09-gpu5' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n10-25-gpu3' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m09-17-gpu3' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n14-09-gpu2' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m09-17-gpu7' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n13-09-gpu3' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n13-09-gpu0' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n14-09-gpu0' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m11-29-gpu2' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m13-13-gpu4' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m13-13-gpu0' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n10-25-gpu7' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m09-17-gpu2' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n14-09-gpu1' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m11-29-gpu4' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n08-17-gpu3' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n14-33-gpu4' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m13-13-gpu6' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m13-13-gpu5' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m09-17-gpu0' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m13-13-gpu1' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n12-17-gpu1' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n14-09-gpu4' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n14-09-gpu6' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m09-17-gpu5' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m11-29-gpu6' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n07-09-gpu6' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n14-33-gpu1' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n10-21-gpu4' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n10-25-gpu1' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m13-13-gpu7' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m11-29-gpu3' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n13-09-gpu6' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n10-25-gpu2' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n10-25-gpu4' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n14-09-gpu7' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n10-21-gpu5' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n07-09-gpu3' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n07-09-gpu5' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m13-13-gpu3' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n14-33-gpu7' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n13-09-gpu7' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m11-29-gpu7' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n07-09-gpu7' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m11-29-gpu0' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n11-21-gpu4' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n10-25-gpu0' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n12-17-gpu7' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n12-17-gpu3' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-m11-29-gpu5' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n07-09-gpu2' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n10-21-gpu2' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n10-21-gpu7' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n07-09-gpu4' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n10-21-gpu6' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n14-33-gpu5' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n07-09-gpu0' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n14-33-gpu3' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n12-17-gpu4' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n12-17-gpu6' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n14-33-gpu6' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n11-21-gpu7' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n10-21-gpu1' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n12-17-gpu2' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n12-17-gpu0' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n14-33-gpu2' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n11-21-gpu3' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n11-21-gpu5' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n11-21-gpu6' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n11-21-gpu1' exited
+2026-02-11 13:28:58 INFO     SUT - b'smci355-ccs-aus-n12-17-gpu5' exited
+2026-02-11 13:28:58 INFO     SUT - Collecting outputs finished...
+2026-02-11 13:29:08 INFO     Run Completed!
+2026-02-11 13:29:08 INFO     Destroying SUT...
+2026-02-11 13:29:08 INFO     Destroying QSL...
+benchmark_name: gpt-oss-120b
+scenario: server
+test_mode: accuracy
+backend: zmq
+engine_version: async
+env_config:
+  HARNESS_DISABLE_VLLM_LOGS: 1
+  HARNESS_GC_LIMIT: 100000
+  HIP_FORCE_DEV_KERNARG: 1
+  VLLM_USE_V1: 1
+  VLLM_LOGGING_LEVEL: ERROR
+  VLLM_USE_TRITON_FLASH_ATTN: 0
+  VLLM_ENGINE_ITERATION_TIMEOUT_S: 36000
+  NCCL_MIN_NCHANNELS: 112
+  VLLM_ROCM_USE_AITER: 1
+  VLLM_ROCM_USE_AITER_UNIFIED_ATTENTION: 1
+  USE_FASTSAFETENSOR: 1
+  SAFETENSORS_FAST_GPU: 1
+  VLLM_ROCM_USE_AITER_MHA: 0
+  VLLM_ROCM_USE_AITER_FUSED_MOE_A16W4: 0
+  AITER_LOG_LEVEL: ERROR
+  AMDGCN_USE_BUFFER_OPS: 0
+  VLLM_MIN_REQUEST_DECODE_STEP: 128
+  VLLM_SUBSEQUENT_DECODE_STEPS: 10
+  GPU_MAX_HW_QUEUES: 3
+  HSA_KERNARG_POOL_SIZE: 4000000
+harness_config:
+  target_qps: -1
+  total_sample_count: 4395
+  accuracy_sample_count: 4395
+  duration_sec: -1
+  enable_log_trace: False
+  enable_warmup: True
+  schedule_algo: shortest_queue
+  enable_batcher: False
+  batcher_threshold: 0.1
+  gpu_batch_size: 128
+  dataset_path: /data/gpt-oss-120b/acc_eval_ref.parquet
+  accuracy_dataset_path: /data/gpt-oss-120b/acc_eval_ref.parquet
+  mlperf_conf_path: /lab-mlperf-inference/mlperf_inference/mlperf.conf
+  user_conf_path: /lab-mlperf-inference/code/gpt-oss-120b/user_mi355x_mn.conf
+  output_log_dir: results/gpt-oss-120b/Server/accuracy
+  load_balance_token_weight: 0.02
+  load_balance_window_size: 10
+  resource_checker_abort_on_failure: False
+  tensor_parallelism: 1
+  pipeline_parallelism: 1
+  data_parallelism: 1
+  max_num_batched_tokens: 65536
+  debug_dump_model_output: False
+  debug_record_sample_latencies: False
+  debug_latency_output_path: samples_latency_data.txt
+  debug_model_output_path: model_output.txt
+  debug_print_finished: False
+  debug_dataset_sampling_size: 0
+  debug_dataset_sampling_num_bins: 10
+  debug_dataset_sampling_random_seed: 42
+  sorting:
+    strategy: ignore
+  device_count: 94
+config_path: gpt-oss-120b/
+config_name: server_mi355x_mn
+port: 12345
+llm_config:
+  model: /model/gpt-oss-120b/fp4_quantized
+  dtype: auto
+  kv_cache_dtype: fp8
+  quantization: quark
+  pipeline_parallel_size: 1
+  tensor_parallel_size: 1
+  data_parallel_size: 1
+  gpu_memory_utilization: 0.95
+  max_model_len: 32768
+  swap_space: 4
+  block_size: 64
+  enforce_eager: False
+  max_num_batched_tokens: 65536
+  max_num_seqs: 1024
+  disable_custom_all_reduce: False
+  disable_log_stats: True
+  enable_chunked_prefill: True
+  enable_prefix_caching: False
+  use_tqdm_on_load: False
+  compilation_config:
+    cudagraph_mode: FULL_AND_PIECEWISE
+    compile_sizes: 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98, 100, 102, 104, 106, 108, 110, 112, 114, 116, 118, 120, 122, 124, 126, 128, 256, 512, 1024, 2048, 8192
+    cudagraph_capture_sizes: 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98, 100, 102, 104, 106, 108, 110, 112, 114, 116, 118, 120, 122, 124, 126, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256, 264, 272, 280, 288, 296, 304, 312, 320, 328, 336, 344, 352, 360, 368, 376, 384, 392, 400, 408, 416, 424, 432, 440, 448, 456, 464, 472, 480, 488, 496, 504, 512, 520, 528, 536, 544, 552, 560, 568, 576, 584, 592, 600, 608, 616, 624, 632, 640, 648, 656, 664, 672, 680, 688, 696, 704, 712, 720, 728, 736, 744, 752, 760, 768, 776, 784, 792, 800, 808, 816, 824, 832, 840, 848, 856, 864, 872, 880, 888, 896, 904, 912, 920, 928, 936, 944, 952, 960, 968, 976, 984, 992, 1000, 1008, 1016, 1024, 2048, 4096, 8192
+  async_scheduling: True
+sampling_params:
+  n: 1
+  presence_penalty: 0.0
+  frequency_penalty: 0.0
+  repetition_penalty: 1.0
+  temperature: 1
+  top_p: 1
+  top_k: -1
+  min_p: 0
+  max_tokens: 32768
+  min_tokens: 1
+  ignore_eos: False
+  detokenize: False

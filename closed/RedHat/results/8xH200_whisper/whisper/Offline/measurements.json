@@ -1,0 +1,7 @@
+{
+    "input_data_types": "int32",
+    "retraining": "No",
+    "starting_weights_filename": "openai/whisper-large-v3",
+    "weight_data_types": "bfloat16",
+    "weight_transformations": "None"
+}

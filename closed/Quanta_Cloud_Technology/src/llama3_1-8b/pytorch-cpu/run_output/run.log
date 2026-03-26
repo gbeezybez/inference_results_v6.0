@@ -1,0 +1,255 @@
+INFO 02-09 15:32:43 [__init__.py:248] No platform detected, vLLM is running on UnspecifiedPlatform
+WARNING 02-09 15:32:43 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('libcudart.so.12: cannot open shared object file: No such file or directory')
+INFO 02-09 15:32:43 [importing.py:43] Triton is installed but 0 active driver(s) found (expected 1). Disabling Triton to prevent runtime errors.
+INFO 02-09 15:32:43 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+Starting SUT for Llama-3.1-8B
+Setting loadgen params
+Creating SUT instance for Server scenario
+Starting SUT...
+Starting first-token response thread
+Starting query batcher thread
+Waiting for all instances to be ready.
+
+
+                    NOTE: Typically, the server runs in a separate terminal.
+                    In this notebook, we run the server and notebook code together, so their outputs are combined.
+                    To improve clarity, the server logs are displayed in the original black color, while the notebook outputs are highlighted in blue.
+                    We are running those notebooks in a CI parallel environment, so the throughput is not representative of the actual performance.
+                    
+
+
+                    NOTE: Typically, the server runs in a separate terminal.
+                    In this notebook, we run the server and notebook code together, so their outputs are combined.
+                    To improve clarity, the server logs are displayed in the original black color, while the notebook outputs are highlighted in blue.
+                    We are running those notebooks in a CI parallel environment, so the throughput is not representative of the actual performance.
+                    
+
+
+                    NOTE: Typically, the server runs in a separate terminal.
+                    In this notebook, we run the server and notebook code together, so their outputs are combined.
+                    To improve clarity, the server logs are displayed in the original black color, while the notebook outputs are highlighted in blue.
+                    We are running those notebooks in a CI parallel environment, so the throughput is not representative of the actual performance.
+                    
+
+                    NOTE: Typically, the server runs in a separate terminal.
+                    In this notebook, we run the server and notebook code together, so their outputs are combined.
+                    To improve clarity, the server logs are displayed in the original black color, while the notebook outputs are highlighted in blue.
+                    We are running those notebooks in a CI parallel environment, so the throughput is not representative of the actual performance.
+                    
+
+Waiting for SUT to be ready...
+Starting Benchmark run
+ttft 1.9849748611450195; violation count: 1
+Rate: 2.04 queries/sec; Processed: 250 queries
+Rate: 2.15 queries/sec; Processed: 500 queries
+Rate: 2.06 queries/sec; Processed: 750 queries
+Rate: 2.11 queries/sec; Processed: 1000 queries
+Rate: 2.16 queries/sec; Processed: 1250 queries
+1;282096128 tot: 2.1301252841949463s; ttft: 1.30s; wait: 0.83s
+ttft 2.1334564685821533; violation count: 2
+Rate: 2.17 queries/sec; Processed: 1500 queries
+Rate: 2.17 queries/sec; Processed: 1750 queries
+Rate: 2.17 queries/sec; Processed: 2000 queries
+1;1805816384 tot: 1.9970731735229492s; ttft: 1.37s; wait: 0.62s
+ttft 1.9988646507263184; violation count: 3
+Rate: 2.16 queries/sec; Processed: 2250 queries
+Rate: 2.14 queries/sec; Processed: 2500 queries
+Rate: 2.13 queries/sec; Processed: 2750 queries
+1;1646529312 tot: 2.0645995140075684s; ttft: 1.97s; wait: 0.10s
+ttft 2.065297842025757; violation count: 4
+1;1646529344 tot: 2.013014554977417s; ttft: 1.97s; wait: 0.05s
+1;1646534624 tot: 2.142565965652466s; ttft: 1.97s; wait: 0.18s
+ttft 2.0138118267059326; violation count: 5
+ttft 2.143357515335083; violation count: 6
+2;1646528768 tot: 2.1276183128356934s; ttft: 1.78s; wait: 0.35s
+ttft 2.1281497478485107; violation count: 7
+Rate: 2.15 queries/sec; Processed: 3000 queries
+Rate: 2.16 queries/sec; Processed: 3250 queries
+Rate: 2.15 queries/sec; Processed: 3500 queries
+2;1627576352 tot: 2.270155191421509s; ttft: 1.73s; wait: 0.54s
+ttft 2.270845651626587; violation count: 8
+2;1627576448 tot: 2.2638819217681885s; ttft: 1.48s; wait: 0.78s
+ttft 2.264591932296753; violation count: 9
+Rate: 2.15 queries/sec; Processed: 3750 queries
+2;328766272 tot: 2.2709758281707764s; ttft: 1.27s; wait: 1.00s
+ttft 2.272714614868164; violation count: 10
+Rate: 2.17 queries/sec; Processed: 4000 queries
+2;330024896 tot: 2.2393977642059326s; ttft: 1.85s; wait: 0.39s
+ttft 2.2405972480773926; violation count: 11
+1;376025728 tot: 2.1919686794281006s; ttft: 1.66s; wait: 0.53s
+ttft 2.1930840015411377; violation count: 12
+Rate: 2.18 queries/sec; Processed: 4250 queries
+Rate: 2.18 queries/sec; Processed: 4500 queries
+Rate: 2.17 queries/sec; Processed: 4750 queries
+Rate: 2.18 queries/sec; Processed: 5000 queries
+Rate: 2.19 queries/sec; Processed: 5250 queries
+3;345261024 tot: 2.102635622024536s; ttft: 1.53s; wait: 0.57s
+ttft 2.1036527156829834; violation count: 13
+1;345261888 tot: 2.0400807857513428s; ttft: 1.31s; wait: 0.73s
+ttft 2.040565252304077; violation count: 14
+2;345265760 tot: 2.0111184120178223s; ttft: 1.50s; wait: 0.51sttft 2.011913537979126; violation count: 15
+
+0;345260896 tot: 2.254699945449829s; ttft: 1.98s; wait: 0.28s
+ttft 2.2556376457214355; violation count: 16
+Rate: 2.20 queries/sec; Processed: 5500 queries
+Rate: 2.19 queries/sec; Processed: 5750 queries
+Rate: 2.20 queries/sec; Processed: 6000 queries
+Rate: 2.19 queries/sec; Processed: 6250 queries
+Rate: 2.19 queries/sec; Processed: 6500 queries
+3;357416192 tot: 2.1960957050323486s; ttft: 1.67s; wait: 0.52s
+ttft 2.1961939334869385; violation count: 17
+Rate: 2.18 queries/sec; Processed: 6750 queries
+Rate: 2.19 queries/sec; Processed: 7000 queries
+Rate: 2.19 queries/sec; Processed: 7250 queries
+ttft 1.9816720485687256; violation count: 18
+Rate: 2.20 queries/sec; Processed: 7500 queries
+Rate: 2.20 queries/sec; Processed: 7750 queries
+Rate: 2.20 queries/sec; Processed: 8000 queries
+2;395587456 tot: 2.3663954734802246s; ttft: 1.62s; wait: 0.75sttft 2.366608142852783; violation count: 19
+
+2;395590816 tot: 2.2012341022491455s; ttft: 1.85s; wait: 0.35sttft 2.2015581130981445; violation count: 20
+
+2;395590912 tot: 2.5228748321533203s; ttft: 2.24s; wait: 0.29sttft 2.5231449604034424; violation count: 21
+
+0;395591648 tot: 2.0205235481262207s; ttft: 0.95s; wait: 1.07sttft 2.0209286212921143; violation count: 22
+
+Rate: 2.21 queries/sec; Processed: 8250 queries
+1;1833181664 tot: 2.4471662044525146s; ttft: 1.77s; wait: 0.68sttft 2.4473989009857178; violation count: 23
+
+Rate: 2.21 queries/sec; Processed: 8500 queries
+3;1833185408 tot: 2.5421764850616455s; ttft: 1.95s; wait: 0.59s
+ttft 2.542555332183838; violation count: 24
+Rate: 2.20 queries/sec; Processed: 8750 queries
+3;392879104 tot: 2.1833972930908203s; ttft: 1.82s; wait: 0.36sttft 2.1836493015289307; violation count: 25
+
+1;392879136 tot: 2.184297800064087s; ttft: 1.62s; wait: 0.56s
+ttft 2.1867640018463135; violation count: 26
+Rate: 2.20 queries/sec; Processed: 9000 queries
+Rate: 2.21 queries/sec; Processed: 9250 queries
+Rate: 2.21 queries/sec; Processed: 9500 queries
+Rate: 2.22 queries/sec; Processed: 9750 queries
+Rate: 2.22 queries/sec; Processed: 10000 queries
+3;1626358048 tot: 2.062199592590332s; ttft: 1.48s; wait: 0.58s
+ttft 2.0628201961517334; violation count: 27
+0;1626358144 tot: 2.225172758102417s; ttft: 2.18s; wait: 0.04s
+0;1626358112 tot: 2.6178863048553467s; ttft: 2.18s; wait: 0.43s
+ttft 2.2263083457946777; violation count: 28
+ttft 2.6193184852600098; violation count: 29
+Rate: 2.22 queries/sec; Processed: 10250 queries
+Rate: 2.21 queries/sec; Processed: 10500 queries
+0;5063591136 tot: 2.041233777999878s; ttft: 1.29s; wait: 0.75sttft 2.0414700508117676; violation count: 30
+
+2;5063595072 tot: 2.099015474319458s; ttft: 1.54s; wait: 0.56sttft 2.101213216781616; violation count: 31
+
+1;5063595616 tot: 2.480079174041748s; ttft: 1.68s; wait: 0.80s
+ttft 2.4838030338287354; violation count: 32
+Rate: 2.21 queries/sec; Processed: 10750 queries
+1;165676576 tot: 2.2832300662994385s; ttft: 1.55s; wait: 0.73sttft 2.283478021621704; violation count: 33
+
+Rate: 2.21 queries/sec; Processed: 11000 queries
+Rate: 2.21 queries/sec; Processed: 11250 queries
+Rate: 2.22 queries/sec; Processed: 11500 queries
+0;647308832 tot: 2.150674343109131s; ttft: 2.00s; wait: 0.15sttft 2.1525070667266846; violation count: 34
+
+Rate: 2.22 queries/sec; Processed: 11750 queries
+Rate: 2.22 queries/sec; Processed: 12000 queries
+Rate: 2.21 queries/sec; Processed: 12250 queries
+Rate: 2.22 queries/sec; Processed: 12500 queries
+Rate: 2.22 queries/sec; Processed: 12750 queries
+0;165246560 tot: 2.6072566509246826s; ttft: 2.21s; wait: 0.40s
+ttft 2.607964277267456; violation count: 35
+Rate: 2.22 queries/sec; Processed: 13000 queries
+Rate: 2.22 queries/sec; Processed: 13250 queries
+Rate: 2.22 queries/sec; Processed: 13368 queries
+================================================
+MLPerf Results Summary
+================================================
+SUT name : PySUT
+Scenario : Server
+Mode     : PerformanceOnly
+Completed samples per second    : 2.22
+Completed tokens per second: 284.35
+Result is : VALID
+  Performance constraints satisfied : Yes
+  Min duration satisfied : Yes
+  Min queries satisfied : Yes
+  Early stopping satisfied: Yes
+TTFT Early Stopping Result:
+ * Run successful.
+TPOT Early Stopping Result:
+ * Run successful.
+
+================================================
+Additional Stats
+================================================
+Scheduled samples per second : 2.22
+Min latency (ns)                : 5752565441
+Max latency (ns)                : 16654676263
+Mean latency (ns)               : 9319144405
+50.00 percentile latency (ns)   : 9139150070
+90.00 percentile latency (ns)   : 11318961693
+95.00 percentile latency (ns)   : 12083024217
+97.00 percentile latency (ns)   : 12603133929
+99.00 percentile latency (ns)   : 13721462987
+99.90 percentile latency (ns)   : 15483507994
+
+Completed tokens per second                 : 284.35
+Min First Token latency (ns)                : 345374216
+Max First Token latency (ns)                : 2627618466
+Mean First Token latency (ns)               : 1336002126
+50.00 percentile first token latency (ns)   : 1414326713
+90.00 percentile first token latency (ns)   : 1541031914
+95.00 percentile first token latency (ns)   : 1599554629
+97.00 percentile first token latency (ns)   : 1641485767
+99.00 percentile first token latency (ns)   : 1747795718
+99.90 percentile first token latency (ns)   : 2227447706
+
+Min Time per Output Token (ns)                : 35865869
+Max Time per Output Token (ns)                : 119251509
+Mean Time per Output Token (ns)               : 62859387
+50.00 percentile time to output token (ns)   : 61472117
+90.00 percentile time to output token (ns)   : 78477577
+95.00 percentile time to output token (ns)   : 84016405
+97.00 percentile time to output token (ns)   : 88077401
+99.00 percentile time to output token (ns)   : 96492168
+99.90 percentile time to output token (ns)   : 109615121
+
+================================================
+Test Parameters Used
+================================================
+samples_per_query : 1
+target_qps : 2.2
+ttft_latency (ns): 2000000000
+tpot_latency (ns): 100000000
+max_async_queries : 0
+min_duration (ms): 600000
+max_duration (ms): 0
+min_query_count : 13368
+max_query_count : 0
+qsl_rng_seed : 2465351861681999779
+sample_index_rng_seed : 14276810075590677512
+schedule_rng_seed : 3936089224930324775
+accuracy_log_rng_seed : 0
+accuracy_log_probability : 0
+accuracy_log_sampling_target : 0
+print_timestamps : 0
+performance_issue_unique : 0
+performance_issue_same : 0
+performance_issue_same_index : 0
+performance_sample_count : 13368
+accuracy_sample_count : 13368
+WARNING: sample_concatenate_permutation was set to true. 
+Generated samples per query might be different as the one in the setting.
+Check the generated_samples_per_query line in the detailed log for the real
+samples_per_query value
+
+No warnings encountered during test.
+
+No errors encountered during test.
+Stopping first token response thread.
+Stopping query batcher thread.
+Exiting First token response thread
+Stopping all instances.
+Run Completed!
+Destroying SUT...
+Destroying QSL...

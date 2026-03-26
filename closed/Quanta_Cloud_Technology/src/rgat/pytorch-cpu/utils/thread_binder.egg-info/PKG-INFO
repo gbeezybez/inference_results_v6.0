@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: thread_binder
+Version: 0.11
+Summary: Core binder for indepdendent threads
+Dynamic: summary

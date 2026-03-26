@@ -1,0 +1,7 @@
+{
+    "input_data_types": "int32",
+    "retraining": "No",
+    "starting_weights_filename": "deepseek-r1",
+    "weight_data_types": "fp4",
+    "weight_transformations": "quantization"
+}

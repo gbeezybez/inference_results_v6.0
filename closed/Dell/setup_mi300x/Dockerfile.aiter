@@ -1,0 +1,14 @@
+ARG BASE_IMAGE
+FROM $BASE_IMAGE
+
+ARG DEBIAN_FRONTEND=noninteractive
+ARG AITER_DIR=setup/aiter
+
+# Re-install aiter
+COPY ${AITER_DIR} /lab-mlperf-inference/aiter
+RUN cd /lab-mlperf-inference/aiter \
+    && python3 -m pip uninstall -y aiter \
+    && pip install -U 'setuptools<80' 'pybind11<3' 'transformers==4.50.1' \
+    && python3 setup.py develop
+
+WORKDIR /lab-mlperf-inference/code/

@@ -1,0 +1,48 @@
+From 72809d683a900e04f342da4835d6b189a4be582e Mon Sep 17 00:00:00 2001
+From: MLPerf <mlperf>
+Date: Wed, 1 Jan 2025 00:00:00 +0000
+Subject: [PATCH] Added SupportQuants interface to MixtralMoe
+
+---
+ vllm/model_executor/layers/quantization/fp8.py | 2 +-
+ vllm/model_executor/models/mixtral.py          | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/vllm/model_executor/layers/quantization/fp8.py b/vllm/model_executor/layers/quantization/fp8.py
+index 64c5df5e4..a1c0a2461 100644
+--- a/vllm/model_executor/layers/quantization/fp8.py
++++ b/vllm/model_executor/layers/quantization/fp8.py
+@@ -121,7 +121,7 @@ class Fp8Config(QuantizationConfig):
+         from vllm.attention.layer import Attention  # Avoid circular import
+ 
+         if isinstance(layer, LinearBase):
+-            if is_layer_skipped(prefix, self.ignored_layers):
++            if is_layer_skipped(prefix, self.ignored_layers, self.packed_modules_mapping):
+                 return UnquantizedLinearMethod()
+             return Fp8LinearMethod(self)
+         elif isinstance(layer, FusedMoE):
+diff --git a/vllm/model_executor/models/mixtral.py b/vllm/model_executor/models/mixtral.py
+index c8d821a39..766ae7359 100644
+--- a/vllm/model_executor/models/mixtral.py
++++ b/vllm/model_executor/models/mixtral.py
+@@ -49,7 +49,7 @@ from vllm.model_executor.sampling_metadata import SamplingMetadata
+ from vllm.sequence import IntermediateTensors
+ from vllm.utils import aiter_linear_enabled
+ 
+-from .interfaces import SupportsLoRA, SupportsPP
++from .interfaces import SupportsLoRA, SupportsPP, SupportsQuant
+ from .utils import (is_pp_missing_parameter,
+                     make_empty_intermediate_tensors_factory, make_layers,
+                     maybe_prefix)
+@@ -314,7 +314,7 @@ class MixtralModel(nn.Module):
+         return hidden_states
+ 
+ 
+-class MixtralForCausalLM(nn.Module, SupportsLoRA, SupportsPP):
++class MixtralForCausalLM(nn.Module, SupportsLoRA, SupportsPP, SupportsQuant):
+     fall_back_to_pt_during_load = False
+ 
+     packed_modules_mapping = {
+-- 
+2.34.1
+

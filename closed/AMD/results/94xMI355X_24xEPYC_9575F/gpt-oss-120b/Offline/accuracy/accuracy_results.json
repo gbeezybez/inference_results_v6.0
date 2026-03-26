@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "total_samples": 4395,
+    "total_correct": 3655,
+    "overall_accuracy": 83.16268486916951,
+    "final_score": 1076.3,
+    "max_score": 1283.0,
+    "final_score_percentage": 83.88932190179267,
+    "dataset_repeats": {
+      "aime25": 8,
+      "gpqa_diamond": 5,
+      "livecodebench_v6": 3
+    },
+    "per_dataset": {
+      "aime25": {
+        "correct": 196,
+        "total": 240,
+        "accuracy": 81.66666666666667,
+        "repeats": 8,
+        "component_score": 24.5,
+        "max_component_score": 30.0
+      },
+      "gpqa_diamond": {
+        "correct": 759,
+        "total": 990,
+        "accuracy": 76.66666666666667,
+        "repeats": 5,
+        "component_score": 151.8,
+        "max_component_score": 198.0
+      },
+      "livecodebench_v6": {
+        "correct": 2700,
+        "total": 3165,
+        "accuracy": 85.30805687203792,
+        "repeats": 3,
+        "component_score": 900.0,
+        "max_component_score": 1055.0
+      }
+    }
+  },
+  "detailed_results": null
+}

@@ -1,0 +1,6 @@
+[2026-02-13 01:11:55,069 log_parser.py:72 INFO] Sucessfully loaded MLPerf log from /home/ubuntu/MLC/repos/local/cache/get-mlperf-inference-results-dir_fa9372ba/valid_results/d986d93afc0b-nvidia_original-gpu-tensorrt-vdefault-default_config/resnet50/singlestream/performance/run_1/mlperf_log_detail.txt.
+[2026-02-13 01:11:55,070 log_parser.py:72 INFO] Sucessfully loaded MLPerf log from /home/ubuntu/MLC/repos/local/cache/get-mlperf-inference-results-dir_fa9372ba/valid_results/d986d93afc0b-nvidia_original-gpu-tensorrt-vdefault-default_config/resnet50/singlestream/TEST01/mlperf_log_detail.txt.
+Verifying performance.
+Reference score = 303116.0
+Test score = 300461.0
+TEST PASS

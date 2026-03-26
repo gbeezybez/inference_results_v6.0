@@ -1,0 +1,15 @@
+diff --git a/sgl-kernel/csrc/cpu/numa_utils.cpp b/sgl-kernel/csrc/cpu/numa_utils.cpp
+index 544327ab..ab7893ab 100644
+--- a/sgl-kernel/csrc/cpu/numa_utils.cpp
++++ b/sgl-kernel/csrc/cpu/numa_utils.cpp
+@@ -2,7 +2,9 @@
+ #include <unistd.h>
+ #include <string>
+ #include <sched.h>
+-
++#include <unistd.h>
++#include <sys/syscall.h>
++#define gettid() syscall(SYS_gettid)
+ #include "common.h"
+ 
+ std::string init_cpu_threads_env(const std::string& cpu_ids) {

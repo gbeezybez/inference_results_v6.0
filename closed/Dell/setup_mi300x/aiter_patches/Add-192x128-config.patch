@@ -1,0 +1,1170 @@
+From b47b23f74671d4de3032926aea21a83f1a6b00f5 Mon Sep 17 00:00:00 2001
+From: MLPerf <mlperf>
+Date: Wed, 1 Jan 2025 00:00:00 +0000
+Subject: [PATCH] Add 192x128 config
+
+---
+ .../moe_ck_gemm1_instance_pertensor_b16.cu       |  6 ++++++
+ .../moe_ck_gemm1_instance_pertensor_b16_f8.cu    | 12 ++++++++++++
+ .../moe_ck_gemm1_instance_pertensor_b16_i8.cu    | 14 ++++++++++++--
+ .../moe_ck_gemm1_instance_pertensor_f16.cu       |  6 ++++++
+ .../moe_ck_gemm1_instance_pertensor_f16_f8.cu    | 12 ++++++++++++
+ .../moe_ck_gemm1_instance_pertensor_f16_i8.cu    | 13 +++++++++++++
+ ..._ck_gemm1_instance_pertensor_mulweight_b16.cu |  6 ++++++
+ ..._ck_gemm1_instance_pertensor_mulweight_f16.cu |  6 ++++++
+ .../moe_ck_gemm1_instance_pertoken_b16.cu        |  8 ++++++++
+ .../moe_ck_gemm1_instance_pertoken_b16_f8.cu     | 13 +++++++++++++
+ .../moe_ck_gemm1_instance_pertoken_b16_i8.cu     | 13 +++++++++++++
+ .../moe_ck_gemm1_instance_pertoken_f16.cu        |  9 +++++++++
+ .../moe_ck_gemm1_instance_pertoken_f16_f8.cu     |  4 ++++
+ .../moe_ck_gemm1_instance_pertoken_f16_i8.cu     | 14 ++++++++++++++
+ ...e_ck_gemm1_instance_pertoken_mulweight_b16.cu |  9 +++++++++
+ ...e_ck_gemm1_instance_pertoken_mulweight_f16.cu |  7 +++++++
+ .../moe_ck_gemm2_instance_pertensor_b16..cu      |  2 ++
+ .../moe_ck_gemm2_instance_pertensor_b16_f8.cu    |  7 +++++++
+ .../moe_ck_gemm2_instance_pertensor_b16_i8.cu    |  6 ++++++
+ .../moe_ck_gemm2_instance_pertensor_f16.cu       |  2 ++
+ .../moe_ck_gemm2_instance_pertensor_f16_f8.cu    |  6 ++++++
+ .../moe_ck_gemm2_instance_pertensor_f16_i8.cu    |  6 ++++++
+ ..._ck_gemm2_instance_pertensor_mulweight_b16.cu |  2 ++
+ ..._ck_gemm2_instance_pertensor_mulweight_f16.cu |  2 ++
+ .../moe_ck_gemm2_instance_pertoken_b16..cu       |  2 ++
+ .../moe_ck_gemm2_instance_pertoken_b16_f8.cu     |  8 ++++++++
+ .../moe_ck_gemm2_instance_pertoken_b16_i8.cu     |  7 +++++++
+ .../moe_ck_gemm2_instance_pertoken_f16.cu        |  2 ++
+ .../moe_ck_gemm2_instance_pertoken_f16_f8.cu     |  7 +++++++
+ .../moe_ck_gemm2_instance_pertoken_f16_i8.cu     |  7 +++++++
+ ...e_ck_gemm2_instance_pertoken_mulweight_b16.cu |  2 ++
+ ...e_ck_gemm2_instance_pertoken_mulweight_f16.cu |  2 ++
+ csrc/py_itfs_ck/moe_ck_2stages_kernel.cu         | 16 ++++++++++++++++
+ 33 files changed, 236 insertions(+), 2 deletions(-)
+
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_b16.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_b16.cu
+index 9d8242f..a498b3d 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_b16.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_b16.cu
+@@ -19,6 +19,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+@@ -26,6 +27,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ 
+ 
+@@ -37,6 +39,10 @@ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
+ 
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
++
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
+\ No newline at end of file
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_b16_f8.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_b16_f8.cu
+index 7b169c2..4ac02d1 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_b16_f8.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_b16_f8.cu
+@@ -19,6 +19,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+@@ -27,6 +28,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false, 1)
+@@ -35,6 +37,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+@@ -42,6 +45,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ 
+ 
+@@ -63,6 +67,14 @@ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
+ 
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
++
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_b16_i8.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_b16_i8.cu
+index 6a7e910..24c8781 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_b16_i8.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_b16_i8.cu
+@@ -18,6 +18,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+@@ -25,6 +26,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false, 1)
+@@ -33,6 +35,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+@@ -40,6 +43,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ 
+ 
+@@ -52,8 +56,6 @@ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
+ 
+ 
+-
+-
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
+@@ -62,6 +64,14 @@ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
+ 
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
++
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_f16.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_f16.cu
+index af11f51..e12e8ec 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_f16.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_f16.cu
+@@ -19,6 +19,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+@@ -26,6 +27,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
+@@ -36,6 +38,10 @@ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
+ 
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
++
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
+\ No newline at end of file
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_f16_f8.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_f16_f8.cu
+index 2a77ff1..79fcc60 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_f16_f8.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_f16_f8.cu
+@@ -18,6 +18,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+@@ -25,6 +26,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false, 1)
+@@ -33,6 +35,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+@@ -40,6 +43,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ 
+ 
+@@ -61,6 +65,14 @@ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
+ 
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
++
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_f16_i8.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_f16_i8.cu
+index eebf485..d6b93b5 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_f16_i8.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_f16_i8.cu
+@@ -18,6 +18,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+@@ -25,6 +26,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false, 1)
+@@ -33,6 +35,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+@@ -40,6 +43,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ 
+ 
+@@ -62,6 +66,15 @@ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
+ 
+ 
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
++
++
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_mulweight_b16.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_mulweight_b16.cu
+index 9d6e2f1..48bc01e 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_mulweight_b16.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_mulweight_b16.cu
+@@ -18,6 +18,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+@@ -25,6 +26,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ 
+ 
+@@ -37,6 +39,10 @@ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
+ 
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
++
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_mulweight_f16.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_mulweight_f16.cu
+index 333d005..ff78095 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_mulweight_f16.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertensor_mulweight_f16.cu
+@@ -18,6 +18,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+@@ -25,6 +26,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
+@@ -35,6 +37,10 @@ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
+ 
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
++
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_b16.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_b16.cu
+index 2464a02..4edf517 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_b16.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_b16.cu
+@@ -19,6 +19,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+@@ -26,6 +27,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ 
+ 
+@@ -37,6 +39,12 @@ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
+ 
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
++
++
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
+\ No newline at end of file
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_b16_f8.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_b16_f8.cu
+index c4b00d5..7d5b35f 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_b16_f8.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_b16_f8.cu
+@@ -18,6 +18,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+@@ -25,6 +26,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false, 1)
+@@ -33,6 +35,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+@@ -40,6 +43,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ 
+ 
+@@ -62,6 +66,15 @@ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
+ 
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
++
++
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_b16_i8.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_b16_i8.cu
+index 0636201..f0fe9a9 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_b16_i8.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_b16_i8.cu
+@@ -18,6 +18,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+@@ -25,6 +26,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false, 1)
+@@ -33,6 +35,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+@@ -40,6 +43,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ 
+ 
+@@ -61,6 +65,15 @@ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
+ 
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
++
++
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_f16.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_f16.cu
+index d73fb18..f64de35 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_f16.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_f16.cu
+@@ -19,6 +19,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+@@ -26,6 +27,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
+@@ -36,6 +38,13 @@ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
+ 
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
++
++
++
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
+\ No newline at end of file
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_f16_f8.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_f16_f8.cu
+index 3611c8f..87d4a73 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_f16_f8.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_f16_f8.cu
+@@ -19,6 +19,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+@@ -26,6 +27,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false, 1)
+@@ -34,6 +36,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+@@ -41,6 +44,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ 
+ 
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_f16_i8.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_f16_i8.cu
+index 2f8ec2a..dffe7f8 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_f16_i8.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_f16_i8.cu
+@@ -18,6 +18,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+@@ -25,6 +26,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false, 1)
+@@ -33,6 +35,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+@@ -40,6 +43,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false, 0)
+ 
+ 
+@@ -61,6 +65,16 @@ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
+ 
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, false, 0)
++
++
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_mulweight_b16.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_mulweight_b16.cu
+index 4bd0372..c6e3c4e 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_mulweight_b16.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_mulweight_b16.cu
+@@ -19,6 +19,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+@@ -26,6 +27,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
+@@ -36,6 +38,13 @@ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
+ 
++
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
++
++
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_mulweight_f16.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_mulweight_f16.cu
+index 5b16b58..9fab0b2 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_mulweight_f16.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm1_instance_pertoken_mulweight_f16.cu
+@@ -19,6 +19,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 1)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(32, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+@@ -26,6 +27,7 @@ CK_MOE_STAGE1_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(64, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true, 0)
+ 
+ 
+@@ -37,6 +39,11 @@ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
+ 
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
++
++CK_MOE_STAGE1_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
++
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 1)
+ 
+ CK_MOE_STAGE1_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3, true, 0)
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_b16..cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_b16..cu
+index 27574f8..5878619 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_b16..cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_b16..cu
+@@ -17,8 +17,10 @@ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V3,false)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,false)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,false)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,false)
+\ No newline at end of file
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_b16_f8.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_b16_f8.cu
+index 5cd6f96..b80b06d 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_b16_f8.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_b16_f8.cu
+@@ -17,12 +17,14 @@ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V3,true)
+@@ -33,6 +35,11 @@ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,false)
+ 
++
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,true)
++
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,false)
++
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,false)
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_b16_i8.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_b16_i8.cu
+index 6e08a08..08d54ce 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_b16_i8.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_b16_i8.cu
+@@ -17,12 +17,14 @@ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V3,true)
+@@ -33,6 +35,10 @@ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,false)
+ 
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,true)
++
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,false)
++
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,false)
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_f16.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_f16.cu
+index 2846f10..5924d96 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_f16.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_f16.cu
+@@ -17,9 +17,11 @@ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false)
+ 
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V3,false)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,false)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,false)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,false)
+\ No newline at end of file
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_f16_f8.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_f16_f8.cu
+index c3aa37a..fba16a5 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_f16_f8.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_f16_f8.cu
+@@ -17,12 +17,14 @@ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false)
+ 
+ 
+@@ -34,6 +36,10 @@ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,false)
+ 
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,true)
++
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,false)
++
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,false)
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_f16_i8.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_f16_i8.cu
+index e9d4d7c..cf594ea 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_f16_i8.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_f16_i8.cu
+@@ -17,12 +17,14 @@ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false)
+ 
+ 
+@@ -34,6 +36,10 @@ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,false)
+ 
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,true)
++
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,false)
++
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,false)
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_mulweight_b16.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_mulweight_b16.cu
+index 1950d37..2691515 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_mulweight_b16.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_mulweight_b16.cu
+@@ -17,9 +17,11 @@ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true)
+ 
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V3,true)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,true)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,true)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,true)
+\ No newline at end of file
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_mulweight_f16.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_mulweight_f16.cu
+index 5e47d7d..7cd4f1f 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_mulweight_f16.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertensor_mulweight_f16.cu
+@@ -17,8 +17,10 @@ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V3,true)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,true)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,true)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,true)
+\ No newline at end of file
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_b16..cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_b16..cu
+index 6dcdec2..a9ae86b 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_b16..cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_b16..cu
+@@ -17,10 +17,12 @@ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false)
+ 
+ 
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V3,false)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,false)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,false)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,false)
+\ No newline at end of file
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_b16_f8.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_b16_f8.cu
+index b892901..a177603 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_b16_f8.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_b16_f8.cu
+@@ -17,12 +17,14 @@ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false)
+ 
+ 
+@@ -35,6 +37,12 @@ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,false)
+ 
++
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,true)
++
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,false)
++
++
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,false)
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_b16_i8.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_b16_i8.cu
+index 5b68e32..870f62f 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_b16_i8.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_b16_i8.cu
+@@ -17,12 +17,14 @@ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false)
++CK_MOE_STAGE2_GEMM_DEFINE(102, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false)
+ 
+ 
+@@ -35,6 +37,11 @@ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,false)
+ 
++
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,true)
++
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,false)
++
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,false)
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_f16.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_f16.cu
+index e6b655c..2e6a203 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_f16.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_f16.cu
+@@ -17,10 +17,12 @@ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false)
+ 
+ 
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V3,false)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,false)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,false)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,false)
+\ No newline at end of file
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_f16_f8.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_f16_f8.cu
+index 1381b98..9a24b9d 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_f16_f8.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_f16_f8.cu
+@@ -17,12 +17,14 @@ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false)
+ 
+ 
+@@ -34,6 +36,11 @@ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,false)
+ 
++
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,true)
++
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,false)
++
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,false)
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_f16_i8.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_f16_i8.cu
+index 055c34e..36744c7 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_f16_i8.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_f16_i8.cu
+@@ -17,12 +17,14 @@ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, false)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, false)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, false)
+ 
+ 
+@@ -35,6 +37,11 @@ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,false)
+ 
++
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,true)
++
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,false)
++
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,true)
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,false)
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_mulweight_b16.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_mulweight_b16.cu
+index e06f55e..ac0abf0 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_mulweight_b16.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_mulweight_b16.cu
+@@ -17,9 +17,11 @@ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true)
+ 
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V3,true)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,true)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,true)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,true)
+\ No newline at end of file
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_mulweight_f16.cu b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_mulweight_f16.cu
+index d66c5ed..a6038a4 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_mulweight_f16.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_gemm_impl/moe_ck_gemm2_instance_pertoken_mulweight_f16.cu
+@@ -17,9 +17,11 @@ CK_MOE_STAGE2_GEMM_DEFINE(32, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(64, 256/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V1, true)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V1, true)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V1, true)
+ 
+ 
+ CK_MOE_STAGE2_GEMM_DEFINE(96, 128/sizeof(A0DataType), 1, 4, V3,true)
+ CK_MOE_STAGE2_GEMM_DEFINE(128, 128/sizeof(A0DataType), 1, 4, V3,true)
++CK_MOE_STAGE2_GEMM_DEFINE(192, 128/sizeof(A0DataType), 1, 4, V3,true)
+ CK_MOE_STAGE2_GEMM_DEFINE(256, 128/sizeof(A0DataType), 1, 4, V3,true)
+\ No newline at end of file
+diff --git a/csrc/py_itfs_ck/moe_ck_2stages_kernel.cu b/csrc/py_itfs_ck/moe_ck_2stages_kernel.cu
+index f88737c..734e75c 100755
+--- a/csrc/py_itfs_ck/moe_ck_2stages_kernel.cu
++++ b/csrc/py_itfs_ck/moe_ck_2stages_kernel.cu
+@@ -37,6 +37,8 @@
+                 ck_moe_stage1_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 96, 128 / sizeof(A0DataType), 1, 4, Nswizzle, true, MulRoutedWeight, 0>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, hidden_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr,  num_valid_ids_ptr, out_ptr, w1_scale_ptr, a1_scale_ptr);   \
+             else if (MPerBlock == 128)                                                                                      \
+                 ck_moe_stage1_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 128, 128 / sizeof(A0DataType), 1, 4, Nswizzle, true, MulRoutedWeight, 0>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, hidden_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr,  num_valid_ids_ptr, out_ptr, w1_scale_ptr, a1_scale_ptr);  \
++            else if (MPerBlock == 192)                                                                                      \
++                ck_moe_stage1_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 192, 128 / sizeof(A0DataType), 1, 4, Nswizzle, true, MulRoutedWeight, 0>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, hidden_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr,  num_valid_ids_ptr, out_ptr, w1_scale_ptr, a1_scale_ptr);  \
+             else if (MPerBlock == 256)                                                                                      \
+                 ck_moe_stage1_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 256, 128 / sizeof(A0DataType), 1, 4, Nswizzle, true, MulRoutedWeight, 0>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, hidden_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr,  num_valid_ids_ptr, out_ptr, w1_scale_ptr, a1_scale_ptr);  \
+         }                                                                                                                   \
+@@ -68,6 +70,8 @@
+                 ck_moe_stage1_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 96, 128 / sizeof(A0DataType), 1, 4, Nswizzle, false, MulRoutedWeight, 0>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, hidden_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr,  num_valid_ids_ptr, out_ptr, w1_scale_ptr, a1_scale_ptr);                                                                                                         \
+             else if (MPerBlock == 128)                                                                                      \
+                 ck_moe_stage1_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 128, 128 / sizeof(A0DataType), 1, 4, Nswizzle, false, MulRoutedWeight, 0>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, hidden_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr,  num_valid_ids_ptr, out_ptr, w1_scale_ptr, a1_scale_ptr);  \
++           else if (MPerBlock == 192)                                                                                      \
++                ck_moe_stage1_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 192, 128 / sizeof(A0DataType), 1, 4, Nswizzle, false, MulRoutedWeight, 0>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, hidden_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr,  num_valid_ids_ptr, out_ptr, w1_scale_ptr, a1_scale_ptr);  \
+             else if (MPerBlock == 256)                                                                                      \
+                 ck_moe_stage1_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 256, 128 / sizeof(A0DataType), 1, 4, Nswizzle, false, MulRoutedWeight, 0>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, hidden_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr,  num_valid_ids_ptr, out_ptr, w1_scale_ptr, a1_scale_ptr);  \
+         }\
+@@ -102,6 +106,8 @@
+                 ck_moe_stage1_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 96, 128 / sizeof(A0DataType), 1, 4, Nswizzle, true, MulRoutedWeight, 1>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, hidden_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr,  num_valid_ids_ptr, out_ptr, w1_scale_ptr, a1_scale_ptr);                                                                                                             \
+             else if (MPerBlock == 128)                                                                                      \
+                 ck_moe_stage1_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 128, 128 / sizeof(A0DataType), 1, 4, Nswizzle, true, MulRoutedWeight, 1>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, hidden_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr,  num_valid_ids_ptr, out_ptr, w1_scale_ptr, a1_scale_ptr);  \
++            else if (MPerBlock == 192)                                                                                      \
++                ck_moe_stage1_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 192, 128 / sizeof(A0DataType), 1, 4, Nswizzle, true, MulRoutedWeight, 1>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, hidden_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr,  num_valid_ids_ptr, out_ptr, w1_scale_ptr, a1_scale_ptr);  \
+             else if (MPerBlock == 256)                                                                                      \
+                 ck_moe_stage1_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 256, 128 / sizeof(A0DataType), 1, 4, Nswizzle, true, MulRoutedWeight, 1>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, hidden_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr,  num_valid_ids_ptr, out_ptr, w1_scale_ptr, a1_scale_ptr);  \
+         }                                                                                                                   \
+@@ -133,6 +139,8 @@
+                 ck_moe_stage1_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 96, 128 / sizeof(A0DataType), 1, 4, Nswizzle, true, MulRoutedWeight, 1>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, hidden_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr,  num_valid_ids_ptr, out_ptr, w1_scale_ptr, a1_scale_ptr);                                                                                                            \
+             else if (MPerBlock == 128)                                                                                      \
+                 ck_moe_stage1_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 128, 128 / sizeof(A0DataType), 1, 4, Nswizzle, false, MulRoutedWeight, 1>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, hidden_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr,  num_valid_ids_ptr, out_ptr, w1_scale_ptr, a1_scale_ptr);  \
++            else if (MPerBlock == 192)                                                                                      \
++                ck_moe_stage1_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 192, 128 / sizeof(A0DataType), 1, 4, Nswizzle, false, MulRoutedWeight, 1>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, hidden_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr,  num_valid_ids_ptr, out_ptr, w1_scale_ptr, a1_scale_ptr);  \
+             else if (MPerBlock == 256)                                                                                      \
+                 ck_moe_stage1_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 256, 128 / sizeof(A0DataType), 1, 4, Nswizzle, false, MulRoutedWeight, 1>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, hidden_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr,  num_valid_ids_ptr, out_ptr, w1_scale_ptr, a1_scale_ptr);  \
+         }\
+@@ -474,6 +482,8 @@ void ck_moe_stage1(torch::Tensor &hidden_states,     // [m, k], input token
+                 ck_moe_stage2_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 96, 128 / sizeof(A0DataType), 1, 4, Nswizzle, true, true>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, inter_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr, num_valid_ids_ptr, out_ptr, w2_scale_ptr, a2_scale_ptr);  \
+             else if (MPerBlock == 128)                                                                                                                                                                                                                                                                                                                                      \
+                 ck_moe_stage2_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 128, 128 / sizeof(A0DataType), 1, 4, Nswizzle, true, true>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, inter_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr, num_valid_ids_ptr, out_ptr, w2_scale_ptr, a2_scale_ptr);  \
++            else if (MPerBlock == 192)                                                                                                                                                                                                                                                                                                                                      \
++                ck_moe_stage2_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 192, 128 / sizeof(A0DataType), 1, 4, Nswizzle, true, true>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, inter_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr, num_valid_ids_ptr, out_ptr, w2_scale_ptr, a2_scale_ptr);  \
+             else if (MPerBlock == 256)                                                                                                                                                                                                                                                                                                                                      \
+                 ck_moe_stage2_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 256, 128 / sizeof(A0DataType), 1, 4, Nswizzle, true, true>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, inter_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr, num_valid_ids_ptr, out_ptr, w2_scale_ptr, a2_scale_ptr);  \
+         }                                                                                                                                                                                                                                                                                                                                                                   \
+@@ -487,6 +497,8 @@ void ck_moe_stage1(torch::Tensor &hidden_states,     // [m, k], input token
+                 ck_moe_stage2_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 96, 128 / sizeof(A0DataType), 1, 4, Nswizzle, false, true>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, inter_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr, num_valid_ids_ptr, out_ptr, w2_scale_ptr, a2_scale_ptr); \
+             else if (MPerBlock == 128)                                                                                                                                                                                                                                                                                                                                      \
+                 ck_moe_stage2_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 128, 128 / sizeof(A0DataType), 1, 4, Nswizzle, false, true>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, inter_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr, num_valid_ids_ptr, out_ptr, w2_scale_ptr, a2_scale_ptr); \
++            else if (MPerBlock == 192)                                                                                                                                                                                                                                                                                                                                      \
++                ck_moe_stage2_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 192, 128 / sizeof(A0DataType), 1, 4, Nswizzle, false, true>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, inter_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr, num_valid_ids_ptr, out_ptr, w2_scale_ptr, a2_scale_ptr); \
+             else if (MPerBlock == 256)                                                                                                                                                                                                                                                                                                                                      \
+                 ck_moe_stage2_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 256, 128 / sizeof(A0DataType), 1, 4, Nswizzle, false, true>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, inter_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr, num_valid_ids_ptr, out_ptr, w2_scale_ptr, a2_scale_ptr); \
+         }                                                                                                                                                                                                                                                                                                                                                                   \
+@@ -503,6 +515,8 @@ void ck_moe_stage1(torch::Tensor &hidden_states,     // [m, k], input token
+                 ck_moe_stage2_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 96, 128 / sizeof(A0DataType), 1, 4, Nswizzle, true, false>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, inter_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr, num_valid_ids_ptr, out_ptr, w2_scale_ptr, a2_scale_ptr);  \
+             else if (MPerBlock == 128)                                                                                                                                                                                                                                                                                                                                      \
+                 ck_moe_stage2_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 128, 128 / sizeof(A0DataType), 1, 4, Nswizzle, true, false>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, inter_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr, num_valid_ids_ptr, out_ptr, w2_scale_ptr, a2_scale_ptr);  \
++            else if (MPerBlock == 192)                                                                                                                                                                                                                                                                                                                                      \
++                ck_moe_stage2_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 192, 128 / sizeof(A0DataType), 1, 4, Nswizzle, true, false>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, inter_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr, num_valid_ids_ptr, out_ptr, w2_scale_ptr, a2_scale_ptr);  \
+             else if (MPerBlock == 256)                                                                                                                                                                                                                                                                                                                                      \
+                 ck_moe_stage2_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 256, 128 / sizeof(A0DataType), 1, 4, Nswizzle, true, false>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, inter_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr, num_valid_ids_ptr, out_ptr, w2_scale_ptr, a2_scale_ptr);  \
+         }                                                                                                                                                                                                                                                                                                                                                                   \
+@@ -516,6 +530,8 @@ void ck_moe_stage1(torch::Tensor &hidden_states,     // [m, k], input token
+                 ck_moe_stage2_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 96, 128 / sizeof(A0DataType), 1, 4, Nswizzle, false, false>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, inter_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr, num_valid_ids_ptr, out_ptr, w2_scale_ptr, a2_scale_ptr); \
+             else if (MPerBlock == 128)                                                                                                                                                                                                                                                                                                                                      \
+                 ck_moe_stage2_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 128, 128 / sizeof(A0DataType), 1, 4, Nswizzle, false, false>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, inter_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr, num_valid_ids_ptr, out_ptr, w2_scale_ptr, a2_scale_ptr); \
++            else if (MPerBlock == 192)                                                                                                                                                                                                                                                                                                                                      \
++                ck_moe_stage2_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 192, 128 / sizeof(A0DataType), 1, 4, Nswizzle, false, false>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, inter_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr, num_valid_ids_ptr, out_ptr, w2_scale_ptr, a2_scale_ptr); \
+             else if (MPerBlock == 256)                                                                                                                                                                                                                                                                                                                                      \
+                 ck_moe_stage2_gemm<A0DataType, B0DataType, AccDataType, EDataType, CDEElementOp, PipelineVer, 256, 128 / sizeof(A0DataType), 1, 4, Nswizzle, false, false>(at::cuda::getCurrentCUDAStream().stream(), tokens, sorted_size, N, K, topk, inter_states_ptr, w1_ptr, w2_ptr, sorted_token_ids_ptr, sorted_expert_ids_ptr, sorted_weights_ptr, num_valid_ids_ptr, out_ptr, w2_scale_ptr, a2_scale_ptr); \
+         }                                                                                                                                                                                                                                                                                                                                                                   \
+-- 
+2.34.1
+

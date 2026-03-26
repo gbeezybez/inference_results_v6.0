@@ -1,0 +1,20 @@
+#!/bin/bash
+
+source $MODEL_INIT_DIR/init_env_shared
+# Validate and set Tensor parallel and Instances
+export TP=1
+export NUM_INSTS=1
+
+if (( XPU_COUNT > 0 )); then
+    # XPU
+    export TP=1
+    export NUM_INSTS=1
+    export BATCH_SIZE=128
+
+    export BATCHED_PREFILL=0
+    TARGET_LATENCY=3500  # in ms
+    sed -i "/llama3_1-8b-edge.SingleStream.target_latency/c\llama3_1-8b-edge.SingleStream.target_latency = $TARGET_LATENCY" $ROOT_DIR/user.conf
+else
+    # CPU
+    echo "Error: No XPU found. CPU is not enabled for this scenario"
+fi

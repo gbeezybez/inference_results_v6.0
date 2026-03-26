@@ -1,0 +1,79 @@
+From a08c6adc9f5f13592c76b31568b6ac97db94ffe9 Mon Sep 17 00:00:00 2001
+From: MLPerf <mlperf>
+Date: Wed, 1 Jan 2025 00:00:00 +0000
+Subject: [PATCH] Swizzle fp8 linear
+
+---
+ vllm/envs.py                                   |  4 ++++
+ vllm/model_executor/layers/quantization/fp8.py | 18 ++++++++++++++++--
+ 2 files changed, 20 insertions(+), 2 deletions(-)
+
+diff --git a/vllm/envs.py b/vllm/envs.py
+index 3f7e8c621..a1a139254 100644
+--- a/vllm/envs.py
++++ b/vllm/envs.py
+@@ -14,6 +14,7 @@ if TYPE_CHECKING:
+     VLLM_LLAMA2_MLPERF_STEP_DECODE_BATCH: int = 256
+     VLLM_LLAMA2_MLPERF_MIN_REQUIRE_PREFILL_GPU_BLOCK: int = 0
+     VLLM_LLAMA2_MLPERF_MIN_REQUIRE_PREFILL_QUERY: int = 10
++    VLLM_MLPERF_SWIZZLE_FP8_LINEAR: bool = False
+     VLLM_HOST_IP: str = ""
+     VLLM_PORT: Optional[int] = None
+     VLLM_RPC_BASE_PATH: str = tempfile.gettempdir()
+@@ -208,6 +209,9 @@ environment_variables: dict[str, Callable[[], Any]] = {
+     "VLLM_LLAMA2_MLPERF_MIN_REQUIRE_PREFILL_QUERY":
+     lambda: int(os.getenv("VLLM_LLAMA2_MLPERF_MIN_REQUIRE_PREFILL_QUERY", "10")),
+
++    "VLLM_MLPERF_SWIZZLE_FP8_LINEAR":
++    lambda: bool(int(os.getenv("VLLM_MLPERF_SWIZZLE_FP8_LINEAR", "0"))),
++
+     # ================== Installation Time Env Vars ==================
+
+     # Target device of vLLM, supporting [cuda (by default),
+diff --git a/vllm/model_executor/layers/quantization/fp8.py b/vllm/model_executor/layers/quantization/fp8.py
+index 12f926710..43e99f23f 100644
+--- a/vllm/model_executor/layers/quantization/fp8.py
++++ b/vllm/model_executor/layers/quantization/fp8.py
+@@ -9,6 +9,10 @@ import torch
+ import torch.nn.functional as F
+ from torch.nn import Module
+ from torch.nn.parameter import Parameter
++try:
++    import torchao
++except ModuleNotFoundError:
++    pass
+
+ import vllm.envs as envs
+ from vllm import _custom_ops as ops
+@@ -378,7 +382,12 @@ class Fp8LinearMethod(LinearMethodBase):
+
+             weight = self._maybe_pad_weight(weight)
+             # Update layer with new values.
+-            layer.weight = Parameter(weight.t(), requires_grad=False)
++            if envs.VLLM_MLPERF_SWIZZLE_FP8_LINEAR:
++                layer.weight = Parameter(torchao.swizzle.SwizzleTensor.shallow_transpose( \
++                                         torchao.swizzle.SwizzleTensor(weight.t())), requires_grad=False)
++            else:
++                layer.weight = Parameter(weight.t(), requires_grad=False)
++
+             layer.weight_scale = Parameter(weight_scale, requires_grad=False)
+             if self.quant_config.activation_scheme == "static":
+                 layer.input_scale = Parameter(layer.input_scale.max(),
+@@ -417,8 +426,13 @@ class Fp8LinearMethod(LinearMethodBase):
+                 use_aiter_and_is_supported=self.use_aiter_and_is_supported,
+             )
+
++        if envs.VLLM_MLPERF_SWIZZLE_FP8_LINEAR:
++            layer_weight = layer.weight.T
++        else:
++            layer_weight = layer.weight
++
+         return self.fp8_linear.apply(input=x,
+-                                     weight=layer.weight,
++                                     weight=layer_weight,
+                                      weight_scale=layer.weight_scale,
+                                      out_dtype=self.out_dtype,
+                                      input_scale=layer.input_scale,
+--
+2.34.1
+

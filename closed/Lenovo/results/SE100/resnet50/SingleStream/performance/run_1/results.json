@@ -1,0 +1,56 @@
+{
+    "TestScenario.SingleStream": {
+        "count": 499314,
+        "good_items": 0,
+        "mean": 0.0011355415068201905,
+        "percentiles": {
+            "50.0": 0.0011339187622070312,
+            "80.0": 0.0011374950408935547,
+            "90.0": 0.0011398792266845703,
+            "95.0": 0.0011441707611083984,
+            "99.0": 0.0011768341064453125,
+            "99.9": 0.0011949539184570312
+        },
+        "qps": 830.0709370416321,
+        "took": 601.531721830368,
+        "total_items": 499314
+    },
+    "args": {
+        "accuracy": false,
+        "audit_conf": "audit.config",
+        "backend": "openvino",
+        "cache": 0,
+        "cache_dir": null,
+        "count": null,
+        "data_format": null,
+        "dataset": "imagenet_softmax_background",
+        "dataset_list": null,
+        "dataset_path": "/home/lenovoai/mlperf-ov/inference/vision/classification_and_detection/datasets/imagenet",
+        "debug": false,
+        "device": "GPU",
+        "find_peak_performance": false,
+        "inputs": null,
+        "max_batchsize": 32,
+        "max_latency": null,
+        "model": "/home/lenovoai/mlperf-ov/inference/vision/classification_and_detection/converted-models/resnet-50/INT8/resnet50_v1.xml",
+        "model_name": "resnet50",
+        "output": "/home/lenovoai/mlperf-ov/inference/vision/classification_and_detection/output-logs/resnet-int8-gpu-performance-singlestream",
+        "outputs": [
+            "softmax_tensor"
+        ],
+        "performance_sample_count": null,
+        "preprocessed_dir": null,
+        "profile": "resnet50-openvino",
+        "qps": null,
+        "samples_per_query": 8,
+        "scenario": "SingleStream",
+        "threads": 16,
+        "time": null,
+        "use_preprocessed_dataset": false,
+        "user_conf": "user.conf"
+    },
+    "cmdline": "Namespace(dataset='imagenet_softmax_background', dataset_path='/home/lenovoai/mlperf-ov/inference/vision/classification_and_detection/datasets/imagenet', dataset_list=None, data_format=None, profile='resnet50-openvino', scenario='SingleStream', max_batchsize=32, model='/home/lenovoai/mlperf-ov/inference/vision/classification_and_detection/converted-models/resnet-50/INT8/resnet50_v1.xml', output='/home/lenovoai/mlperf-ov/inference/vision/classification_and_detection/output-logs/resnet-int8-gpu-performance-singlestream', inputs=None, outputs=['softmax_tensor'], backend='openvino', device='GPU', model_name='resnet50', threads=16, qps=None, cache=0, cache_dir=None, preprocessed_dir=None, use_preprocessed_dataset=False, accuracy=False, find_peak_performance=False, debug=False, user_conf='user.conf', audit_conf='audit.config', time=None, count=None, performance_sample_count=None, max_latency=None, samples_per_query=8)",
+    "runtime": "openvino",
+    "time": 1770678951,
+    "version": "2025.4.1-20426-82bbf0292c5-releases/2025/4"
+}

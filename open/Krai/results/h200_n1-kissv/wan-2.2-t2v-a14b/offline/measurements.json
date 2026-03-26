@@ -1,0 +1,7 @@
+{
+    "retraining": "no",
+    "input_data_types": "bfloat16",
+    "weight_data_types": "bfloat16",
+    "starting_weights_filename": "https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B-Diffusers",
+    "weight_transformations": "no"
+}

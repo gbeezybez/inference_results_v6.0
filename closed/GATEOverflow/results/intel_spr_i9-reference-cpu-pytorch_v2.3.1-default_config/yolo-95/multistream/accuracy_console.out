@@ -1,0 +1,16 @@
+
+No warnings encountered during test.
+
+No errors encountered during test.
+Loading official COCO annotations from: /home/arjun/MLC/repos/local/cache/download-file_ml-dataset-yolo_0f74e5dc/yolo-coco2017-filtered-dataset/val2017_safe/annotations/instances_val2017.json
+Loaded 1525 images in official COCO order.
+Starting MLPerf run
+Scenario: MultiStream
+Accuracy run
+Log directory: /home/arjun/MLC/repos/local/cache/get-mlperf-inference-results-dir_3ba3b012/valid_results/intel_spr_i9-reference-cpu-pytorch-v2.3.1-default_config/yolo-95/multistream/accuracy
+MLPerf run complete - cleaning up
+cleaning up LoadGen and flushing logs
+Checking for logs in /home/arjun/MLC/repos/local/cache/get-mlperf-inference-results-dir_3ba3b012/valid_results/intel_spr_i9-reference-cpu-pytorch-v2.3.1-default_config/yolo-95/multistream/accuracy:
+ [OK] mlperf_log_summary.txt present (74 bytes)
+ [OK] mlperf_log_detail.txt present (107840 bytes)
+ [OK] mlperf_log_accuracy.json present (7002533 bytes)

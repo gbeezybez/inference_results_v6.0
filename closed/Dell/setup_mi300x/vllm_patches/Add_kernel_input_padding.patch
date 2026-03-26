@@ -1,0 +1,176 @@
+From 3c8e9e0dec591320c3924ce3a6e58f7dffe48942 Mon Sep 17 00:00:00 2001
+From: MLPerf <mlperf>
+Date: Fri, 18 Jul 2025 13:01:18 +0000
+Subject: [PATCH] Add input padding to kernels
+
+---
+ vllm/attention/backends/rocm_flash_attn.py    | 32 +++++++++++++++----
+ vllm/model_executor/layers/activation.py      |  1 +
+ vllm/model_executor/layers/layernorm.py       |  4 +++
+ .../quark/schemes/quark_w4a4_mxfp4.py         | 15 +++++++--
+ 4 files changed, 43 insertions(+), 9 deletions(-)
+
+diff --git a/vllm/attention/backends/rocm_flash_attn.py b/vllm/attention/backends/rocm_flash_attn.py
+index 0a3408e96..5f3f3cbcb 100644
+--- a/vllm/attention/backends/rocm_flash_attn.py
++++ b/vllm/attention/backends/rocm_flash_attn.py
+@@ -592,6 +592,7 @@ class ROCmFlashAttentionImpl(AttentionImpl):
+             # either
+             if not current_platform.has_device_capability(90):
+                 self.use_naive_attn = True
++                assert False
+             else:
+                 try:
+                     from flash_attn import flash_attn_varlen_func  # noqa: F401
+@@ -599,8 +600,10 @@ class ROCmFlashAttentionImpl(AttentionImpl):
+                     logger.debug("Using CK FA in ROCmBackend")
+                 except ModuleNotFoundError:
+                     self.use_naive_attn = True
++                    assert False
+ 
+             if self.use_naive_attn:
++                assert False
+                 if logits_soft_cap is not None:
+                     raise ValueError(
+                         "ROCm Naive FlashAttention does not support "
+@@ -796,6 +799,17 @@ class ROCmFlashAttentionImpl(AttentionImpl):
+                 # prompt, and they have the same length.
+                 attn_masks = None
+                 if self.use_triton_flash_attn:
++                    PADDING =32
++                    def pad(size, padding=PADDING):
++                        return (size + padding- 1) // padding * padding
++                    def pad_tensor_first_dim(tensor, padding=PADDING):
++                        shape = list(tensor.size())
++                        x_dim = shape[0]
++                        shape[0] = pad(x_dim, padding)
++                        x_pad = torch.zeros(shape, device=tensor.device, dtype=tensor.dtype)
++                        x_pad[:x_dim, :] = tensor
++                        return x_pad
++                    
+                     if self.alibi_slopes is not None:
+                         attn_masks = _make_alibi_bias(
+                             self.alibi_slopes,
+@@ -827,14 +841,19 @@ class ROCmFlashAttentionImpl(AttentionImpl):
+                             layer._out_scale,
+                         )
+                     else:
++                        q=pad_tensor_first_dim(query)
++                        k=pad_tensor_first_dim(key)
++                        v=pad_tensor_first_dim(value)
++                        # print(f"@@@ Attention inputs: {q.size()=}, {q.dtype=} {k.size()=}, {k.dtype=}, {v.size()=}, {v.dtype=}, {query_seq_start_loc.size()=}, {query_seq_start_loc.dtype=}, {key_seq_start_loc.size()=}, {key_seq_start_loc.dtype=}, {query_max_seq_len=}, {key_max_seq_len=}, {self.scale=}, {causal_mask=}, {self.sliding_window=}, {self.alibi_slopes=}", flush=True)
++                        assert query.size()[0] == key.size()[0] and query.size()[0] == value.size()[0]
+                         output[:num_prefill_tokens] = self.triton_attn_func(
+-                            q=query,
+-                            k=key,
+-                            v=value,
++                            q=q,
++                            k=k,
++                            v=v,
+                             cu_seqlens_q=query_seq_start_loc,
+                             cu_seqlens_k=key_seq_start_loc,
+-                            max_seqlen_q=query_max_seq_len,
+-                            max_seqlen_k=key_max_seq_len,
++                            max_seqlen_q=pad(query_max_seq_len),
++                            max_seqlen_k=pad(key_max_seq_len),
+                             dropout_p=0.0,
+                             softmax_scale=self.scale,
+                             causal=causal_mask,
+@@ -844,8 +863,9 @@ class ROCmFlashAttentionImpl(AttentionImpl):
+                             return_lse=False,
+                             return_attn_probs=False,
+                             block_table=None,
+-                        )
++                        )[:num_prefill_tokens]
+                 elif self.use_naive_attn:
++                    assert False
+                     if self.num_kv_heads != self.num_heads:
+                         # Interleave for MQA workaround.
+                         key = self.repeat_kv(key, self.num_queries_per_kv)
+diff --git a/vllm/model_executor/layers/activation.py b/vllm/model_executor/layers/activation.py
+index 803bca8bc..a3af45824 100644
+--- a/vllm/model_executor/layers/activation.py
++++ b/vllm/model_executor/layers/activation.py
+@@ -97,6 +97,7 @@ class SiluAndMul(CustomOp):
+                      scale: Optional[torch.Tensor] = None) -> torch.Tensor:
+         if VLLM_USE_AITER_TRITON_SILU_MUL:
+             if (VLLM_TRITON_FP4_GEMM_USE_ASM and x.shape[0] >= 32) or VLLM_TRITON_FP4_GEMM_BPRESHUFFLE:
++                # print(f"@@@ Activation input {x.shape=}, {x.dtype=}", flush=True)
+                 out, out_scales = self.op_shfl(x)
+             else:
+                 out, out_scales = self.op(x)
+diff --git a/vllm/model_executor/layers/layernorm.py b/vllm/model_executor/layers/layernorm.py
+index 8a82c1cdb..82a866bc1 100644
+--- a/vllm/model_executor/layers/layernorm.py
++++ b/vllm/model_executor/layers/layernorm.py
+@@ -146,6 +146,7 @@ class RMSNorm(CustomOp):
+         residual: Optional[torch.Tensor] = None,
+         scale: Optional[torch.Tensor] = None,
+     ) -> Union[torch.Tensor, tuple[torch.Tensor, torch.Tensor]]:
++        assert False
+         """PyTorch-native implementation equivalent to forward()."""
+         orig_dtype = x.dtype
+         x = x.to(torch.float32)
+@@ -203,6 +204,7 @@ class RMSNorm(CustomOp):
+         add_residual = residual is not None
+         norm_func = dispatch_cuda_rmsnorm_func(add_residual)
+ 
++        # print(f"@@@ RMSNORM input {add_residual=}, ({x.size()=} {x.dtype=}), ({self.weight.size()=} {self.weight.dtype=}, {self.variance_epsilon=}, (residual.size={residual.size() if residual != None else 'None'} residual.dtype={residual.dtype if residual != None else 'None'})", flush=True)
+         if add_residual:
+             return norm_func(x, residual, self.weight.data,
+                              self.variance_epsilon)
+@@ -214,6 +216,7 @@ class RMSNorm(CustomOp):
+         x: torch.Tensor,
+         residual: Optional[torch.Tensor] = None,
+     ) -> Union[torch.Tensor, tuple[torch.Tensor, torch.Tensor]]:
++        assert False
+         from vllm_hpu_extension.kernels import rms_norm
+         HPUFusedRMSNorm = rms_norm()
+         if HPUFusedRMSNorm is None:
+@@ -234,6 +237,7 @@ class RMSNorm(CustomOp):
+         x: torch.Tensor,
+         residual: Optional[torch.Tensor] = None,
+     ) -> Union[torch.Tensor, tuple[torch.Tensor, torch.Tensor]]:
++        assert False
+         if self.variance_size_override is not None:
+             return self.forward_native(x, residual)
+ 
+diff --git a/vllm/model_executor/layers/quantization/quark/schemes/quark_w4a4_mxfp4.py b/vllm/model_executor/layers/quantization/quark/schemes/quark_w4a4_mxfp4.py
+index 0ed935818..1f6923ae6 100644
+--- a/vllm/model_executor/layers/quantization/quark/schemes/quark_w4a4_mxfp4.py
++++ b/vllm/model_executor/layers/quantization/quark/schemes/quark_w4a4_mxfp4.py
+@@ -173,19 +173,28 @@ class QuarkW4A4MXFP4(QuarkScheme):
+             qdq_x, _ = per_token_group_quant_mxfp4(x, OCP_MX_BLOCK_SIZE)
+             return F.linear(qdq_x, dq_w, bias)
+         else:
++            PADDING = 256
+             M = x.shape[0]
++            if (M % 256) != 0:
++                x_pad = torch.zeros((M + PADDING- 1) // PADDING * PADDING, x.shape[1], device=x.device, dtype=x.dtype)
++                x_pad[:M, :] = x
++            else:
++                x_pad = x
+             if VLLM_TRITON_FP4_GEMM_USE_ASM and M > 128:
+                 if x_scales is None:
+-                    x_q, x_s = dynamic_mxfp4_quant_asm(x, shuffle=True)
++                    # print(f"@@@@ dynamic_mxfp4_quant_asm inputs ({x_pad.shape=} {x_pad.dtype=})", flush=True)
++                    x_q, x_s = dynamic_mxfp4_quant_asm(x_pad, shuffle=True)
+                 else:
+-                    x_q = x
++                    assert x_pad.shape[0] == x_scales.shape[0], f"{x_pad.shape=}, {x_scales.shape=}"
++                    x_q = x_pad
+                     x_s = x_scales
+ 
+-                y = torch.empty((M + 255) // 256 * 256,
++                y = torch.empty((M + PADDING - 1) // PADDING * PADDING,
+                                 layer.weight.shape[0],
+                                 device=x_q.device,
+                                 dtype=self.out_dtype)
+                 #asm_bias = torch.empty_like(y)
++                # print(f"@@@@ gemm_a4w4_asm inputs ({x_q.shape=} {x_q.dtype=}), ({layer.weight.shape=} {layer.weight.dtype=}), ({x_s.shape=} {x_s.dtype=}), ({layer.weight_scale.shape=} {layer.weight_scale.dtype=}), ({y.shape=} {y.dtype=})", flush=True)
+                 gemm_a4w4_asm(x_q, layer.weight, x_s, layer.weight_scale, y, y, bpreshuffle=VLLM_TRITON_FP4_GEMM_BPRESHUFFLE)
+ 
+                 return y[:M]
+-- 
+2.34.1
+

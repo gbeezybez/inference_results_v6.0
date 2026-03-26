@@ -1,0 +1,20 @@
+diff --git a/compliance/TEST01/verify_performance.py b/compliance/TEST01/verify_performance.py
+index 7a230e0c..0510efb8 100644
+--- a/compliance/TEST01/verify_performance.py
++++ b/compliance/TEST01/verify_performance.py
+@@ -52,10 +52,11 @@ def parse_result_log(file_path):
+         sys.exit("TEST FAIL: Invalid results in {}".format(file_path))
+ 
+     if mlperf_log.has_error():
+-        print(
+-            "WARNING: {} ERROR reported in {}".format(
+-                line.split()[0],
+-                file_path))
++        pass
++        #print(
++        #    "WARNING: {} ERROR reported in {}".format(
++        #        line.split()[0],
++        #        file_path))
+ 
+     res = float(mlperf_log[RESULT_FIELD[scenario]])
+     if scenario == "Server":

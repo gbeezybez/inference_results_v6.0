@@ -1,0 +1,7 @@
+llama2-70b.Offline.target_qps = 11.5
+llama2-70b.Server.target_qps = 7.8
+llama2-70b.*.min_query_count = 24576 
+
+llama3_1-8b.Offline.target_qps = 50.0
+llama3_1-8b.Server.target_qps = 49.0
+llama3_1-8b.*.min_query_count = 30000

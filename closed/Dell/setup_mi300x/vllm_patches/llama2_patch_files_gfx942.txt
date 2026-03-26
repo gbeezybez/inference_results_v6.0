@@ -1,0 +1,5 @@
+scheduler-change-to-have-prefill-and-decode-reach-go.patch
+add-MIN_REQUIRE_PREFILL_QUERY-condition.patch
+use-fast-silu.patch
+Prevent-surplus-tensor-reshape.patch
+Swizzle-fp8-linear.patch

@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Validate and set Tensor parallel and Instances
+export TP=1
+export NUM_INSTS=1
+
+if (( XPU_COUNT > 0 )); then
+    # XPU
+    if (( XPU_DEVICE_ID == 57891 )); then
+        # B70
+        export PP=2
+        export NUM_INSTS=$((XPU_COUNT / (TP*PP)))
+        export BATCH_SIZE=1024
+        export MAX_NUM_BATCHED_TOKENS=320
+        export GPU_MEMORY_UTILIZATION=0.99
+    elif (( XPU_DEVICE_ID == 57873 )); then
+        # B60
+        export PP=2
+        export NUM_INSTS=$((XPU_COUNT / (TP*PP)))
+        export BATCH_SIZE=1024
+        export MAX_NUM_BATCHED_TOKENS=192
+        export GPU_MEMORY_UTILIZATION=0.99
+    else
+        echo "Error: XPU device ID $XPU_DEVICE_ID is not in allowed set (${XPU_SUPPORTED_DEVICE_IDS[*]})."
+        return 1
+    fi
+else
+    # CPU
+    echo "Error: No XPU found. CPU is not enabled for this scenario"
+fi

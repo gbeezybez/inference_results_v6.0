@@ -1,0 +1,8 @@
+Loading dataset from sample_cnn_eval_5000.json...
+Dataset contains 5000 samples
+
+Results
+
+{'rouge1': '38.3796', 'rouge2': '15.9406', 'rougeL': '24.3855', 'rougeLsum': '35.5168', 'gen_len': 3112369, 'gen_num': 5000}
+
+hash=bcf1cf61f571b967ebfa249bef70a5bd6ee92ba04f7064c96a7e488c2e79781f

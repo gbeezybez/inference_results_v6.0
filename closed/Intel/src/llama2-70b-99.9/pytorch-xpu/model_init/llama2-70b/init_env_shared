@@ -1,0 +1,19 @@
+#!/bin/bash
+
+export MODEL_NAME="/model/Llama-2-70b-chat-hf-gptq-w4g-1kv-fp8"
+export MODEL_NAME_FULL="/model/Llama-2-70b-chat-hf"
+
+export DATASET_PATH="/data/open_orca/open_orca_gpt4_tokenized_llama.sampled_24576.pkl"
+export CALIBRATION_PATH="/data/open_orca/open_orca_gpt4_tokenized_llama.calibration_1000.pkl"
+export OUTPUT_DIR=${RUN_LOGS}
+export TOTAL_SAMPLE_COUNT=24576
+export EVAL_SCRIPT=${EVALUATION_DIR}/evaluate-accuracy.py
+
+export MAX_MODEL_LEN=2048
+export MAX_NUM_BATCHED_TOKENS=256
+
+export VLLM_USE_TRITON_XPU_ATTN=1
+export VLLM_XPU_USE_W4A8=1
+
+# B60, B70 supported
+export XPU_SUPPORTED_DEVICE_IDS=(57873 57891)
